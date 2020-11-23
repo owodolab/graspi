@@ -4,7 +4,7 @@ GraSPI is a tool for morphology analysis. The first application was in the field
 
 ## Small example
 
-See documentaion 
+See documentaion (folders: docs and examples)
 
 ## Major features 
 
@@ -44,6 +44,7 @@ GraSPI is distributed under BSD license - for more details see the LICENSE.txt f
 We keep updating GraSPI, here we log the major changes:
 
 * June 2020, the first release of GraSPI, with the capabilities to analyze two phase morphology
+* October 2020, cythonized version of GraSPI released
 
 
 ## Community information 
@@ -56,6 +57,9 @@ GraSPI has been developing at two institutions:
 
 * Olga Wodo, University at Buffalo 
 * Baskar Ganapathysubramian,  Iowa State Univiersity 
+* Jaroslaw Zola, Univeristy at Buffalo 
+* Devyani Jivani, University at Buffalo
+
 
 ## Contact info
 
@@ -64,4 +68,6 @@ Any questions and queries can be directed to Olga: olgawodo at buffalo dot edu.
 
 [NSF]: https://www.nsf.gov/
 [QRM award]: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1906344&HistoricalAwards=false# graspi
-# graspi
+
+
+
