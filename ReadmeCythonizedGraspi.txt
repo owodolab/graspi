@@ -6,6 +6,6 @@ step 1:
 	python3 setupGraspiCython.py build_ext -i
 	As an outcome you should get graspi.cpython-ARCH.so object in the folder
 step 2:
-	python3 testCythonizedGraSPI.py
+	python3 testCythonizedGraSPI.py    
 
 
