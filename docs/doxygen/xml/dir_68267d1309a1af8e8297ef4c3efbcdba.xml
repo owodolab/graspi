@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src</compoundname>
+    <innerfile refid="graph__cc_8hpp">graph_cc.hpp</innerfile>
+    <innerfile refid="graph__constructors_8cpp">graph_constructors.cpp</innerfile>
+    <innerfile refid="graph__constructors_8hpp">graph_constructors.hpp</innerfile>
+    <innerfile refid="graph__dijkstra_8hpp">graph_dijkstra.hpp</innerfile>
+    <innerfile refid="graph__io_8hpp">graph_io.hpp</innerfile>
+    <innerfile refid="graspi_8hpp">graspi.hpp</innerfile>
+    <innerfile refid="graspi__cc_8hpp">graspi_cc.hpp</innerfile>
+    <innerfile refid="graspi__descriptors_8hpp">graspi_descriptors.hpp</innerfile>
+    <innerfile refid="graspi__predicates_8hpp">graspi_predicates.hpp</innerfile>
+    <innerfile refid="graspi__types_8hpp">graspi_types.hpp</innerfile>
+    <innerfile refid="graspi_a_p_i_8hpp">graspiAPI.hpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="main_a_p_i_8cpp">mainAPI.cpp</innerfile>
+    <innerfile refid="performance__indicators_8hpp">performance_indicators.hpp</innerfile>
+    <innerfile refid="performance__indicators__abs_8hpp">performance_indicators_abs.hpp</innerfile>
+    <innerfile refid="performance__indicators__charge__transport_8hpp">performance_indicators_charge_transport.hpp</innerfile>
+    <innerfile refid="performance__indicators__diss_8hpp">performance_indicators_diss.hpp</innerfile>
+    <innerfile refid="time__check_8hpp">time_check.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/"/>
+  </compounddef>
+</doxygen>

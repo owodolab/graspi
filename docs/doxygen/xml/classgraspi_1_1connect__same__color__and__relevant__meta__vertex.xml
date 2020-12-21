@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex" kind="class" language="C++" prot="public">
+    <compoundname>graspi::connect_same_color_and_relevant_meta_vertex</compoundname>
+    <includes refid="graspi__predicates_8hpp" local="no">graspi_predicates.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a4b5b859a56898ae9d28e19cd8b753c2f" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacegraspi_1a6f9edbe30b9dd1b3180ca57998b99f95" kindref="member">graph_t</ref> *</type>
+        <definition>const graph_t* graspi::connect_same_color_and_relevant_meta_vertex::G_</definition>
+        <argsstring></argsstring>
+        <name>G_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="118" column="23" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1ad84be0ccdd4d9ae595f9245d08c8bf68" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacegraspi_1ad9170ac2a7c9a7b3fc1231b2486598bd" kindref="member">vertex_colors_t</ref> *</type>
+        <definition>const vertex_colors_t* graspi::connect_same_color_and_relevant_meta_vertex::vertex_colors_</definition>
+        <argsstring></argsstring>
+        <name>vertex_colors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="119" column="31" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a71c5fd7bcae2f32b28a4cdc0c0fdb193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graspi::connect_same_color_and_relevant_meta_vertex::connect_same_color_and_relevant_meta_vertex</definition>
+        <argsstring>()</argsstring>
+        <name>connect_same_color_and_relevant_meta_vertex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="88" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="88" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a52e2a2de7a4262587c2860d1ad8530a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graspi::connect_same_color_and_relevant_meta_vertex::connect_same_color_and_relevant_meta_vertex</definition>
+        <argsstring>(const graph_t &amp;G, const vertex_colors_t &amp;C)</argsstring>
+        <name>connect_same_color_and_relevant_meta_vertex</name>
+        <param>
+          <type>const <ref refid="namespacegraspi_1a6f9edbe30b9dd1b3180ca57998b99f95" kindref="member">graph_t</ref> &amp;</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacegraspi_1ad9170ac2a7c9a7b3fc1231b2486598bd" kindref="member">vertex_colors_t</ref> &amp;</type>
+          <declname>C</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="90" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a2271fbebf7835deabbb77e408d90bad8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graspi::connect_same_color_and_relevant_meta_vertex::operator()</definition>
+        <argsstring>(const edge_descriptor_t &amp;e) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="namespacegraspi_1af2094bc8f309097cb0761fcbc246682b" kindref="member">edge_descriptor_t</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="94" column="14" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="94" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="86" column="5" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="86" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a71c5fd7bcae2f32b28a4cdc0c0fdb193" prot="public" virt="non-virtual"><scope>graspi::connect_same_color_and_relevant_meta_vertex</scope><name>connect_same_color_and_relevant_meta_vertex</name></member>
+      <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a52e2a2de7a4262587c2860d1ad8530a1" prot="public" virt="non-virtual"><scope>graspi::connect_same_color_and_relevant_meta_vertex</scope><name>connect_same_color_and_relevant_meta_vertex</name></member>
+      <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a4b5b859a56898ae9d28e19cd8b753c2f" prot="private" virt="non-virtual"><scope>graspi::connect_same_color_and_relevant_meta_vertex</scope><name>G_</name></member>
+      <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a2271fbebf7835deabbb77e408d90bad8" prot="public" virt="non-virtual"><scope>graspi::connect_same_color_and_relevant_meta_vertex</scope><name>operator()</name></member>
+      <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1ad84be0ccdd4d9ae595f9245d08c8bf68" prot="private" virt="non-virtual"><scope>graspi::connect_same_color_and_relevant_meta_vertex</scope><name>vertex_colors_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

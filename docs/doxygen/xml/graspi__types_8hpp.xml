@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="graspi__types_8hpp" kind="file" language="C++">
+    <compoundname>graspi_types.hpp</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">boost/graph/adjacency_list.hpp</includes>
+    <includedby refid="graph__cc_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_cc.hpp</includedby>
+    <includedby refid="graph__constructors_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_constructors.hpp</includedby>
+    <includedby refid="graph__dijkstra_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_dijkstra.hpp</includedby>
+    <includedby refid="graph__io_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_io.hpp</includedby>
+    <includedby refid="graspi_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi.hpp</includedby>
+    <includedby refid="graspi__cc_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_cc.hpp</includedby>
+    <includedby refid="graspi__predicates_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp</includedby>
+    <includedby refid="graspi_a_p_i_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp</includedby>
+    <includedby refid="main_8cpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/main.cpp</includedby>
+    <includedby refid="main_a_p_i_8cpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/mainAPI.cpp</includedby>
+    <includedby refid="performance__indicators_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators.hpp</includedby>
+    <includedby refid="performance__indicators__abs_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp</includedby>
+    <includedby refid="performance__indicators__charge__transport_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_charge_transport.hpp</includedby>
+    <includedby refid="performance__indicators__diss_8hpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_diss.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="1">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp</label>
+        <link refid="graspi__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi.hpp</label>
+        <link refid="graspi_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_diss.hpp</label>
+        <link refid="performance__indicators__diss_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_cc.hpp</label>
+        <link refid="graph__cc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp</label>
+        <link refid="graspi__predicates_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp</label>
+        <link refid="performance__indicators__abs_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_cc.hpp</label>
+        <link refid="graspi__cc_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_constructors.hpp</label>
+        <link refid="graph__constructors_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_dijkstra.hpp</label>
+        <link refid="graph__dijkstra_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_io.hpp</label>
+        <link refid="graph__io_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp</label>
+        <link refid="graspi_a_p_i_8hpp"/>
+      </node>
+      <node id="5">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/mainAPI.cpp</label>
+        <link refid="main_a_p_i_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_charge_transport.hpp</label>
+        <link refid="performance__indicators__charge__transport_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graph_constructors.cpp</label>
+        <link refid="graph__constructors_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators.hpp</label>
+        <link refid="performance__indicators_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp</label>
+        <link refid="graspi__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgraspi_1_1dim__g__t" prot="public">graspi::dim_g_t</innerclass>
+    <innerclass refid="structgraspi_1_1dim__a__t" prot="public">graspi::dim_a_t</innerclass>
+    <innernamespace refid="namespacegraspi">graspi</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82" prot="public" static="no">
+        <name>COLOR</name>
+        <initializer>unsigned int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="21" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6" prot="public" static="no">
+        <name>BLACK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="23" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382" prot="public" static="no">
+        <name>WHITE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="24" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964" prot="public" static="no">
+        <name>GREY</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="25" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38" prot="public" static="no">
+        <name>BLUE</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="27" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f" prot="public" static="no">
+        <name>RED</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="28" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721" prot="public" static="no">
+        <name>GREEN</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="30" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0" prot="public" static="no">
+        <name>DGREEN</name>
+        <initializer>31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="31" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6" prot="public" static="no">
+        <name>LGREEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="32" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>$Id$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>File:<sp/>graspi_types.hpp</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created:<sp/>May<sp/>8,<sp/>2012</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Author:<sp/>Olga<sp/>Wodo,<sp/>Baskar<sp/>Ganapathysubramanian</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Olga<sp/>Wodo,<sp/>Baskar<sp/>Ganapthysubramanian</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>accompanying<sp/>LICENSE.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GraSPI.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRASPI_TYPES_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRASPI_TYPES_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/graph/adjacency_list.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR<sp/>unsigned<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLACK<sp/><sp/><sp/>0<sp/>//<sp/>donor<sp/><sp/><sp/><sp/><sp/>(D)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WHITE<sp/><sp/><sp/>1<sp/>//<sp/>acceptor<sp/><sp/>(A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GREY<sp/><sp/><sp/><sp/>3<sp/>//<sp/>mixed<sp/><sp/><sp/><sp/><sp/>(D+A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLUE<sp/><sp/><sp/>10<sp/>//<sp/>cathode<sp/><sp/><sp/>(neg/bottom)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RED<sp/><sp/><sp/><sp/>20<sp/>//<sp/>anode<sp/><sp/><sp/><sp/><sp/>(pos/top)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GREEN<sp/><sp/>30<sp/>//<sp/>interface<sp/>(I<sp/>D/A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DGREEN<sp/>31<sp/>//<sp/>interface<sp/>(I<sp/>D/D+A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LGREEN<sp/>32<sp/>//<sp/>interface<sp/>(I<sp/>A/D+A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegraspi" kindref="compound">graspi</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>graph<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::adjacency_list&lt;boost::setS,<sp/>boost::vecS,<sp/>boost::undirectedS,</highlight></codeline>
+<codeline lineno="38" refid="namespacegraspi_1a6f9edbe30b9dd1b3180ca57998b99f95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::no_property,<sp/>boost::no_property&gt;<sp/><ref refid="namespacegraspi_1a6f9edbe30b9dd1b3180ca57998b99f95" kindref="member">graph_t</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="namespacegraspi_1a4cbb0f11b7c424b7949e42ab9e49eee5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::graph_traits&lt;graph_t&gt;::vertex_descriptor<sp/><ref refid="namespacegraspi_1a4cbb0f11b7c424b7949e42ab9e49eee5" kindref="member">vertex_t</ref>;</highlight></codeline>
+<codeline lineno="41" refid="namespacegraspi_1af2094bc8f309097cb0761fcbc246682b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::graph_traits&lt;graph_t&gt;::edge_descriptor<sp/><sp/><sp/><ref refid="namespacegraspi_1af2094bc8f309097cb0761fcbc246682b" kindref="member">edge_descriptor_t</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vertex<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="namespacegraspi_1ad9170ac2a7c9a7b3fc1231b2486598bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;COLOR&gt;<sp/><ref refid="namespacegraspi_1ad9170ac2a7c9a7b3fc1231b2486598bd" kindref="member">vertex_colors_t</ref>;</highlight></codeline>
+<codeline lineno="45" refid="namespacegraspi_1a832030346ce3d5af00fb9a8c521996d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><sp/><sp/><ref refid="namespacegraspi_1a832030346ce3d5af00fb9a8c521996d1" kindref="member">vertex_ccs_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>edge<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="namespacegraspi_1a1715ad8628f60478c7327ad40fd5c4ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::pair&lt;int,int&gt;<sp/>,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraspi_1a1715ad8628f60478c7327ad40fd5c4ef" kindref="member">edge_colors_t</ref>;</highlight></codeline>
+<codeline lineno="49" refid="namespacegraspi_1a2b298407124b7b3c351ca7eb3d7196cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;edge_descriptor_t,<sp/>float&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraspi_1a2b298407124b7b3c351ca7eb3d7196cc" kindref="member">edge_map_t</ref>;</highlight></codeline>
+<codeline lineno="50" refid="namespacegraspi_1a046ee9c35910d3989aa082a65b7073c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::associative_property_map&lt;edge_map_t&gt;<sp/><ref refid="namespacegraspi_1a046ee9c35910d3989aa082a65b7073c2" kindref="member">edge_weights_t</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cc<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgraspi_1_1_c_c" kindref="compound">CC</ref>;</highlight></codeline>
+<codeline lineno="54" refid="namespacegraspi_1aca225ce3c337d13a7889284679d62493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;CC&gt;<sp/><ref refid="namespacegraspi_1aca225ce3c337d13a7889284679d62493" kindref="member">ccs_t</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>descriptor<sp/>type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="namespacegraspi_1a3c842c2d176bde6ed3a1a52a5ff16d31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;float,std::string&gt;<sp/><ref refid="namespacegraspi_1a3c842c2d176bde6ed3a1a52a5ff16d31" kindref="member">desc_t</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>descriptor<sp/>dimension<sp/>of<sp/>graph<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structgraspi_1_1dim__g__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgraspi_1_1dim__g__t" kindref="compound">dim_g_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kindref="member">n_phases</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//number<sp/>of<sp/>phases<sp/>(currently<sp/>2<sp/>or<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//all<sp/>BLACK,WHITE<sp/>and<sp/>GREY<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kindref="member">n_meta_basic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//basic<sp/>meta<sp/>vertices<sp/>(anode,<sp/>cathode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref>;<sp/></highlight><highlight class="comment">//interfacial<sp/>meta<sp/>vertices<sp/>between</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(BLACK/WHITE),<sp/>(BLACK/GREY),<sp/>(WHITE/GREY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structgraspi_1_1dim__g__t_1a40d82de12658b228d7b05360a597bbfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a40d82de12658b228d7b05360a597bbfd" kindref="member">dim_g_t</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kindref="member">n_phases</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bulk<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>meta<sp/>=<sp/>2)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kindref="member">n_phases</ref>(<ref refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kindref="member">n_phases</ref>),<sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>(bulk),<sp/><ref refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kindref="member">n_meta_basic</ref>(2),<sp/><ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref>(1)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kindref="member">n_phases</ref><sp/>==<sp/>3)<sp/><ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structgraspi_1_1dim__g__t_1a3795d7675d95b65b2efe0cb2096f12f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a3795d7675d95b65b2efe0cb2096f12f2" kindref="member">n_total</ref>()</highlight><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/>const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>+<ref refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kindref="member">n_meta_basic</ref>+<ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="74" refid="structgraspi_1_1dim__g__t_1aa86a784784e82d825bfdfe7136262629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aa86a784784e82d825bfdfe7136262629" kindref="member">n_meta</ref>()</highlight><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/>const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kindref="member">n_meta_basic</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="75" refid="structgraspi_1_1dim__g__t_1ade3192552be4452533df24aa8f5925c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1ade3192552be4452533df24aa8f5925c8" kindref="member">n_meta_int</ref>()</highlight><highlight class="keyword"><sp/><sp/>const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="76" refid="structgraspi_1_1dim__g__t_1a98651ea280e0c84ebe5816f4b19b6d10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a98651ea280e0c84ebe5816f4b19b6d10" kindref="member">n_meta_total</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kindref="member">n_meta_basic</ref>+<ref refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kindref="member">n_meta_interfacial</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="structgraspi_1_1dim__g__t_1a6951ed9e4b4bea6d71bf0931a850115c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a6951ed9e4b4bea6d71bf0931a850115c" kindref="member">id</ref>(<ref refid="graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82" kindref="member">COLOR</ref><sp/>c)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/><ref refid="graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38" kindref="member">BLUE</ref>)<sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" kindref="member">id_blue</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/><ref refid="graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f" kindref="member">RED</ref>)<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520" kindref="member">id_red</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/><ref refid="graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721" kindref="member">GREEN</ref>)<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" kindref="member">id_green</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/><ref refid="graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0" kindref="member">DGREEN</ref>)<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" kindref="member">id_dgreen</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/><ref refid="graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6" kindref="member">LGREEN</ref>)<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7" kindref="member">id_lgreen</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" kindref="member">id_blue</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>;<sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88" refid="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520" kindref="member">id_red</ref>()</highlight><highlight class="keyword"><sp/><sp/>const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>+1;<sp/>}</highlight></codeline>
+<codeline lineno="89" refid="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" kindref="member">id_green</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>+2;<sp/>}</highlight></codeline>
+<codeline lineno="90" refid="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" kindref="member">id_dgreen</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>+3;<sp/>}</highlight></codeline>
+<codeline lineno="91" refid="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7" kindref="member">id_lgreen</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kindref="member">n_bulk</ref>+4;<sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//<sp/>struct<sp/>dim_g_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dimension<sp/>descriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structgraspi_1_1dim__a__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgraspi_1_1dim__a__t" kindref="compound">dim_a_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="structgraspi_1_1dim__a__t_1a778e7772a78d70c9bbc8f6fb441419eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__a__t_1a778e7772a78d70c9bbc8f6fb441419eb" kindref="member">dim_a_t</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>1)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structgraspi_1_1dim__a__t_1a407b5aa4640715a8a6f9177af7e12b3a" kindref="member">nx</ref>(x),<sp/><ref refid="structgraspi_1_1dim__a__t_1abe39c6518dd3f52bc550177b6d7d3b84" kindref="member">ny</ref>(y),<sp/><ref refid="structgraspi_1_1dim__a__t_1ac95db87848c2c021d525436665f6e9fa" kindref="member">nz</ref>(z)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="structgraspi_1_1dim__a__t_1a407b5aa4640715a8a6f9177af7e12b3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__a__t_1a407b5aa4640715a8a6f9177af7e12b3a" kindref="member">nx</ref>;</highlight></codeline>
+<codeline lineno="101" refid="structgraspi_1_1dim__a__t_1abe39c6518dd3f52bc550177b6d7d3b84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__a__t_1abe39c6518dd3f52bc550177b6d7d3b84" kindref="member">ny</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structgraspi_1_1dim__a__t_1ac95db87848c2c021d525436665f6e9fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgraspi_1_1dim__a__t_1ac95db87848c2c021d525436665f6e9fa" kindref="member">nz</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/></highlight><highlight class="comment">//<sp/>struct<sp/>dim_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>graspi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>GRASPI_TYPES_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp"/>
+  </compounddef>
+</doxygen>

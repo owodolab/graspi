@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.20" xml:lang="en-US">
+  <compound refid="structgraspi_1_1_c_c" kind="struct"><name>graspi::CC</name>
+    <member refid="structgraspi_1_1_c_c_1aff370b6f4ccc399e6159ce197a2e772c" kind="variable"><name>color</name></member>
+    <member refid="structgraspi_1_1_c_c_1a38ab8a071f66390904ab1b5b50fef880" kind="variable"><name>size</name></member>
+    <member refid="structgraspi_1_1_c_c_1a35c1d73acf414ed3107bc09a76c94624" kind="variable"><name>if_connected_to_electrode</name></member>
+    <member refid="structgraspi_1_1_c_c_1afa1e9e27f0f2febc123327d187cb5181" kind="function"><name>CC</name></member>
+    <member refid="structgraspi_1_1_c_c_1a01cab41409b5c87ae33386dd42f251eb" kind="function"><name>if_connected_to_top_or_bottom</name></member>
+    <member refid="structgraspi_1_1_c_c_1a05ca638e2067bd563c0bfd22e2fc1cb2" kind="function"><name>if_connected_to_top_and_bottom</name></member>
+    <member refid="structgraspi_1_1_c_c_1a8449deb46c5cd1d6a225d08fd7df90a0" kind="function"><name>if_connected_to_top</name></member>
+    <member refid="structgraspi_1_1_c_c_1a7de5e46481e7909ed13f78d2e0af11f5" kind="function"><name>if_connected_to_bottom</name></member>
+    <member refid="structgraspi_1_1_c_c_1a12132a2b8a5898c6307e5c1dbeae361e" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classgraspi_1_1connect__color__green" kind="class"><name>graspi::connect_color_green</name>
+    <member refid="classgraspi_1_1connect__color__green_1a2681f33872e6d3407fdb09446b931f40" kind="variable"><name>green_</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1ac6419d546558eee6c5c21ad146a588c6" kind="variable"><name>color_</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1ad6b5a3a5fd2e8b2ac0682eb01cbd8b41" kind="variable"><name>G_</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1a110703a9762a0f297def0bf6fa02010d" kind="variable"><name>vertex_colors_</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1a124c2fb0c785f77730f9ac50929e8cc7" kind="function"><name>connect_color_green</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1a5e6e5320e34d498b92f01b5f897913ae" kind="function"><name>connect_color_green</name></member>
+    <member refid="classgraspi_1_1connect__color__green_1a3416dcd68655c0abf164a780d4bbf907" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classgraspi_1_1connect__relevant__meta__vertex" kind="class"><name>graspi::connect_relevant_meta_vertex</name>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1afe0d48b5ef6d222aa3cdbe28b937446f" kind="variable"><name>G_</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a8eb8e6d3fce61f0d5ffbca54ae941e01" kind="variable"><name>vertex_colors_</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1ae8272c18d2f80e71f8f90cad03caf83b" kind="variable"><name>vertex_ccs_</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a1704801186f41724ff1e38ae2816bde1" kind="variable"><name>ccs_</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a3f4512cda99d54d36c89fb3db081dc11" kind="variable"><name>c_</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a7d8d2b9bcb400c4c9081f2c10e4de8e5" kind="function"><name>connect_relevant_meta_vertex</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a3a0f9723797631b3eb43ddbe2a52df26" kind="function"><name>change_color</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a84b3f670417f55da7f335b7182ebae5a" kind="function"><name>connect_relevant_meta_vertex</name></member>
+    <member refid="classgraspi_1_1connect__relevant__meta__vertex_1a4bb277c0bce6c552ae0f5e68c5e3ebb8" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classgraspi_1_1connect__same__color" kind="class"><name>graspi::connect_same_color</name>
+    <member refid="classgraspi_1_1connect__same__color_1a1f35d64ca90e5b9443e13d678d2c3180" kind="variable"><name>G_</name></member>
+    <member refid="classgraspi_1_1connect__same__color_1a2f21c3e638dd2c09ab1d844c0ad01538" kind="variable"><name>vertex_colors_</name></member>
+    <member refid="classgraspi_1_1connect__same__color_1accfba0ce088a1b9dfc1fa96e7a27894d" kind="function"><name>connect_same_color</name></member>
+    <member refid="classgraspi_1_1connect__same__color_1abb606edcfc61dd395164f652ab40cb59" kind="function"><name>connect_same_color</name></member>
+    <member refid="classgraspi_1_1connect__same__color_1a58b1001f862b386247c213cdc5cf0488" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex" kind="class"><name>graspi::connect_same_color_and_relevant_meta_vertex</name>
+    <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a4b5b859a56898ae9d28e19cd8b753c2f" kind="variable"><name>G_</name></member>
+    <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1ad84be0ccdd4d9ae595f9245d08c8bf68" kind="variable"><name>vertex_colors_</name></member>
+    <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a71c5fd7bcae2f32b28a4cdc0c0fdb193" kind="function"><name>connect_same_color_and_relevant_meta_vertex</name></member>
+    <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a52e2a2de7a4262587c2860d1ad8530a1" kind="function"><name>connect_same_color_and_relevant_meta_vertex</name></member>
+    <member refid="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a2271fbebf7835deabbb77e408d90bad8" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1_d_e_s_c" kind="struct"><name>graspi::DESC</name>
+    <member refid="structgraspi_1_1_d_e_s_c_1a3262511865a157ac66c048341fbbbd75" kind="variable"><name>desc</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1ab0125765af60578528ae778ba74611e7" kind="variable"><name>find_desc</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1aeb5760ee1b4db0fc360e3702ace905c7" kind="function"><name>DESC</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1a8ee9209eb910c66a45358f2c629ada19" kind="function"><name>initiate_descriptors_2_phase</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1a653f629bd7ff3e2e6e8b9aa1001c81e4" kind="function"><name>print_descriptors_2_phase</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1a28288568c0ad73655591a62e423db7d2" kind="function"><name>initiate_descriptors_3_phase</name></member>
+    <member refid="structgraspi_1_1_d_e_s_c_1a374ce4fd135df1c1e8b3ab2f735bc540" kind="function"><name>update_desc</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1dim__a__t" kind="struct"><name>graspi::dim_a_t</name>
+    <member refid="structgraspi_1_1dim__a__t_1a407b5aa4640715a8a6f9177af7e12b3a" kind="variable"><name>nx</name></member>
+    <member refid="structgraspi_1_1dim__a__t_1abe39c6518dd3f52bc550177b6d7d3b84" kind="variable"><name>ny</name></member>
+    <member refid="structgraspi_1_1dim__a__t_1ac95db87848c2c021d525436665f6e9fa" kind="variable"><name>nz</name></member>
+    <member refid="structgraspi_1_1dim__a__t_1a778e7772a78d70c9bbc8f6fb441419eb" kind="function"><name>dim_a_t</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1dim__g__t" kind="struct"><name>graspi::dim_g_t</name>
+    <member refid="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" kind="variable"><name>n_phases</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" kind="variable"><name>n_bulk</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" kind="variable"><name>n_meta_basic</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" kind="variable"><name>n_meta_interfacial</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a40d82de12658b228d7b05360a597bbfd" kind="function"><name>dim_g_t</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a3795d7675d95b65b2efe0cb2096f12f2" kind="function"><name>n_total</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1aa86a784784e82d825bfdfe7136262629" kind="function"><name>n_meta</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1ade3192552be4452533df24aa8f5925c8" kind="function"><name>n_meta_int</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a98651ea280e0c84ebe5816f4b19b6d10" kind="function"><name>n_meta_total</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a6951ed9e4b4bea6d71bf0931a850115c" kind="function"><name>id</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" kind="function"><name>id_blue</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520" kind="function"><name>id_red</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" kind="function"><name>id_green</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" kind="function"><name>id_dgreen</name></member>
+    <member refid="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7" kind="function"><name>id_lgreen</name></member>
+  </compound>
+  <compound refid="classgraspi_1_1find__desc__of__name" kind="class"><name>graspi::find_desc_of_name</name>
+    <member refid="classgraspi_1_1find__desc__of__name_1aa6818a38ed7ef6f520c93589bcb5b739" kind="variable"><name>desc_</name></member>
+    <member refid="classgraspi_1_1find__desc__of__name_1ad5a50aeeda7ab1ac99ca5f39ae3837dd" kind="function"><name>find_desc_of_name</name></member>
+    <member refid="classgraspi_1_1find__desc__of__name_1a6be1fc66bb50201e0cb024577831b81b" kind="function"><name>find_desc_of_name</name></member>
+    <member refid="classgraspi_1_1find__desc__of__name_1a8b235db704f92f1fbe6d448f74f9fd55" kind="function"><name>set_desc</name></member>
+    <member refid="classgraspi_1_1find__desc__of__name_1ac8055e4aef0cbf282732ebead78c3886" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1foo__no__w__abs" kind="struct"><name>graspi::foo_no_w_abs</name>
+    <member refid="structgraspi_1_1foo__no__w__abs_1a4b4527f8229a99b7cb570b1f4a9d7614" kind="function"><name>foo_no_w_abs</name></member>
+    <member refid="structgraspi_1_1foo__no__w__abs_1ad8be67d80e6c22c6e3eef4c05e3b5776" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1foo__w__abs" kind="struct"><name>graspi::foo_w_abs</name>
+    <member refid="structgraspi_1_1foo__w__abs_1a3308d2550f163f64c5ff6d247b89a5ca" kind="variable"><name>Lexp</name></member>
+    <member refid="structgraspi_1_1foo__w__abs_1a1122cf7c99cde8bf2f5e18b279086357" kind="function"><name>foo_w_abs</name></member>
+    <member refid="structgraspi_1_1foo__w__abs_1a5bc2f679db09fd9d3c5d1497948282f4" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structgraspi_1_1foo__w__diss" kind="struct"><name>graspi::foo_w_diss</name>
+    <member refid="structgraspi_1_1foo__w__diss_1aad313f43bfd67b86dc866f4d7b27b1a3" kind="variable"><name>A1</name></member>
+    <member refid="structgraspi_1_1foo__w__diss_1a2d9f1f7d8b018863e7396cc3db9edd66" kind="variable"><name>B1</name></member>
+    <member refid="structgraspi_1_1foo__w__diss_1aecdfb8c2ece4a3ebc0413a03ff9eb91b" kind="variable"><name>C1</name></member>
+    <member refid="structgraspi_1_1foo__w__diss_1a590e1bd4ec3f0a5d380dd120bc6c9c1f" kind="function"><name>foo_w_diss</name></member>
+    <member refid="structgraspi_1_1foo__w__diss_1ad4de89c1561c731c722260a5c670a6b5" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classtime__check" kind="class"><name>time_check</name>
+    <member refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kind="typedef"><name>size_type</name></member>
+    <member refid="classtime__check_1a86439dfa2d1b33186f0219dae5e18b01" kind="variable"><name>name_</name></member>
+    <member refid="classtime__check_1a6e93468a4035d2e3b79cd4d179dd9149" kind="variable"><name>hbeg_</name></member>
+    <member refid="classtime__check_1abf68675dd137c6bd752e87a37abbbe6d" kind="variable"><name>beg_</name></member>
+    <member refid="classtime__check_1a59671c67e19d89af0ade663986b198e4" kind="variable"><name>hfin_</name></member>
+    <member refid="classtime__check_1a5278176ab8453398f7e88f08946337ce" kind="variable"><name>fin_</name></member>
+    <member refid="classtime__check_1a605208cedf77ab18bbd2c1d223d57741" kind="variable"><name>pos_</name></member>
+    <member refid="classtime__check_1a41de1f07ec4f2f27f74474865b837598" kind="variable"><name>tpts_</name></member>
+    <member refid="classtime__check_1a049ba64876f1b2b70d3d1b2c8d7df09e" kind="variable"><name>ipts_</name></member>
+    <member refid="classtime__check_1abe9c1ae866d898e9e92474822ac84394" kind="function"><name>time_check</name></member>
+    <member refid="classtime__check_1a0489b9aa63325598c6abc64faaea64a2" kind="function"><name>size</name></member>
+    <member refid="classtime__check_1afe50b049747f263f4dd926beaba8de07" kind="function"><name>capacity</name></member>
+    <member refid="classtime__check_1aa5da84d6b22069b9ad2e484081e50700" kind="function"><name>start</name></member>
+    <member refid="classtime__check_1a201d9270174505322fdee709629a5d3d" kind="function"><name>stop</name></member>
+    <member refid="classtime__check_1aa434d70404b96ea86ca8ef87039ad1b0" kind="function"><name>check</name></member>
+    <member refid="classtime__check_1a04ab99fd2a5eaf66998e2eb869807482" kind="function"><name>total</name></member>
+    <member refid="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b" kind="function"><name>at_point</name></member>
+    <member refid="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6" kind="function"><name>to_point</name></member>
+    <member refid="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2" kind="function"><name>point_id</name></member>
+    <member refid="classtime__check_1a75e169967d55124c1e93313fe6cc3f1d" kind="function"><name>get_time</name></member>
+    <member refid="classtime__check_1a0a0975558a6e417fc264d58682dc5cab" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classtime__check_1ad61d781bc0dd0afda0ced6c10ddd43ff" kind="function"><name>tv2double</name></member>
+  </compound>
+  <compound refid="namespacegraspi" kind="namespace"><name>graspi</name>
+    <member refid="namespacegraspi_1a6f9edbe30b9dd1b3180ca57998b99f95" kind="typedef"><name>graph_t</name></member>
+    <member refid="namespacegraspi_1a4cbb0f11b7c424b7949e42ab9e49eee5" kind="typedef"><name>vertex_t</name></member>
+    <member refid="namespacegraspi_1af2094bc8f309097cb0761fcbc246682b" kind="typedef"><name>edge_descriptor_t</name></member>
+    <member refid="namespacegraspi_1ad9170ac2a7c9a7b3fc1231b2486598bd" kind="typedef"><name>vertex_colors_t</name></member>
+    <member refid="namespacegraspi_1a832030346ce3d5af00fb9a8c521996d1" kind="typedef"><name>vertex_ccs_t</name></member>
+    <member refid="namespacegraspi_1a1715ad8628f60478c7327ad40fd5c4ef" kind="typedef"><name>edge_colors_t</name></member>
+    <member refid="namespacegraspi_1a2b298407124b7b3c351ca7eb3d7196cc" kind="typedef"><name>edge_map_t</name></member>
+    <member refid="namespacegraspi_1a046ee9c35910d3989aa082a65b7073c2" kind="typedef"><name>edge_weights_t</name></member>
+    <member refid="namespacegraspi_1aca225ce3c337d13a7889284679d62493" kind="typedef"><name>ccs_t</name></member>
+    <member refid="namespacegraspi_1a3c842c2d176bde6ed3a1a52a5ff16d31" kind="typedef"><name>desc_t</name></member>
+    <member refid="namespacegraspi_1af0904f04b234b1219639b64e22b424d3" kind="function"><name>identify_connected_components</name></member>
+    <member refid="namespacegraspi_1a0127f742b9a0a14a9f5dccb2acd56548" kind="function"><name>determine_number_of_CCs</name></member>
+    <member refid="namespacegraspi_1aea5b1a326446657e7287655d78ce757c" kind="function"><name>determine_basic_stats_of_ccs</name></member>
+    <member refid="namespacegraspi_1aee448ce90f643a56015935134950fef8" kind="function"><name>build_graph</name></member>
+    <member refid="namespacegraspi_1a50a980d4374ff66475ee49e3d47b8df5" kind="function"><name>build_graph</name></member>
+    <member refid="namespacegraspi_1a3b45d4541b18f373faf7d0827ad8e4a8" kind="function"><name>read_array</name></member>
+    <member refid="namespacegraspi_1a2afc7b6672ee1e6555943c41d3a48852" kind="function"><name>build_graph</name></member>
+    <member refid="namespacegraspi_1a53f33892ab14d614ea10cf5d1906126f" kind="function"><name>initlize_colors_meta_vertices</name></member>
+    <member refid="namespacegraspi_1aa06fd4851c6fa0e57c56bfc6ef70fac0" kind="function"><name>update_graph</name></member>
+    <member refid="namespacegraspi_1a83e33356090a0994c0845656a3d56601" kind="function"><name>add_edge_to_graph</name></member>
+    <member refid="namespacegraspi_1a1858ff31637ac75b0ffa03c793239e3d" kind="function"><name>make_update_edge_with_meta_vertex</name></member>
+    <member refid="namespacegraspi_1ab9c0f50386d5c15fc51f6b99d8ac4270" kind="function"><name>compute_pos_2D</name></member>
+    <member refid="namespacegraspi_1a3683cbb89913ef8416bf241640d23929" kind="function"><name>compute_pos_3D</name></member>
+    <member refid="namespacegraspi_1a9cf2d83b96f6a2237f46fb338666d5cf" kind="function"><name>generate_ngbr</name></member>
+    <member refid="namespacegraspi_1a28e3a15b3334d5b397a3d34372e03cfe" kind="function"><name>determine_shortest_distances</name></member>
+    <member refid="namespacegraspi_1a05120bd27869c1613c15eb1faeb9d75d" kind="function"><name>output_graph</name></member>
+    <member refid="namespacegraspi_1a31a12e3f7e55861c4d0723c9398c4bae" kind="function"><name>output_graph</name></member>
+    <member refid="namespacegraspi_1a23faba3c9fbcc1bcffab7d8d646a23d9" kind="function"><name>print_id_ccs</name></member>
+    <member refid="namespacegraspi_1a7834b811f17d737eb30e0d0ef522d161" kind="function"><name>print_id_ccs</name></member>
+    <member refid="namespacegraspi_1a5f1bb071296a4badb95419918641de77" kind="function"><name>compute_descriptors</name></member>
+    <member refid="namespacegraspi_1a294849c801959ea7513ffb782d103f98" kind="function"><name>compute_descriptors_only</name></member>
+    <member refid="namespacegraspi_1a7dd549073f9101b3448f7d0b64045d0b" kind="function"><name>perfomance_indicator</name></member>
+    <member refid="namespacegraspi_1a2e4749cd6042c411d70aa47b9554befa" kind="function"><name>all_perfomance_indicators_2phases</name></member>
+    <member refid="namespacegraspi_1aa2e1d1db917ac845c946c31569509e67" kind="function"><name>all_perfomance_indicators_2phases</name></member>
+    <member refid="namespacegraspi_1aa08af6cb3191a5a3b1a1884f5f0221d4" kind="function"><name>all_perfomance_indicators_3phases</name></member>
+    <member refid="namespacegraspi_1aeb3009f425a24b4a6bc0a67ba59a2082" kind="function"><name>wf_abs</name></member>
+    <member refid="namespacegraspi_1a8271c9ba4fea31400bdb2794601fa005" kind="function"><name>find_useful_cc</name></member>
+    <member refid="namespacegraspi_1a8a9d93f04353b4b1b2905656a2e50b2c" kind="function"><name>identify_complementary_paths_from_green</name></member>
+    <member refid="namespacegraspi_1a51680c144971f0584d8f5ed4e16957a8" kind="function"><name>compute_shortest_distance_from_sourceC_to_targetC</name></member>
+    <member refid="namespacegraspi_1a4cf5e5deebbc874bdda865d78e0bf3ec" kind="function"><name>identify_useful_triple_black_white_green</name></member>
+    <member refid="namespacegraspi_1ae255b5ecc645b49c4d3bf1dc87a73528" kind="function"><name>identify_black_vertices_connected_to_green</name></member>
+    <member refid="namespacegraspi_1aaf160173b786fe7fd8883dab78949dde" kind="function"><name>print_distances_of_ids</name></member>
+    <member refid="namespacegraspi_1a63d100df7eec0dc8ab535dc19efb20c9" kind="function"><name>determine_and_print_tortuosity</name></member>
+    <member refid="namespacegraspi_1ae031ffcbe6ab8fa48ae271612174f55d" kind="function"><name>determine_tortuosity</name></member>
+    <member refid="namespacegraspi_1a198a729cde1836cb5d6e79d870e82fd2" kind="function"><name>identify_n_vertices_within_distance</name></member>
+    <member refid="namespacegraspi_1ac200e273b19362a1b0d8e3f264f3a641" kind="function"><name>identify_weighted_vertices_within_distance</name></member>
+    <member refid="namespacegraspi_1add6ca43f27b7b5f15d15536d332596db" kind="function"><name>identify_n_weighted_vertices_within_distance</name></member>
+    <member refid="namespacegraspi_1a92757c4b9849cdb12860647ae22f7dd7" kind="function"><name>wf_diss</name></member>
+    <member refid="namespacegraspi_1a491f8120a8978c68d7e80562aeeed8c8" kind="function"><name>wf_diss</name></member>
+  </compound>
+  <compound refid="graph__cc_8hpp" kind="file"><name>graph_cc.hpp</name>
+  </compound>
+  <compound refid="graph__constructors_8cpp" kind="file"><name>graph_constructors.cpp</name>
+  </compound>
+  <compound refid="graph__constructors_8hpp" kind="file"><name>graph_constructors.hpp</name>
+  </compound>
+  <compound refid="graph__dijkstra_8hpp" kind="file"><name>graph_dijkstra.hpp</name>
+  </compound>
+  <compound refid="graph__io_8hpp" kind="file"><name>graph_io.hpp</name>
+  </compound>
+  <compound refid="graspi_8hpp" kind="file"><name>graspi.hpp</name>
+  </compound>
+  <compound refid="graspi__cc_8hpp" kind="file"><name>graspi_cc.hpp</name>
+  </compound>
+  <compound refid="graspi__descriptors_8hpp" kind="file"><name>graspi_descriptors.hpp</name>
+  </compound>
+  <compound refid="graspi__predicates_8hpp" kind="file"><name>graspi_predicates.hpp</name>
+  </compound>
+  <compound refid="graspi__types_8hpp" kind="file"><name>graspi_types.hpp</name>
+    <member refid="graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82" kind="define"><name>COLOR</name></member>
+    <member refid="graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6" kind="define"><name>BLACK</name></member>
+    <member refid="graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382" kind="define"><name>WHITE</name></member>
+    <member refid="graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964" kind="define"><name>GREY</name></member>
+    <member refid="graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38" kind="define"><name>BLUE</name></member>
+    <member refid="graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f" kind="define"><name>RED</name></member>
+    <member refid="graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721" kind="define"><name>GREEN</name></member>
+    <member refid="graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0" kind="define"><name>DGREEN</name></member>
+    <member refid="graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6" kind="define"><name>LGREEN</name></member>
+  </compound>
+  <compound refid="graspi_a_p_i_8hpp" kind="file"><name>graspiAPI.hpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main_a_p_i_8cpp" kind="file"><name>mainAPI.cpp</name>
+    <member refid="main_a_p_i_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="performance__indicators_8hpp" kind="file"><name>performance_indicators.hpp</name>
+  </compound>
+  <compound refid="performance__indicators__abs_8hpp" kind="file"><name>performance_indicators_abs.hpp</name>
+  </compound>
+  <compound refid="performance__indicators__charge__transport_8hpp" kind="file"><name>performance_indicators_charge_transport.hpp</name>
+  </compound>
+  <compound refid="performance__indicators__diss_8hpp" kind="file"><name>performance_indicators_diss.hpp</name>
+  </compound>
+  <compound refid="time__check_8hpp" kind="file"><name>time_check.hpp</name>
+    <member refid="time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src</name>
+  </compound>
+</doxygenindex>
