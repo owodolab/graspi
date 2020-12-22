@@ -10,6 +10,11 @@ See documentaion (folders: docs and examples)
 
 GraSPI computes the set of descriptors/features that can used for data analytics (e.g., to establish process-structure-property maps). GraSPI is implemented in C++ and uses bash as a scripting tool to encode basic analysis pipelines. GraSPI aims to handle multiple input formats, and tools to convert various formats it to internal data structures. 
 
+## Documentation 
+
+Documentation can be found here (generated using sphinx+doxygen+breathe). 
+[Function compute_descriptors_only](https://github.com/owodolab/graspi/blob/master/docs/_build/html/index.html)
+
 ## Installation instructions 
 
 GraSPI requires boost library. 
