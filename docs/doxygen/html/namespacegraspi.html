@@ -980,6 +980,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This function computes descriptors of morphology defined on structured matrix</p>
+<p>This function computes a set of descriptors of morphology </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_colors</td><td>is the morphology stored as an array of colors (row-wise order of matrix) </td></tr>
+    <tr><td class="paramname">nx</td><td>is the number of voxels in x-direction </td></tr>
+    <tr><td class="paramname">ny</td><td>is the number of voxels in y-direction </td></tr>
+    <tr><td class="paramname">nz</td><td>is the number of voxels in z-direction (default value is 1) </td></tr>
+    <tr><td class="paramname">pixelsize</td><td>is the physical unit of the voxel (distances will be rescaled according to this value) </td></tr>
+    <tr><td class="paramname">if_per</td><td>is the flag setting the periodicity on sides (true value means periodicity on sides, for 2D - in x-dir, for 3D - in x anf y-diretion) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the vector of descriptors, where each descriptor is a pair (std::pair&lt;float,std::string&gt;) consisting of descriptor's value (float) and name (string) </dd></dl>
 
 </div>
 </div>

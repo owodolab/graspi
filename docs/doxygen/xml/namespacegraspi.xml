@@ -890,10 +890,63 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>This function computes descriptors of morphology defined on structured matrix</para>
+<para>This function computes a set of descriptors of morphology <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_colors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the morphology stored as an array of colors (row-wise order of matrix) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of voxels in x-direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ny</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of voxels in y-direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of voxels in z-direction (default value is 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pixelsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the physical unit of the voxel (distances will be rescaled according to this value) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>if_per</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the flag setting the periodicity on sides (true value means periodicity on sides, for 2D - in x-dir, for 3D - in x anf y-diretion) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the vector of descriptors, where each descriptor is a pair (std::pair&lt;float,std::string&gt;) consisting of descriptor&apos;s value (float) and name (string) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp" line="28" column="17" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp" bodystart="28" bodyend="100"/>
+        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp" line="36" column="17" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspiAPI.hpp" bodystart="36" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="namespacegraspi_1a7dd549073f9101b3448f7d0b64045d0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>

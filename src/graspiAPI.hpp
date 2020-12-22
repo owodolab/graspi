@@ -23,8 +23,16 @@
 namespace graspi {
     
     
-    // std::vector<std::pair<float,std::string> > compute_descriptors(const std:vector<unsigned int>& vertex_colors){
-    
+    /// This function computes descriptors of morphology defined on structured matrix
+    ///
+    /// This function computes a set of descriptors of morphology
+    /// @param p_colors is the morphology stored as an array of colors (row-wise order of matrix)
+    /// @param nx is the number of voxels in x-direction
+    /// @param ny is the number of voxels in y-direction
+    /// @param nz is the number of voxels in z-direction (default value is 1)
+    /// @param pixelsize is the physical unit of the voxel (distances will be rescaled according to this value)
+    /// @param if_per is the flag setting the periodicity on sides (true value means periodicity on sides, for 2D - in x-dir, for 3D - in x anf y-diretion)
+    /// @return     the vector of descriptors, where each descriptor is a pair (std::pair<float,std::string>) consisting of descriptor's value (float) and name (string)
     std::vector<desc_t> compute_descriptors_only(int* p_colors,
                                                  const unsigned int& nx,
                                                  const unsigned int& ny,
