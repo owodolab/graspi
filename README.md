@@ -4,7 +4,7 @@ GraSPI is a tool for morphology analysis. The first application was in the field
 
 ## Small example
 
-See documentaion (folders: docs and examples)
+See example folder with [2 phase morpholgies](https://github.com/owodolab/graspi/tree/master/examples/2phaseMorphologies) and the slides [GraSPI.pdf](https://github.com/owodolab/graspi/blob/master/examples/GraSPI.pdf)
 
 ## Major features 
 
@@ -39,7 +39,8 @@ Type make all
  
 ## Support 
 
-This project is supported by [National Science Foundation][NSF], award number [1906344][QRM award]
+This project is supported by [National Science Foundation](https://www.nsf.gov/), award number [1906344](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1906344&HistoricalAwards=false#)
+
 
 ## License 
 
@@ -51,6 +52,7 @@ We keep updating GraSPI, here we log the major changes:
 
 * June 2020, the first release of GraSPI, with the capabilities to analyze two phase morphology
 * October 2020, cythonized version of GraSPI released
+* January 2020, documentation and examples added
 
 
 ## Community information 
@@ -72,8 +74,6 @@ GraSPI has been developing at two institutions:
 Any questions and queries can be directed to Olga: olgawodo at buffalo dot edu.  
 
 
-[NSF]: https://www.nsf.gov/
-[QRM award]: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1906344&HistoricalAwards=false# graspi
 
 
 
