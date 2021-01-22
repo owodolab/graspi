@@ -14,7 +14,7 @@ GraSPI computes the set of descriptors/features that can used for data analytics
 
 Documentation can be found here (generated using sphinx+doxygen+breathe). 
 
-[Function to compute descriptors](https://owodolab.github.io/graspi/)
+[GraSPI documentation](https://owodolab.github.io/graspi/)
 
 ## Installation instructions 
 
