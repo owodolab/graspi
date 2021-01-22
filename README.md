@@ -52,7 +52,7 @@ We keep updating GraSPI, here we log the major changes:
 
 * June 2020, the first release of GraSPI, with the capabilities to analyze two phase morphology
 * October 2020, cythonized version of GraSPI released
-* January 2020, documentation and examples added
+* January 2021, documentation and examples added
 
 
 ## Community information 
