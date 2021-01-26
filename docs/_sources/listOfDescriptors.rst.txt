@@ -1,3 +1,5 @@
+.. _listOfDescriptors:
+
 ===================
 List of Descriptors
 ===================

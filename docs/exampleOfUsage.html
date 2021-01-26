@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Install" href="install.html" />
-    <link rel="prev" title="Basic Operations On Graphs" href="basicOperationsOnGraphs.html" /> 
+    <link rel="next" title="Build" href="build.html" />
+    <link rel="prev" title="Input Formats" href="inputFormats.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,11 +87,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="listOfDescriptors.html">List of Descriptors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basicDefinitions.html">Basic Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Example of usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credit.html">Credit</a></li>
 </ul>
 
@@ -160,6 +161,33 @@
             
   <div class="section" id="example-of-usage">
 <h1>Example of usage<a class="headerlink" href="#example-of-usage" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> is a command line tool.
+To learn the set of <code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> available settings, the user is encourages to
+execute it in the command line with no arguments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./graspi
+</pre></div>
+</div>
+<p>The usage message will provide the list of parameters that can be used. <code class="docutils literal notranslate"><span class="pre">GraSPI</span></code>
+accepts input data in two formats: graph and array. If graph is constructed
+externally data can be inputted in the graph format, for example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./graspi -g &lt;INPUT_FILE.graphe&gt;
+</pre></div>
+</div>
+<p>If data is structured (e.g., image), the following options are available</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./graspi -a &lt;INPUT_FILE.txt&gt; <span class="o">(</span>row-major order<span class="o">)</span> -s &lt;pixelSize&gt; <span class="o">(</span>default <span class="m">1</span><span class="o">)</span> -p &lt;<span class="o">{</span><span class="m">0</span>,1<span class="o">}</span>&gt; <span class="o">(</span>default <span class="m">0</span>-false<span class="o">)</span> -n &lt;<span class="o">{</span><span class="m">2</span>,3<span class="o">}</span>&gt; <span class="o">(</span>default <span class="m">2</span>-<span class="o">{</span>D,A<span class="o">})</span> -r path where store results <span class="o">(</span>default ./<span class="o">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> requires one one mandatory input parameter: the name of the input file <code class="docutils literal notranslate"><span class="pre">&lt;INPUT_FILE&gt;</span></code>. The remaining parameters are optional, and have the default values set up, if the parameter is not explicitly provided.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-a</span> <span class="pre">&lt;INPUT_FILE.txt&gt;</span></code> (row-major order)  this is the option to input information about structured data. With this assumption, neighborhood of each voxel/pixel can be determined as the graph is constructed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-g</span> <span class="pre">&lt;INPUT_FILE.graphe&gt;</span></code> this is the option to input information about the unstructured data. Input file must provide all information about the graph, this means that neighborhood of each vertex in the graph needs to be determined externally. Meta-vertices and the associated edges need to be defines in the input file. When this option is called, <code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> reads the text file and initializes the set of vertices and edges from the input file, and need to be in agreement with these defined in the package for a given usage case.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-s</span> <span class="pre">&lt;pixelSize&gt;</span></code> (default 1) this option sets the size of the pixel to compute the length of the shortest paths. If unspecified, all results will be outputted in terms of number of pixels, and need to be rescaled for dimensional analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">&lt;{0,1}&gt;</span></code> (default 0-false) this option specifies if periodicity on the side faces is to be applied (valid only morphology inputted as the array option <code class="docutils literal notranslate"><span class="pre">-a</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">&lt;{2,3}&gt;</span></code> default 2 (black and white, electron-donor and electron accepting material) – this option specifies the number of phases. For three-phase morphology (option <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">3</span></code>, black, white and grey vertices are read, that correspond to electron-donor, electron-accepting and mixed phase material, respectively).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">path</span></code> – this option specifies where store result (default <code class="docutils literal notranslate"><span class="pre">./</span></code>). This option allows to specify where text files with results will be saved.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> computes the set of descriptors that are relevant for the morphology in organic solar cells. See
+<a class="reference internal" href="listOfDescriptors.html#listofdescriptors"><span class="std std-ref">List of Descriptors</span></a> section.</p>
 </div>
 
 
@@ -170,10 +198,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install.html" class="btn btn-neutral float-right" title="Install" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="build.html" class="btn btn-neutral float-right" title="Build" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="basicOperationsOnGraphs.html" class="btn btn-neutral float-left" title="Basic Operations On Graphs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="inputFormats.html" class="btn btn-neutral float-left" title="Input Formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

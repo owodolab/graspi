@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>List of Descriptors &mdash; GraSPI July 2020 documentation</title>
+  <title>Input Formats &mdash; GraSPI July 2020 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="GraSPI functionality" href="graspiFunctionality.html" />
-    <link rel="prev" title="Welcome to GraSPI’s documentation!" href="index.html" /> 
+    <link rel="next" title="Example of usage" href="exampleOfUsage.html" />
+    <link rel="prev" title="GraSPI functionality" href="graspiFunctionality.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,9 +85,9 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listOfDescriptors.html">List of Descriptors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graspiFunctionality.html">GraSPI functionality</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Input Formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exampleOfUsage.html">Example of usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
@@ -140,13 +140,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>List of Descriptors</li>
+      <li>Input Formats</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/listOfDescriptors.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/inputFormats.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -159,8 +159,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="list-of-descriptors">
-<span id="listofdescriptors"></span><h1>List of Descriptors<a class="headerlink" href="#list-of-descriptors" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="input-formats">
+<h1>Input Formats<a class="headerlink" href="#input-formats" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> accepts two input formats for structured and unstructured data.
+The structured data assumes that size of discrete points in each dimension is known.
+The dimensionality is provided in the first line of the input file: <span class="math notranslate nohighlight">\(n_x, n_y, n_z\)</span>.
+The reminder of the input file contains the array (row-wise representation of the corresponding matrix) with the corresponding phases from the set of available labels. Since the data is structured, the local neighborhood can be constructed as the data is read by <code class="docutils literal notranslate"><span class="pre">GraSPI</span></code>.</p>
+<a class="reference internal image-reference" href="_images/simpleMorphExample.png"><img alt="_images/simpleMorphExample.png" src="_images/simpleMorphExample.png" style="width: 400px;" /></a>
+<p>The input file for the above figure</p>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>4 4 1
+0 1 1 0
+0 1 1 0
+0 0 1 0
+</pre></div>
+</td></tr></table></div>
+<p>The second format corresponds to unstructured data, where information about
+phases needs to provided along with the neighborhood.
+Here, we use the adjacency matrix to inform <code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> on the neigborhood.
+The input file start with the total number of vertices in the data set.
+Next each line provides the information about each vortex.
+First the index of the vertex is provided followed by the color of the vertex.
+The reminder of the line consist of triplets with information about the neighbors.
+The triplet consists of the index of the neighbor, the distance from to the neighbor and type of the neighbor.
+In this example, two types of neighbors are considered: <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> that
+corresponds to first-, second- and third-order neighbors, respectively.
+The set of types may be redefined to encode additional information.</p>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  0 1    4 1 f  5 1.42 s   1 1 f   -1 1 f
+
+  1 1    5 1 f  6 1.42 s   2 1 f   -1 1 f   0 1 f  4 1.42 s
+
+  2 0    6 1 f  7 1.42 s   3 1 f   -1 1 f   1 1 f  5 1.42 s
+
+  ...
+
+  14 1   -2 1 f   15 1 f  11 1.42 s  10 1 f   9 1.42 s  13 1 f
+
+  15 0   -2 1 f   11 1 f  10 1.42 s  14 1 f
+
+  16  0 0 s  1 0 s    2 0 s   3 0 s
+
+  17  15 0 s      14 0 s      13 0 s      12 0 s
+</pre></div>
+</td></tr></table></div>
 </div>
 
 
@@ -171,10 +228,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="graspiFunctionality.html" class="btn btn-neutral float-right" title="GraSPI functionality" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exampleOfUsage.html" class="btn btn-neutral float-right" title="Example of usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to GraSPI’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="graspiFunctionality.html" class="btn btn-neutral float-left" title="GraSPI functionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

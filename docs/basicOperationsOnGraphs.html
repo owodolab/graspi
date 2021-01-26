@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Example of usage" href="exampleOfUsage.html" />
+    <link rel="next" title="Credit" href="credit.html" />
     <link rel="prev" title="Basic Definitions" href="basicDefinitions.html" /> 
 </head>
 
@@ -87,11 +87,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="listOfDescriptors.html">List of Descriptors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basicDefinitions.html">Basic Definitions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Operations On Graphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exampleOfUsage.html">Example of usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Operations On Graphs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#identifying-connected-components-of-a-graph">Identifying connected components of a graph</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="credit.html">Credit</a></li>
 </ul>
 
@@ -160,6 +164,82 @@
             
   <div class="section" id="basic-operations-on-graphs">
 <h1>Basic Operations On Graphs<a class="headerlink" href="#basic-operations-on-graphs" title="Permalink to this headline">¶</a></h1>
+<p>For a targeted application, characterization can be posed as a graph query
+operation using three graph-based algorithms:</p>
+<ul class="simple">
+<li><p>finding connected components, and</p></li>
+<li><p>computing the shortest paths.</p></li>
+<li><p>the graph filtering operation which enables the query definitions that capture
+some aspects of underlying physics.</p></li>
+</ul>
+<div class="section" id="identifying-connected-components-of-a-graph">
+<h2>Identifying connected components of a graph<a class="headerlink" href="#identifying-connected-components-of-a-graph" title="Permalink to this headline">¶</a></h2>
+<p>We start by explaining the link between the question of quantifying the number
+of individual domains and the graph queries. Here, we aim to identify the
+sub-domains of the morphology, where the sub-domain is part of the morphology
+that is surrounded by sub-domains of other color(s). We accomplish it by
+assigning an index of their connected component (CC) to each vertex.
+The process requires two steps. First, we define the filtered graph by
+masking the edges connecting  vertices of different labels/colors. In other words,
+we ensure that only the edges connecting vertices of the same label are considered.
+In the second step, we invoke the the connected components algorithm on  the filtered graph.</p>
+<p>Translating this process into the code requires only few lines of code (included below).
+We use data structure and functions from the <code class="docutils literal notranslate"><span class="pre">boost</span></code> library.
+First, the code defines the predicate to facilitate graph filtering via
+class <code class="docutils literal notranslate"><span class="pre">edge_same_color_predicate</span></code>. This class has <code class="docutils literal notranslate"><span class="pre">operator()</span></code> that checks
+if a given edge satisfies the filtering condition (returns a <code class="docutils literal notranslate"><span class="pre">true</span></code>
+or a <code class="docutils literal notranslate"><span class="pre">false</span></code> value if the condition is satisfied or not). In this case, we
+check the condition whether the colors of the two vertices that build the edge
+<code class="docutils literal notranslate"><span class="pre">e</span></code> (<code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">target</span></code>) are the same. To look up the labels of vertices
+constituting the edge, the class additionally stores pointers to the graph
+<code class="docutils literal notranslate"><span class="pre">G_</span></code> and the vector of vertices labels (<code class="docutils literal notranslate"><span class="pre">color_</span></code>).</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">edge_same_color_predicate</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">edge_same_color_predicate</span><span class="p">()</span> <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">color_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="n">edge_same_color_predicate</span><span class="p">(</span><span class="k">const</span> <span class="n">gt</span><span class="o">::</span><span class="n">graph_t</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">COLOR</span><span class="o">&gt;&amp;</span> <span class="n">color</span><span class="p">)</span>
+           <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span> <span class="n">color_</span><span class="p">(</span><span class="o">&amp;</span><span class="n">color</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+     <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">gt</span><span class="o">::</span><span class="n">edge_t</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">((</span><span class="o">*</span><span class="n">color_</span><span class="p">)[</span><span class="n">boost</span><span class="o">::</span><span class="n">source</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G_</span><span class="p">)]</span> <span class="o">==</span> <span class="p">(</span><span class="o">*</span><span class="n">color_</span><span class="p">)[</span><span class="n">boost</span><span class="o">::</span><span class="n">target</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G_</span><span class="p">)]);</span>
+      <span class="p">}</span>
+      <span class="k">private</span><span class="o">:</span>
+      <span class="k">const</span> <span class="n">gt</span><span class="o">::</span><span class="n">graph_t</span><span class="o">*</span> <span class="n">G_</span><span class="p">;</span>
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">COLOR</span><span class="o">&gt;*</span> <span class="n">color_</span><span class="p">;</span>
+      <span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>Once the graph filtering is defined, it is used to filter the original graph.
+The function to determine the connected components in the graph is included below. It consists of three lines:</p>
+<ol class="arabic simple">
+<li><p>the declaration of the object <code class="docutils literal notranslate"><span class="pre">p</span></code> of type defined above,</p></li>
+<li><p>the declaration of the filtered graph <code class="docutils literal notranslate"><span class="pre">FG</span></code> of type <code class="docutils literal notranslate"><span class="pre">filtered_graph</span></code> defined in <code class="docutils literal notranslate"><span class="pre">boost::graph</span></code> library and</p></li>
+<li><p>the call of function <code class="docutils literal notranslate"><span class="pre">connected_components</span></code> from <code class="docutils literal notranslate"><span class="pre">boost::graph</span></code> library that determines connected components in the filtered graph.</p></li>
+</ol>
+<p>The outcome from this procedure is stored in the vector <code class="docutils literal notranslate"><span class="pre">components</span></code> with integer values that corresponds to the index of the connected components.</p>
+<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">DetermineConnectedComponents</span><span class="p">(</span><span class="n">gt</span><span class="o">::</span><span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">COLOR</span><span class="o">&gt;&amp;</span> <span class="n">color</span><span class="p">,</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">components</span><span class="p">){</span>
+    <span class="n">edge_same_color_predicate</span> <span class="n">p</span><span class="p">(</span> <span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">color</span><span class="p">);</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">filtered_graph</span><span class="o">&lt;</span><span class="n">gt</span><span class="o">::</span><span class="n">graph_t</span><span class="p">,</span> <span class="n">edge_same_color_predicate</span><span class="o">&gt;</span> <span class="n">FG</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">connected_components</span><span class="p">(</span><span class="n">FG</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">components</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 </div>
 
 
@@ -170,7 +250,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exampleOfUsage.html" class="btn btn-neutral float-right" title="Example of usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="credit.html" class="btn btn-neutral float-right" title="Credit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="basicDefinitions.html" class="btn btn-neutral float-left" title="Basic Definitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
