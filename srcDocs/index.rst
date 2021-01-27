@@ -20,11 +20,12 @@ post-processing the raw results from the graph analysis is provided.
 
    listOfDescriptors
    graspiFunctionality
+   inputFormats
+   exampleOfUsage
+   build
    graphBasedRepresentation
    basicDefinitions
    basicOperationsOnGraphs
-   exampleOfUsage
-   install
    credit
 
 

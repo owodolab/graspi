@@ -34,7 +34,7 @@ release = 'July 2020'
 # ones.
 extensions = [
               "sphinx_rtd_theme",
-              "breathe" ,
+              "breathe" 
               ]
 
 # Breathe Configuration
@@ -43,6 +43,13 @@ breathe_projects = {
     "GraSPI": "doxygen/xml/",
 }
 breathe_default_project = "GraSPI"
+
+
+# Tell sphinx what the primary language being documented is.
+primary_domain = 'cpp'
+
+# Tell sphinx what the pygments highlight language should be.
+highlight_language = 'cpp'
 
 
 # Add any paths that contain templates here, relative to this directory.
