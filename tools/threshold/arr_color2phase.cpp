@@ -24,7 +24,7 @@ int main(int argc, char* argv[])try{
 
     std::ifstream f_in(argv[1]);
     std::ofstream f_out(argv[2]);
-    int threshold = atoi(argv[3]);
+    double threshold = atof(argv[3]);
     std::ostringstream oss_out_1;
     std::ostringstream oss_out_2;
 
@@ -50,14 +50,14 @@ int main(int argc, char* argv[])try{
 
     if( (!f_in) && (!f_in.eof()) ) {
 	std::cerr << "Problem with the stream!!!" << tmp << std::endl;
-	return false;
+        return -1;
     }
 
     if(verbose) std::cerr << "(arr_color2phase)"
 			  << " nofNodes: " << nofNodes
 			  << std::endl;
 
-    int phase;
+    double phase;
     for(int i = 0; i < nofNodes; i++){
 	f_in >> phase;
 	if (phase < threshold) oss_out_2 << "1 ";

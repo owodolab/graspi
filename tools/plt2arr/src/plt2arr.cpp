@@ -48,7 +48,7 @@ int main(int argc, char* argv[])try{
 
 	if( (!f_in) && (!f_in.eof()) ) {
 	    std::cerr << "Problem with the stream!!!" << tmp << std::endl;
-	    return false;
+	    return -1;
 	}
 
 	// read header - begin
@@ -153,7 +153,7 @@ int main(int argc, char* argv[])try{
 
 		double x,y,z;
 		double x_prev, y_prev,z_prev = 0;
-		int phase;
+		double phase;
 		for(int i = 0; i < nofNodes; i++){
 		    f_in >> x;
 		    if(nsd > 1) f_in >> y;
