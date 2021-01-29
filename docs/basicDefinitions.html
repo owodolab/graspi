@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basic Definitions &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Operations On Graphs" href="basicOperationsOnGraphs.html" />
+    <link rel="prev" title="Graph-based representation of microstructure" href="graphBasedRepresentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Basic Definitions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/basicDefinitions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-definitions">
+<span id="basicdefinitions"></span><h1>Basic Definitions<a class="headerlink" href="#basic-definitions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>An undirected graph <span class="math notranslate nohighlight">\(G=(V,E)\)</span> is defined by a set of vertices, <span class="math notranslate nohighlight">\(V\)</span>,
+and a set of edges, <span class="math notranslate nohighlight">\(E\)</span>, where each  edge in <span class="math notranslate nohighlight">\(E\)</span> is an unordered
+pair of vertices drawn from <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p>A weighted undirected graph <span class="math notranslate nohighlight">\(G=(V,E,W)\)</span> is an undirected graph
+<span class="math notranslate nohighlight">\((V,E)\)</span> with an associated weight function,
+<span class="math notranslate nohighlight">\(W: E \rightarrow {\mathbb R}_{+}\)</span>, that assigns a non-negative real
+weight to each edge in <span class="math notranslate nohighlight">\(E\)</span>.</p></li>
+<li><p>A labeled weighted undirected graph <span class="math notranslate nohighlight">\(G=(V,E,W, L)\)</span> is a weighted
+undirected graph <span class="math notranslate nohighlight">\((V,E,W)\)</span> with an associated labeling function, <span class="math notranslate nohighlight">\(L\)</span>,
+that assigns a label to each vertex in <span class="math notranslate nohighlight">\(V\)</span>.
+In GraSPI, we label each vertex by a color.</p></li>
+<li><p>A path between a source vertex, <span class="math notranslate nohighlight">\(s \in V\)</span>, and a target vertex,
+<span class="math notranslate nohighlight">\(t \in V\)</span> is a sequence <span class="math notranslate nohighlight">\(p=[v_0, v_1, \dots v_i \dots v_k]\)</span> of
+vertices such that <span class="math notranslate nohighlight">\(v_o=s\)</span>, <span class="math notranslate nohighlight">\(v_k=t\)</span> and for each <span class="math notranslate nohighlight">\(i\)</span> from
+<span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(i-1\)</span>, vertices <span class="math notranslate nohighlight">\(v_i\)</span> and <span class="math notranslate nohighlight">\(v_{i+1}\)</span> are
+adjacent in <span class="math notranslate nohighlight">\(G\)</span>. The length of path <span class="math notranslate nohighlight">\(p\)</span> is
+<span class="math notranslate nohighlight">\(\sum_{i=0}^{k-1}w(e(v_i,v_{i+1}))\)</span>.</p></li>
+<li><p>A shortest path between a source vertex <span class="math notranslate nohighlight">\(s \in V\)</span> and a target vertex
+<span class="math notranslate nohighlight">\(t \in V\)</span> is a path between <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(t\)</span> that is of the
+shortest length among all paths between <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(t\)</span> in <span class="math notranslate nohighlight">\(G\)</span>.
+The distance between vertices <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(t\)</span> in <span class="math notranslate nohighlight">\(G\)</span> is the
+length of a shortest path between <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(t\)</span> in <span class="math notranslate nohighlight">\(G\)</span>.
+If no such path exists, the distance is defined as infinity.
+Note that the shortest path between a pair of vertices need not be unique,
+but the distance between them is unique.</p></li>
+<li><p>A subgraph of <span class="math notranslate nohighlight">\(G\)</span> is a graph <span class="math notranslate nohighlight">\(G' = (V', E')\)</span> such that
+<span class="math notranslate nohighlight">\(V' \subseteq V\)</span> and <span class="math notranslate nohighlight">\(E' \subseteq E\)</span>. A vertex-induced subgraph
+on vertex set <span class="math notranslate nohighlight">\(V' \subseteq V\)</span> is the maximal subgraph with the vertex
+set <span class="math notranslate nohighlight">\(V'\)</span>.</p></li>
+<li><p>A graph <span class="math notranslate nohighlight">\(G\)</span> is connected if there is a path between any pair of vertices
+in <span class="math notranslate nohighlight">\(G\)</span>. A connected component <span class="math notranslate nohighlight">\(C\)</span> in <span class="math notranslate nohighlight">\(G\)</span> is a maximal connected subgraph of <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basicOperationsOnGraphs.html" class="btn btn-neutral float-right" title="Basic Operations On Graphs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="graphBasedRepresentation.html" class="btn btn-neutral float-left" title="Graph-based representation of microstructure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Devyani Jivani, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
