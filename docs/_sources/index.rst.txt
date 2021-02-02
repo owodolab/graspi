@@ -18,14 +18,14 @@ post-processing the raw results from the graph analysis is provided.
    :maxdepth: 2
    :caption: Contents:
 
-   listOfDescriptors
    graspiFunctionality
    inputFormats
    exampleOfUsage
-   build
+   listOfDescriptors
    graphBasedRepresentation
    basicDefinitions
    basicOperationsOnGraphs
+   build
    credit
 
 

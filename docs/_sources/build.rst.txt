@@ -3,4 +3,12 @@ Build
 =================
 
 Go to src folder and at the command line:
+.. code-block:: bash
+
   make
+
+
+As a result the executable ``graspi`` will be compiled. |graspi| requires boost
+library, you need to download it and install it. If the location of boost is not added to the environment variable (in unix),
+you need to explicity add it to the search paths in the makefile.
+|graspi| at the time of release was tested with version boost_1_72_0

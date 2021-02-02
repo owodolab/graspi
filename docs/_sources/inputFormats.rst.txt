@@ -5,7 +5,8 @@ Input Formats
 |graspi| accepts two input formats for structured and unstructured data.
 The structured data assumes that size of discrete points in each dimension is known.
 The dimensionality is provided in the first line of the input file: :math:`n_x, n_y, n_z`.
-The reminder of the input file contains the array (row-wise representation of the corresponding matrix) with the corresponding phases from the set of available labels. Since the data is structured, the local neighborhood can be constructed as the data is read by |graspi|.
+The reminder of the input file contains the array (row-wise representation of the corresponding matrix) with the corresponding phases from the set of available labels.  It is a single contiguous block in row-major order (sometimes called “C order”).
+Since the data is structured, the local neighborhood can be constructed as the data is read by |graspi|.
 
 .. image:: figs/simpleMorphExample.png
   :width: 400
@@ -16,7 +17,9 @@ The input file for the above figure
 .. literalinclude:: figs/simpleMorphExample.txt
     :linenos:
     :language: none
-    :lines: 1, 3-5
+
+
+Note that the first row is considered to be adjacent to the cathode (BLUE meta-vertex), while the last row is considered to be adjacent to anode (RED meta vertex).
 
 The second format corresponds to unstructured data, where information about
 phases needs to provided along with the neighborhood.

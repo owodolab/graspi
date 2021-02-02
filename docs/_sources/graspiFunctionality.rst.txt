@@ -2,7 +2,28 @@
  GraSPI functionality
 ==============================================
 
-Start here, this is the main functionality of graspi.
-GraSPI computes descriptors
+|graspi| computes a library of descriptors for a segmented microstructure
+and computes descriptors that are relevant for organic solar cells performance.
+The package computes two types of descriptors: scalar descriptors and array descriptors.
+The scalar descriptors are directed to the standard output, while array descriptors are directed to the corresponding file.
+The array descriptors corresponds to the shortest distances and are saved in the following files:
+
+* DistancesGreenToRedViaBlack.txt
+* DistancesGreenToBlueViaWhite.txt
+* DistancesBlackToRed.txt
+* DistancesWhiteToBlue.txt
+* DistancesBlackToGreen.txt
+* TortuosityBlackToRed.txt
+* TortuosityWhiteToBlue.txt
+
+
+The names of the file indicates the conditions used to filter the graph.
+For example file DistancesBlackToGreen.txt stores all the shortest distances between any donor/black/0 voxel and the interface/green.
+If there is no direct connection between source vertex and the target vertex, the distance is set to inifinity.
+This is is how ``boost`` library is initializing the distance vector.
+The distances are save in the order of the labels from the input file.
+The infinity distances are maintained to maintain capability to map back the distances to the input voxels.
+
+|graspi| provides one function where a set of descriptors are computed - see documentation for more details:
 
 .. doxygenfunction:: graspi::compute_descriptors_only

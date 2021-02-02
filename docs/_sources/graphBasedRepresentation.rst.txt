@@ -31,6 +31,11 @@ First order neighbors one lattice distance away have an edge weight of :math:`1`
 second order neighbors :math:`\sqrt{2}` lattice units away have an edge weight
 of :math:`\sqrt{2}` weight.
 For 3D systems, third order neighbors are included.
+To facilitate the graph descriptor computations we introduce the edge labels
+:math:`G = (V,E,W,L,L_e)` (in addition to the vertex labels :math:`L`).
+The edge color set consists of: :math:`f, s, t`, that correspodns to first, second and third order descriptors.
+
+
 
 The graph :math:`G` can be constructed for several types of data.
 In Figure, the graph construction is showcased for three types of data: structured two-phase morphology, structured three-phase morphology and unstructured two-phase morphology.

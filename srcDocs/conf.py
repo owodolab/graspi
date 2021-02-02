@@ -20,8 +20,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'GraSPI'
-copyright = '2020, Olga Wodo, Devyani Jivani, Baskar Ganapathysubramanian, Jaroslaw Zola'
-author = 'Olga Wodo, Devyani Jivani, Baskar Ganapathysubramanian, Jaroslaw Zola'
+copyright = '2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola'
+author = 'Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola'
 
 # The full version, including alpha/beta/rc tags
 release = 'July 2020'
@@ -34,7 +34,7 @@ release = 'July 2020'
 # ones.
 extensions = [
               "sphinx_rtd_theme",
-              "breathe" 
+              "breathe"
               ]
 
 # Breathe Configuration
@@ -76,4 +76,3 @@ html_static_path = ['_static']
 rst_prolog = """
 .. |graspi| replace:: ``GraSPI``
 """
-
