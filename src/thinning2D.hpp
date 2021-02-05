@@ -13,6 +13,7 @@
 #include "performance_indicators.hpp"
 #include "graph_cc.hpp"
 #include "skeletal-descriptors.hpp"
+#include "skeletonization.hpp"
 
 namespace graspi {
 
@@ -23,17 +24,37 @@ std::vector<desc_t> compute_skeletal_descriptors(int **dataMatrix, int nx, int n
     
     int **skelImageMatrix;
     
-    **skelImageMatrix = skeletonization2D(dataMatrix, nx, ny);
+//    skelImageMatrix = new int*[ny];
+//    for(int i = 0; i < (ny); i++) { // Matrix to store the skeleton (ny * nx)
+//        skelImageMatrix[i] = new int[nx];
+//    }
+ //   **skelImageMatrix = initializeSkelMatrix(skelImageMatrix, nx, ny, 0);
+
+    
+    skelImageMatrix = skeletonization2D(dataMatrix, nx, ny);
     
     graspi::SKELDESC          skeletal_descriptors;    //container (vector) storing all skeletal descriptors
     
     skeletal_descriptors.initiate_skeletal_descriptors();
+    int skelpixel = 0;
+    
+    std::cout << "\n\n\n";
+    for(int i=0; i < ny;i++){
+        for(int j=0; j < nx ;j++){
+            if(skelImageMatrix[i][j] == 1){
+                std::cout << skelImageMatrix[i][j];
+                std::cout << " ";
+                skelpixel++;
+            }
+        }
+        std::cout << "\n";
+    }
+    
+    skeletal_descriptors.update_desc("SKEL_n",skelpixel);
     
     return skeletal_descriptors.skeldesc;
 }
-    
-    
+        
 }
-
 
 #endif /* thinning2D_h */

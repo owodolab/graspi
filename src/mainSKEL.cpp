@@ -37,23 +37,34 @@ int main() {
     int bgPixel = 0;
     
     // Allocate memory
-    dataMatrix = new int*[ny+(2*p)];
-    for(int i = 0; i < ny+(2*p); i++) { // Matrix with dimensions (ny+2) * (nx+2)
-        dataMatrix[i] = new int[nx+ (2*p)];
+    dataMatrix = new int*[ny];
+    for(int i = 0; i < ny; i++) { // Matrix with dimensions (ny+2) * (nx+2)
+        dataMatrix[i] = new int[nx];
     }
-    for (int i = 0; i < ny+(2*p); i++) { // Initializing with background pixels
-        for (int j = 0; j < nx+(2*p); j++) {
-            dataMatrix[i][j] = bgPixel;
-        }
-    }
+//    for (int i = 0; i < ny+(2*p); i++) { // Initializing with background pixels
+//        for (int j = 0; j < nx+(2*p); j++) {
+//            dataMatrix[i][j] = bgPixel;
+//        }
+//    }
     
-    for(int i = p; i < ny+p; i++) { // Read data into matrix
-        for(int j = p; j < (nx+p); j++) {
+    for(int i = 0; i < ny; i++) { // Read data into matrix
+        for(int j = 0; j < nx; j++) {
             f >> dataMatrix[i][j];
         }
     }
     f.close();
     
+    for(int i=0; i < ny;i++){
+            for(int j=0; j < nx ;j++){
+ //               if(skelImageMatrix[i][j] == 1){
+                    std::cout << dataMatrix[i][j];
+                    std::cout << " ";
+                }
+                std::cout << "\n";
+            }
+        
+        
+        
     graspi::compute_skeletal_descriptors(dataMatrix, nx, ny);
     
     return 0;

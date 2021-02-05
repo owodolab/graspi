@@ -24,8 +24,19 @@ namespace graspi {
 typedef struct{
     int row,col;
 }pixel;
+
+int** initializeSkelMatrix(int** inputMatrix, int ncol, int nrow, int initValue) {
+    
+    for (int i = 0; i < nrow; i++) { // Initializing with background pixels
+        for (int j = 0; j < ncol; j++) {
+            inputMatrix[i][j] = initValue;
+        }
+    }
+    return inputMatrix;
+}
+
  
-int mirrorPadding(int **dataMatrix, int p, int nx, int ny) { // padding the image with reflection of the image itself
+int** mirrorPadding(int** dataMatrix, int p, int nx, int ny) { // padding the image with reflection of the image itself
 
     for(int i = 1; i < p+1; i++) { // Flip 20 pixels of matrix vertically on the top and bottom
         for(int j = p; j < nx + p; j++) {
@@ -40,10 +51,10 @@ int mirrorPadding(int **dataMatrix, int p, int nx, int ny) { // padding the imag
             dataMatrix[i][(nx+(p-1)) + j] = dataMatrix[i][(nx+p) - j];
         }
     }
-    return **dataMatrix;
+    return dataMatrix;
 }
 
-int getNeighbors(int **dataMatrix, int row, int col, const int phasePixel){ //Number of neighbors that belong to the image
+int getNeighbors(int** dataMatrix, int row, int col, const int phasePixel){ //Number of neighbors that belong to the image
 
     return ((dataMatrix[row-1][col]==phasePixel) //P2
             +(dataMatrix[row-1][col+1]==phasePixel) //P3
@@ -55,7 +66,7 @@ int getNeighbors(int **dataMatrix, int row, int col, const int phasePixel){ //Nu
             +(dataMatrix[row-1][col-1]==phasePixel)); //P9
 }
  
-int getTransitions(int **dataMatrix, int row,int col, const int phasePixel, const int bgPixel){//Number of transitions from background pixel to phase pixel
+int getTransitions(int** dataMatrix, int row,int col, const int phasePixel, const int bgPixel){//Number of transitions from background pixel to phase pixel
     return(((dataMatrix[row-1][col]==bgPixel && dataMatrix[row-1][col+1]==phasePixel) //P2P3
             +(dataMatrix[row-1][col+1]==bgPixel && dataMatrix[row][col+1]==phasePixel) //P3P4
             +(dataMatrix[row][col+1]==bgPixel && dataMatrix[row+1][col+1]==phasePixel) //P4P5
@@ -67,7 +78,7 @@ int getTransitions(int **dataMatrix, int row,int col, const int phasePixel, cons
 }
 
 
-int thinTest1(int **dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
+int thinTest1(int** dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
     int neighbours = getNeighbors(dataMatrix, row, col, phasePixel);
  
     return ((neighbours>=2 && neighbours<=6) //Condition 1
@@ -76,7 +87,7 @@ int thinTest1(int **dataMatrix, int row, int col, const int phasePixel, const in
         && (dataMatrix[row][col+1]==bgPixel||dataMatrix[row+1][col]==bgPixel||dataMatrix[row][col-1]==bgPixel)); //P4, P6, P8 Condition 4
 }
 
-int thinTest2(int **dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
+int thinTest2(int** dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
     int neighbours = getNeighbors(dataMatrix, row, col, phasePixel);
  
     return ((neighbours>=2 && neighbours<=6) //Condition 1
@@ -85,15 +96,41 @@ int thinTest2(int **dataMatrix, int row, int col, const int phasePixel, const in
         && (dataMatrix[row-1][col]==bgPixel||dataMatrix[row+1][col]==bgPixel||dataMatrix[row][col-1]==bgPixel)); // P2, P6, P8 Condition 4
 }
  
-int skeletonization2D(int **dataMatrix, int nx, int ny){
+int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
  
     int firstny = 1, firstnx = 1, lastny, lastnx, i, j, count, endflag;
     pixel* delpixel; //pixels for deletion
     int p = 15; //padding
     const int bgPixel = 0;
     const int phasePixel = 1;
- 
-    **dataMatrix = mirrorPadding(dataMatrix, p, nx, ny);
+    
+    int** dataMatrix;
+    
+    dataMatrix = new int*[ny + (2*p)];
+    for(int i = 0; i < (ny + (2*p)); i++) { // Matrix with dimensions (ny+2) * (nx+2)
+        dataMatrix[i] = new int[nx + (2*p)];
+    }
+    
+    dataMatrix = initializeSkelMatrix(dataMatrix, nx + (2*p), ny + (2*p), bgPixel);
+    
+    for(int i = p; i < ny+p; i++){ // Assign input image matrix values to the data matrix
+        for(int j = p; j < (nx+p); j++){
+            dataMatrix[i][j] = inputdataMatrix[i-p][j-p];
+            std::cout << dataMatrix[i][j];
+        }
+        std::cout << '\n';
+    }
+    
+    
+    dataMatrix = mirrorPadding(dataMatrix, p, nx, ny);
+    
+    for(int i = 0; i < ny + (2*p); i++){ // Display image matrix with padding
+        for(int j = 0; j < nx + (2*p); j++){
+            std::cout << dataMatrix[i][j];
+        }
+        std::cout << '\n';
+    }
+    
     lastny = ny + ((2*p) - 2);
     lastnx = nx + ((2*p) - 2);
     char elapsedTimeFile[100] = "/Users/devyanijivani/Desktop/thinning2D/timeStructOrig.txt";
@@ -161,8 +198,31 @@ int skeletonization2D(int **dataMatrix, int nx, int ny){
     }while(endflag==1);
 
     delete delpixel;
- 
-    return **dataMatrix;
+    
+    for(int i = 0; i < ny + (2*p); i++){ // Display skeleton matrix with padding
+        for(int j = 0; j < nx + (2*p); j++){
+            std::cout << dataMatrix[i][j];
+        }
+        std::cout << '\n';
+    }
+    
+    int** skelMatrix;
+    skelMatrix = new int*[ny];
+    for(int i = 0; i < ny; i++) { // Matrix with dimensions (ny) * (nx)
+        skelMatrix[i] = new int[nx];
+    }
+    skelMatrix = initializeSkelMatrix(skelMatrix, nx, ny, bgPixel);
+    
+    for (int i = 0; i < ny; i++) {
+        for (int j = 0; j < nx; j++) {
+            skelMatrix[i][j] = dataMatrix[i+p][j+p];
+            std::cout << skelMatrix[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    
+    return skelMatrix;
 }
+
 }
 #endif /* skeletonization_h */

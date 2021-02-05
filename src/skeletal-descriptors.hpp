@@ -31,6 +31,19 @@ namespace graspi {
             }
         }
         
+        bool update_desc(std::string desc_name,float value){
+            
+            find_desc.set_desc(desc_name);
+            std::vector< std::pair<float, std::string> >::iterator it;
+            it = std::find_if( skeldesc.begin(), skeldesc.end(), find_desc );
+            if (it == skeldesc.end())
+                return false;
+            else{
+                (*it).first=value;
+                return true;
+            }
+        }
+        
     };// struct SKELDESC
 }
 
