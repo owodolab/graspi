@@ -12,7 +12,7 @@
 #include "thinning2D.hpp"
 #include "skeletal-descriptors.hpp"
 
-int main() {
+int main(int argc, char *argv[]) {
  
 //    int vertex_colors []= {1, 1, 1, 0, 0, 0, 1, 0};
 //    int if_per = false;
@@ -20,9 +20,18 @@ int main() {
 //    int ny = 4;
 //    int nz = 1;
 //    float pixelsize = 1.0;
-        
-    const std::string& inputFile = "/Users/devyanijivani/Desktop/GraspiXcode/GraspiXcode/data_circle.txt";
-    const std::string& outputFile = "/Users/devyanijivani/Desktop/GraspiXcode/GraspiXcode/data_circleskel1.txt";
+
+//    printf("Program Name Is: %s",argv[0]); 
+    if(argc==1) 
+        printf("\nNo Extra Command Line Argument Passed Other Than Program Name"); 
+//    if(argc>=2) 
+//    { 
+//            printf("\nargv[%d]: %s",1,argv[1]); 
+//    }
+
+    const std::string& inputFile = argv[1];
+    const std::string& outputFile = argv[2];    
+
     int nx, ny;
     //graspi::thinning2D(inputFile,outputFile);
  //   graspi::compute_descriptors_only(vertex_colors, nx, ny, nz = 1, pixelsize, if_per);

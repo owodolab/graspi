@@ -99,7 +99,6 @@ int thinTest2(int** dataMatrix, int row, int col, const int phasePixel, const in
 int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
  
     int firstny = 1, firstnx = 1, lastny, lastnx, i, j, count, endflag;
-    pixel* delpixel; //pixels for deletion
     int p = 15; //padding
     const int bgPixel = 0;
     const int phasePixel = 1;
@@ -141,7 +140,7 @@ int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
     file.close();
 
     count = 0;
-    delpixel = (pixel*)malloc((lastny-firstny+1)*(lastnx-firstnx+1)*sizeof(pixel));
+    pixel* delpixel = new pixel [(lastny-firstny+1)*(lastnx-firstnx+1)]; //pixels for deletion
     do{
     // Record start time
         auto start = std::chrono::high_resolution_clock::now();

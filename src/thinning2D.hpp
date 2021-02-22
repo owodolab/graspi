@@ -14,6 +14,7 @@
 #include "graph_cc.hpp"
 #include "skeletal-descriptors.hpp"
 #include "skeletonization.hpp"
+#include "node_identification.hpp"
 
 namespace graspi {
 
@@ -49,6 +50,8 @@ std::vector<desc_t> compute_skeletal_descriptors(int **dataMatrix, int nx, int n
         }
         std::cout << "\n";
     }
+    
+    identifyIntersections(skelImageMatrix, nx, ny, 1);
     
     skeletal_descriptors.update_desc("SKEL_n",skelpixel);
     

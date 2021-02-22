@@ -14,7 +14,6 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
-#include <stdbool.h>
 #include <string>
 
 
@@ -27,6 +26,8 @@
 
 typedef struct{
     int count;
+    int even;
+    int odd;
     bool direction[8];
 }neighbor;
 
@@ -37,20 +38,46 @@ neighbor* getNeighbors(node* thispixel, node* skeleton, int skelsize){ //Number 
     node neighbors[8] = {{thispixel->row, thispixel->col - 1}, {thispixel->row - 1, thispixel->col - 1}, {thispixel->row - 1, thispixel->col}, {thispixel->row - 1, thispixel->col + 1}, {thispixel->row, thispixel->col + 1}, {thispixel->row + 1, thispixel->col + 1}, {thispixel->row + 1, thispixel->col}, {thispixel->row + 1,
         thispixel->col - 1}};
     neighbordata->count = 0;
+    neighbordata->even = 0;
+    neighbordata->odd = 0;
     for(int i = 0; i < 8; i++){
         neighbordata->direction[i] = 0;
         for(int j=0; j < skelsize; j++){
             if (neighbors[i].row == skeleton[j].row && neighbors[i].col == skeleton[j].col){
                 neighbordata->direction[i] = 1;
                 neighbordata->count++ ;
+                if(i % 2 == 0) {
+                    neighbordata->even++;
+                    break;
+                }
+                else {
+                    neighbordata->odd++;
+                    break;
+                }
                 std::cout << i << " , " << j << "\n";
-                break;
             }
         }
     }
     std::cout << neighbordata->count++;
     return neighbordata;
 }
+
+bool getNeighborPosition(neighbor* neighbordata, int* ndir, int dir_count){
+    bool neighbor_exists = false;
+    int this_dir;
+    for(int i = 0; i < dir_count; i++){
+        this_dir = ndir[i];
+        if (neighbordata->direction[this_dir] == 1){
+            neighbor_exists = true;
+        }
+        else {
+            return false;
+        }
+    }
+    return neighbor_exists;
+}
+
+
 
 int identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) {
     
@@ -70,12 +97,12 @@ int identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) 
  
     neighbor* thispixel_neighbors;
     thispixel_neighbors = (neighbor*)malloc( sizeof(neighbor));
-    node* thispixel;
-    thispixel = (node*)malloc(sizeof(node));
-    node* potentialJunction;
-    node* branchEnd;
-    potentialJunction = (node*)malloc((ny+1)*(nx+1)*sizeof(node));
-    branchEnd = (node*)malloc((ny+1)*(nx+1)*sizeof(node));
+    node* thispixel = new node;
+//    thispixel = (node*)malloc(sizeof(node));
+    node* potentialJunction = new node [(ny+1)*(nx+1)];
+    node* branchEnd = new node [(ny+1)*(nx+1)];
+//    potentialJunction = (node*)malloc((ny+1)*(nx+1)*sizeof(node));
+//    branchEnd = (node*)malloc((ny+1)*(nx+1)*sizeof(node));
     
     int endcount = 0, potjunctcount = 0;
     for(int i = 0; i < skelpixel; i++) {
@@ -99,12 +126,15 @@ int identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) 
     // Identify junction nodes from potential junction nodes
     
     for(int i = 0; i < potjunctcount; i++) {
-        node* curpixel;
-        curpixel = (node*)malloc(sizeof(node));
+        node* curpixel = new node;
+//        curpixel = (node*)malloc(sizeof(node));
         curpixel = &potentialJunction[i];
-        neighbor* potJunc_neighbors;
-        potJunc_neighbors = (neighbor*)malloc(sizeof(neighbor));
+        neighbor* potJunc_neighbors = new neighbor;
+        neighbor* first_neighbors = new neighbor;
+        first_neighbors = getNeighbors(curpixel, skeleton, skelpixel - 1);
+//        potJunc_neighbors = (neighbor*)malloc(sizeof(neighbor));
         potJunc_neighbors = getNeighbors(curpixel, potentialJunction, potjunctcount);
+
         
     }
     return 0;
