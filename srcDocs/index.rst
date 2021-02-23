@@ -29,6 +29,11 @@ post-processing the raw results from the graph analysis is provided.
    credit
 
 
+.. toctree::
+         :maxdepth: 2
+
+         api/library_root
+
 
 Indices and tables
 ==================

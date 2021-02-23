@@ -1,0 +1,954 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Library API &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace graspi" href="namespace_graspi.html" />
+    <link rel="prev" title="Credit" href="../credit.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Library API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-api">Full API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_graspi.html">Namespace graspi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1_c_c.html">Struct CC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1_d_e_s_c.html">Struct DESC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1dim__a__t.html">Struct dim_a_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1dim__g__t.html">Struct dim_g_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1foo__no__w__abs.html">Struct foo_no_w_abs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1foo__w__abs.html">Struct foo_w_abs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structgraspi_1_1foo__w__diss.html">Struct foo_w_diss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classgraspi_1_1connect__color__green.html">Class connect_color_green</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classgraspi_1_1connect__relevant__meta__vertex.html">Class connect_relevant_meta_vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classgraspi_1_1connect__same__color.html">Class connect_same_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classgraspi_1_1connect__same__color__and__relevant__meta__vertex.html">Class connect_same_color_and_relevant_meta_vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classgraspi_1_1find__desc__of__name.html">Class find_desc_of_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classtime__check.html">Class time_check</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601.html">Function graspi::add_edge_to_graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators_8hpp_1a2e4749cd6042c411d70aa47b9554befa.html">Function graspi::all_perfomance_indicators_2phases(graspi::DESC&amp;, graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const dim_a_t&amp;, const edge_weights_t&amp;, const edge_colors_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67.html">Function graspi::all_perfomance_indicators_2phases(graspi::DESC&amp;, std::ostream&amp;, graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const dim_a_t&amp;, const edge_weights_t&amp;, const edge_colors_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, const std::string&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4.html">Function graspi::all_perfomance_indicators_3phases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8.html">Function graspi::build_graph(std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5.html">Function graspi::build_graph(const std::string&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852.html">Function graspi::build_graph(graph_t *&amp;, const dim_g_t&amp;, vertex_colors_t&amp;, dim_a_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;, double, bool)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graspi_8hpp_1a5f1bb071296a4badb95419918641de77.html">Function graspi::compute_descriptors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graspi_a_p_i_8hpp_1a294849c801959ea7513ffb782d103f98.html">Function graspi::compute_descriptors_only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1ab9c0f50386d5c15fc51f6b99d8ac4270.html">Function graspi::compute_pos_2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929.html">Function graspi::compute_pos_3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7.html">Function graspi::compute_shortest_distance_from_sourceC_to_targetC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b.html">Function graspi::determine_and_print_tortuosity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__cc_8hpp_1aea5b1a326446657e7287655d78ce757c.html">Function graspi::determine_basic_stats_of_ccs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__cc_8hpp_1a0127f742b9a0a14a9f5dccb2acd56548.html">Function graspi::determine_number_of_CCs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__dijkstra_8hpp_1a28e3a15b3334d5b397a3d34372e03cfe.html">Template Function graspi::determine_shortest_distances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a5bba1fdf9b55141a186eabaf238d8553.html">Function graspi::determine_tortuosity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8271c9ba4fea31400bdb2794601fa005.html">Function graspi::find_useful_cc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a9cf2d83b96f6a2237f46fb338666d5cf.html">Function graspi::generate_ngbr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1ae255b5ecc645b49c4d3bf1dc87a73528.html">Function graspi::identify_black_vertices_connected_to_green</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8a9d93f04353b4b1b2905656a2e50b2c.html">Function graspi::identify_complementary_paths_from_green</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__cc_8hpp_1af0904f04b234b1219639b64e22b424d3.html">Function graspi::identify_connected_components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a198a729cde1836cb5d6e79d870e82fd2.html">Function graspi::identify_n_vertices_within_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1add6ca43f27b7b5f15d15536d332596db.html">Function graspi::identify_n_weighted_vertices_within_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a4cf5e5deebbc874bdda865d78e0bf3ec.html">Function graspi::identify_useful_triple_black_white_green</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac200e273b19362a1b0d8e3f264f3a641.html">Function graspi::identify_weighted_vertices_within_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f.html">Function graspi::initlize_colors_meta_vertices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html">Function graspi::make_update_edge_with_meta_vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.html">Function graspi::output_graph(std::ostream&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html">Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b.html">Function graspi::perfomance_indicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.html">Function graspi::print_distances_of_ids</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9.html">Function graspi::print_id_ccs(std::ofstream&amp;, const vertex_colors_t&amp;, const vertex_ccs_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__io_8hpp_1a7834b811f17d737eb30e0d0ef522d161.html">Function graspi::print_id_ccs(const std::string&amp;, const vertex_colors_t&amp;, const vertex_ccs_t&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1a3b45d4541b18f373faf7d0827ad8e4a8.html">Template Function graspi::read_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_graph__constructors_8hpp_1aa06fd4851c6fa0e57c56bfc6ef70fac0.html">Template Function graspi::update_graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__abs_8hpp_1aeb3009f425a24b4a6bc0a67ba59a2082.html">Template Function graspi::wf_abs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc.html">Function graspi::wf_diss(graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const edge_weights_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, const std::string&amp;, const std::string&amp;, unsigned int, unsigned int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478.html">Function graspi::wf_diss(graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const edge_weights_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, unsigned int, unsigned int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627.html">Function main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24.html">Function operator&lt;&lt;</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#defines">Defines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6.html">Define BLACK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38.html">Define BLUE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82.html">Define COLOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0.html">Define DGREEN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721.html">Define GREEN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964.html">Define GREY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6.html">Define LGREEN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f.html">Define RED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382.html">Define WHITE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1aca225ce3c337d13a7889284679d62493.html">Typedef graspi::ccs_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html">Typedef graspi::desc_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html">Typedef graspi::edge_colors_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1af2094bc8f309097cb0761fcbc246682b.html">Typedef graspi::edge_descriptor_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a2b298407124b7b3c351ca7eb3d7196cc.html">Typedef graspi::edge_map_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html">Typedef graspi::edge_weights_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html">Typedef graspi::graph_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a832030346ce3d5af00fb9a8c521996d1.html">Typedef graspi::vertex_ccs_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html">Typedef graspi::vertex_colors_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_graspi__types_8hpp_1a4cbb0f11b7c424b7949e42ab9e49eee5.html">Typedef graspi::vertex_t</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Library API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/library_root.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="library-api">
+<h1>Library API<a class="headerlink" href="#library-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li>Namespace <a href="namespace_graspi.html#namespace-graspi">graspi</a><ul><li>Struct <a href="structgraspi_1_1_c_c.html#exhale-struct-structgraspi-1-1-c-c">CC</a></li><li>Struct <a href="structgraspi_1_1_d_e_s_c.html#exhale-struct-structgraspi-1-1-d-e-s-c">DESC</a></li><li>Struct <a href="structgraspi_1_1dim__a__t.html#exhale-struct-structgraspi-1-1dim-a-t">dim_a_t</a></li><li>Struct <a href="structgraspi_1_1dim__g__t.html#exhale-struct-structgraspi-1-1dim-g-t">dim_g_t</a></li><li>Struct <a href="structgraspi_1_1foo__no__w__abs.html#exhale-struct-structgraspi-1-1foo-no-w-abs">foo_no_w_abs</a></li><li>Struct <a href="structgraspi_1_1foo__w__abs.html#exhale-struct-structgraspi-1-1foo-w-abs">foo_w_abs</a></li><li>Struct <a href="structgraspi_1_1foo__w__diss.html#exhale-struct-structgraspi-1-1foo-w-diss">foo_w_diss</a></li><li>Class <a href="classgraspi_1_1connect__color__green.html#exhale-class-classgraspi-1-1connect-color-green">connect_color_green</a></li><li>Class <a href="classgraspi_1_1connect__relevant__meta__vertex.html#exhale-class-classgraspi-1-1connect-relevant-meta-vertex">connect_relevant_meta_vertex</a></li><li>Class <a href="classgraspi_1_1connect__same__color.html#exhale-class-classgraspi-1-1connect-same-color">connect_same_color</a></li><li>Class <a href="classgraspi_1_1connect__same__color__and__relevant__meta__vertex.html#exhale-class-classgraspi-1-1connect-same-color-and-relevant-meta-vertex">connect_same_color_and_relevant_meta_vertex</a></li><li class="lastChild">Class <a href="classgraspi_1_1find__desc__of__name.html#exhale-class-classgraspi-1-1find-desc-of-name">find_desc_of_name</a></li></ul></li><li class="lastChild">Class <a href="classtime__check.html#exhale-class-classtime-check">time_check</a></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></div>
+<div class="section" id="file-hierarchy">
+<h2>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="file-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Directory <a href="dir_src.html#dir-src">src</a><ul><li>File <a href="file_src_graph_cc.hpp.html#file-src-graph-cc.hpp">graph_cc.hpp</a></li><li>File <a href="file_src_graph_constructors.cpp.html#file-src-graph-constructors.cpp">graph_constructors.cpp</a></li><li>File <a href="file_src_graph_constructors.hpp.html#file-src-graph-constructors.hpp">graph_constructors.hpp</a></li><li>File <a href="file_src_graph_dijkstra.hpp.html#file-src-graph-dijkstra.hpp">graph_dijkstra.hpp</a></li><li>File <a href="file_src_graph_io.hpp.html#file-src-graph-io.hpp">graph_io.hpp</a></li><li>File <a href="file_src_graspi.hpp.html#file-src-graspi.hpp">graspi.hpp</a></li><li>File <a href="file_src_graspi_cc.hpp.html#file-src-graspi-cc.hpp">graspi_cc.hpp</a></li><li>File <a href="file_src_graspi_descriptors.hpp.html#file-src-graspi-descriptors.hpp">graspi_descriptors.hpp</a></li><li>File <a href="file_src_graspi_predicates.hpp.html#file-src-graspi-predicates.hpp">graspi_predicates.hpp</a></li><li>File <a href="file_src_graspi_types.hpp.html#file-src-graspi-types.hpp">graspi_types.hpp</a></li><li>File <a href="file_src_graspiAPI.hpp.html#file-src-graspiAPI.hpp">graspiAPI.hpp</a></li><li>File <a href="file_src_main.cpp.html#file-src-main.cpp">main.cpp</a></li><li>File <a href="file_src_mainAPI.cpp.html#file-src-mainAPI.cpp">mainAPI.cpp</a></li><li>File <a href="file_src_performance_indicators.hpp.html#file-src-performance-indicators.hpp">performance_indicators.hpp</a></li><li>File <a href="file_src_performance_indicators_abs.hpp.html#file-src-performance-indicators-abs.hpp">performance_indicators_abs.hpp</a></li><li>File <a href="file_src_performance_indicators_charge_transport.hpp.html#file-src-performance-indicators-charge-transport.hpp">performance_indicators_charge_transport.hpp</a></li><li>File <a href="file_src_performance_indicators_diss.hpp.html#file-src-performance-indicators-diss.hpp">performance_indicators_diss.hpp</a></li><li class="lastChild">File <a href="file_src_time_check.hpp.html#file-src-time-check.hpp">time_check.hpp</a></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView file-treeView --></div>
+<div class="section" id="full-api">
+<h2>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_graspi.html">Namespace graspi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_graspi.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_graspi.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_graspi.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1_c_c.html">Struct CC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1_c_c.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1_d_e_s_c.html">Struct DESC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1_d_e_s_c.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1dim__a__t.html">Struct dim_a_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1dim__a__t.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1dim__g__t.html">Struct dim_g_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1dim__g__t.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1foo__no__w__abs.html">Struct foo_no_w_abs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1foo__no__w__abs.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1foo__w__abs.html">Struct foo_w_abs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1foo__w__abs.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structgraspi_1_1foo__w__diss.html">Struct foo_w_diss</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structgraspi_1_1foo__w__diss.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classgraspi_1_1connect__color__green.html">Class connect_color_green</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classgraspi_1_1connect__color__green.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classgraspi_1_1connect__relevant__meta__vertex.html">Class connect_relevant_meta_vertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classgraspi_1_1connect__relevant__meta__vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classgraspi_1_1connect__same__color.html">Class connect_same_color</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classgraspi_1_1connect__same__color.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classgraspi_1_1connect__same__color__and__relevant__meta__vertex.html">Class connect_same_color_and_relevant_meta_vertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classgraspi_1_1connect__same__color__and__relevant__meta__vertex.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classgraspi_1_1find__desc__of__name.html">Class find_desc_of_name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classgraspi_1_1find__desc__of__name.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classtime__check.html">Class time_check</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classtime__check.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601.html">Function graspi::add_edge_to_graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators_8hpp_1a2e4749cd6042c411d70aa47b9554befa.html">Function graspi::all_perfomance_indicators_2phases(graspi::DESC&amp;, graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const dim_a_t&amp;, const edge_weights_t&amp;, const edge_colors_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators_8hpp_1a2e4749cd6042c411d70aa47b9554befa.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67.html">Function graspi::all_perfomance_indicators_2phases(graspi::DESC&amp;, std::ostream&amp;, graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const dim_a_t&amp;, const edge_weights_t&amp;, const edge_colors_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, const std::string&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4.html">Function graspi::all_perfomance_indicators_3phases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8.html">Function graspi::build_graph(std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5.html">Function graspi::build_graph(const std::string&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852.html">Function graspi::build_graph(graph_t *&amp;, const dim_g_t&amp;, vertex_colors_t&amp;, dim_a_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;, double, bool)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graspi_8hpp_1a5f1bb071296a4badb95419918641de77.html">Function graspi::compute_descriptors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graspi_8hpp_1a5f1bb071296a4badb95419918641de77.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graspi_a_p_i_8hpp_1a294849c801959ea7513ffb782d103f98.html">Function graspi::compute_descriptors_only</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graspi_a_p_i_8hpp_1a294849c801959ea7513ffb782d103f98.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1ab9c0f50386d5c15fc51f6b99d8ac4270.html">Function graspi::compute_pos_2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1ab9c0f50386d5c15fc51f6b99d8ac4270.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929.html">Function graspi::compute_pos_3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7.html">Function graspi::compute_shortest_distance_from_sourceC_to_targetC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b.html">Function graspi::determine_and_print_tortuosity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__cc_8hpp_1aea5b1a326446657e7287655d78ce757c.html">Function graspi::determine_basic_stats_of_ccs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__cc_8hpp_1aea5b1a326446657e7287655d78ce757c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__cc_8hpp_1a0127f742b9a0a14a9f5dccb2acd56548.html">Function graspi::determine_number_of_CCs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__cc_8hpp_1a0127f742b9a0a14a9f5dccb2acd56548.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__dijkstra_8hpp_1a28e3a15b3334d5b397a3d34372e03cfe.html">Template Function graspi::determine_shortest_distances</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__dijkstra_8hpp_1a28e3a15b3334d5b397a3d34372e03cfe.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a5bba1fdf9b55141a186eabaf238d8553.html">Function graspi::determine_tortuosity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a5bba1fdf9b55141a186eabaf238d8553.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8271c9ba4fea31400bdb2794601fa005.html">Function graspi::find_useful_cc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8271c9ba4fea31400bdb2794601fa005.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a9cf2d83b96f6a2237f46fb338666d5cf.html">Function graspi::generate_ngbr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a9cf2d83b96f6a2237f46fb338666d5cf.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1ae255b5ecc645b49c4d3bf1dc87a73528.html">Function graspi::identify_black_vertices_connected_to_green</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1ae255b5ecc645b49c4d3bf1dc87a73528.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8a9d93f04353b4b1b2905656a2e50b2c.html">Function graspi::identify_complementary_paths_from_green</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a8a9d93f04353b4b1b2905656a2e50b2c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__cc_8hpp_1af0904f04b234b1219639b64e22b424d3.html">Function graspi::identify_connected_components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__cc_8hpp_1af0904f04b234b1219639b64e22b424d3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a198a729cde1836cb5d6e79d870e82fd2.html">Function graspi::identify_n_vertices_within_distance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a198a729cde1836cb5d6e79d870e82fd2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1add6ca43f27b7b5f15d15536d332596db.html">Function graspi::identify_n_weighted_vertices_within_distance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1add6ca43f27b7b5f15d15536d332596db.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a4cf5e5deebbc874bdda865d78e0bf3ec.html">Function graspi::identify_useful_triple_black_white_green</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1a4cf5e5deebbc874bdda865d78e0bf3ec.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac200e273b19362a1b0d8e3f264f3a641.html">Function graspi::identify_weighted_vertices_within_distance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac200e273b19362a1b0d8e3f264f3a641.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f.html">Function graspi::initlize_colors_meta_vertices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html">Function graspi::make_update_edge_with_meta_vertex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.html">Function graspi::output_graph(std::ostream&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html">Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b.html">Function graspi::perfomance_indicator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.html">Function graspi::print_distances_of_ids</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9.html">Function graspi::print_id_ccs(std::ofstream&amp;, const vertex_colors_t&amp;, const vertex_ccs_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__io_8hpp_1a7834b811f17d737eb30e0d0ef522d161.html">Function graspi::print_id_ccs(const std::string&amp;, const vertex_colors_t&amp;, const vertex_ccs_t&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__io_8hpp_1a7834b811f17d737eb30e0d0ef522d161.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1a3b45d4541b18f373faf7d0827ad8e4a8.html">Template Function graspi::read_array</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1a3b45d4541b18f373faf7d0827ad8e4a8.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_graph__constructors_8hpp_1aa06fd4851c6fa0e57c56bfc6ef70fac0.html">Template Function graspi::update_graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_graph__constructors_8hpp_1aa06fd4851c6fa0e57c56bfc6ef70fac0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__abs_8hpp_1aeb3009f425a24b4a6bc0a67ba59a2082.html">Template Function graspi::wf_abs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__abs_8hpp_1aeb3009f425a24b4a6bc0a67ba59a2082.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc.html">Function graspi::wf_diss(graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const edge_weights_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, const std::string&amp;, const std::string&amp;, unsigned int, unsigned int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478.html">Function graspi::wf_diss(graph_t *, const dim_g_t&amp;, const vertex_colors_t&amp;, const edge_weights_t&amp;, const vertex_ccs_t&amp;, const ccs_t&amp;, double, unsigned int, unsigned int)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627.html">Function main</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24.html">Function operator&lt;&lt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="defines">
+<h3>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6.html">Define BLACK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a7b3b25cba33b07c303f3060fe41887f6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38.html">Define BLUE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a79d10e672abb49ad63eeaa8aaef57c38.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82.html">Define COLOR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0.html">Define DGREEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a6d970e4c4769c52d19f321a08d531cf0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721.html">Define GREEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1acfbc006ea433ad708fdee3e82996e721.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964.html">Define GREY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1adce122f566c88a1eceeb79a635afa964.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6.html">Define LGREEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a81db76ac94f4fb70e9c7aa2044c0a0c6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f.html">Define RED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a8d23feea868a983c8c2b661e1e16972f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382.html">Define WHITE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_graspi__types_8hpp_1a87b537f5fa5c109d3c05c13d6b18f382.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1aca225ce3c337d13a7889284679d62493.html">Typedef graspi::ccs_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1aca225ce3c337d13a7889284679d62493.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html">Typedef graspi::desc_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html">Typedef graspi::edge_colors_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1af2094bc8f309097cb0761fcbc246682b.html">Typedef graspi::edge_descriptor_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1af2094bc8f309097cb0761fcbc246682b.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a2b298407124b7b3c351ca7eb3d7196cc.html">Typedef graspi::edge_map_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a2b298407124b7b3c351ca7eb3d7196cc.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html">Typedef graspi::edge_weights_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html">Typedef graspi::graph_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a832030346ce3d5af00fb9a8c521996d1.html">Typedef graspi::vertex_ccs_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a832030346ce3d5af00fb9a8c521996d1.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html">Typedef graspi::vertex_colors_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_graspi__types_8hpp_1a4cbb0f11b7c424b7949e42ab9e49eee5.html">Typedef graspi::vertex_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_graspi__types_8hpp_1a4cbb0f11b7c424b7949e42ab9e49eee5.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="namespace_graspi.html" class="btn btn-neutral float-right" title="Namespace graspi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../credit.html" class="btn btn-neutral float-left" title="Credit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

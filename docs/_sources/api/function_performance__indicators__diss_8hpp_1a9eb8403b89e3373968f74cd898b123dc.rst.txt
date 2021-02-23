@@ -1,0 +1,13 @@
+.. _exhale_function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc:
+
+Function graspi::wf_diss(graph_t \*, const dim_g_t&, const vertex_colors_t&, const edge_weights_t&, const vertex_ccs_t&, const ccs_t&, double, const std::string&, const std::string&, unsigned int, unsigned int)
+==================================================================================================================================================================================================================
+
+- Defined in :ref:`file_src_performance_indicators_diss.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graspi::wf_diss(graph_t *, const dim_g_t&, const vertex_colors_t&, const edge_weights_t&, const vertex_ccs_t&, const ccs_t&, double, const std::string&, const std::string&, unsigned int, unsigned int)

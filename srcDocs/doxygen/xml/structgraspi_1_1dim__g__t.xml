@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="structgraspi_1_1dim__g__t" kind="struct" language="C++" prot="public">
     <compoundname>graspi::dim_g_t</compoundname>
-    <includes refid="graspi__types_8hpp" local="no">graspi_types.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c" prot="public" static="no" mutable="no">
         <type>unsigned int</type>
@@ -15,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="61" column="22" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="61" bodyend="-1"/>
+        <location file="src/graspi_types.hpp" line="61" column="22" bodyfile="src/graspi_types.hpp" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7" prot="public" static="no" mutable="no">
         <type>unsigned int</type>
@@ -28,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="62" column="22" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="62" bodyend="-1"/>
+        <location file="src/graspi_types.hpp" line="62" column="22" bodyfile="src/graspi_types.hpp" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901" prot="public" static="no" mutable="no">
         <type>unsigned int</type>
@@ -41,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="63" column="22" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="63" bodyend="-1"/>
+        <location file="src/graspi_types.hpp" line="63" column="22" bodyfile="src/graspi_types.hpp" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae" prot="public" static="no" mutable="no">
         <type>unsigned int</type>
@@ -54,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="64" column="22" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="64" bodyend="-1"/>
+        <location file="src/graspi_types.hpp" line="64" column="22" bodyfile="src/graspi_types.hpp" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -84,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="66" column="18" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="66" bodyend="71"/>
+        <location file="src/graspi_types.hpp" line="66" column="18" bodyfile="src/graspi_types.hpp" bodystart="66" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a3795d7675d95b65b2efe0cb2096f12f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -97,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="73" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="73" bodyend="73"/>
+        <location file="src/graspi_types.hpp" line="73" column="13" bodyfile="src/graspi_types.hpp" bodystart="73" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1aa86a784784e82d825bfdfe7136262629" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -110,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="74" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="74" bodyend="74"/>
+        <location file="src/graspi_types.hpp" line="74" column="13" bodyfile="src/graspi_types.hpp" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1ade3192552be4452533df24aa8f5925c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -123,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="75" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="75" bodyend="75"/>
+        <location file="src/graspi_types.hpp" line="75" column="13" bodyfile="src/graspi_types.hpp" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a98651ea280e0c84ebe5816f4b19b6d10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -136,15 +135,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="76" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="76" bodyend="76"/>
+        <location file="src/graspi_types.hpp" line="76" column="13" bodyfile="src/graspi_types.hpp" bodystart="76" bodyend="76"/>
       </memberdef>
-      <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a6951ed9e4b4bea6d71bf0931a850115c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a0acc215898943d9ae168c5c6aa1a089d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int graspi::dim_g_t::id</definition>
-        <argsstring>(COLOR c) const</argsstring>
+        <argsstring>(unsigned int c) const</argsstring>
         <name>id</name>
         <param>
-          <type><ref refid="graspi__types_8hpp_1a4b5014034c9aac136ab8c82c2d16dc82" kindref="member">COLOR</ref></type>
+          <type>unsigned int</type>
           <declname>c</declname>
         </param>
         <briefdescription>
@@ -153,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="78" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="78" bodyend="85"/>
+        <location file="src/graspi_types.hpp" line="78" column="13" bodyfile="src/graspi_types.hpp" bodystart="78" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -166,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="87" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="87" bodyend="87"/>
+        <location file="src/graspi_types.hpp" line="87" column="13" bodyfile="src/graspi_types.hpp" bodystart="87" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -179,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="88" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="88" bodyend="88"/>
+        <location file="src/graspi_types.hpp" line="88" column="13" bodyfile="src/graspi_types.hpp" bodystart="88" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -192,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="89" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="89" bodyend="89"/>
+        <location file="src/graspi_types.hpp" line="89" column="13" bodyfile="src/graspi_types.hpp" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -205,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="90" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="90" bodyend="90"/>
+        <location file="src/graspi_types.hpp" line="90" column="13" bodyfile="src/graspi_types.hpp" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -218,17 +217,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="91" column="13" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="91" bodyend="91"/>
+        <location file="src/graspi_types.hpp" line="91" column="13" bodyfile="src/graspi_types.hpp" bodystart="91" bodyend="91"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" line="60" column="5" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_types.hpp" bodystart="60" bodyend="92"/>
+    <location file="src/graspi_types.hpp" line="60" column="5" bodyfile="src/graspi_types.hpp" bodystart="60" bodyend="92"/>
     <listofallmembers>
       <member refid="structgraspi_1_1dim__g__t_1a40d82de12658b228d7b05360a597bbfd" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>dim_g_t</name></member>
-      <member refid="structgraspi_1_1dim__g__t_1a6951ed9e4b4bea6d71bf0931a850115c" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>id</name></member>
+      <member refid="structgraspi_1_1dim__g__t_1a0acc215898943d9ae168c5c6aa1a089d" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>id</name></member>
       <member refid="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>id_blue</name></member>
       <member refid="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>id_dgreen</name></member>
       <member refid="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136" prot="public" virt="non-virtual"><scope>graspi::dim_g_t</scope><name>id_green</name></member>

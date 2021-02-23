@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Full API &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Full API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/unabridged_orphan.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src.html">Directory src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graph_cc.hpp.html">File graph_cc.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_cc.hpp.html#definition-src-graph-cc-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graph_cc.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graph_cc.hpp.html">Program Listing for File graph_cc.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_cc.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_cc.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_cc.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_cc.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graph_constructors.cpp.html">File graph_constructors.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.cpp.html#definition-src-graph-constructors-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graph_constructors.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graph_constructors.cpp.html">Program Listing for File graph_constructors.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graph_constructors.hpp.html">File graph_constructors.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.hpp.html#definition-src-graph-constructors-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graph_constructors.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graph_constructors.hpp.html">Program Listing for File graph_constructors.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_constructors.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html">File graph_dijkstra.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html#definition-src-graph-dijkstra-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graph_dijkstra.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graph_dijkstra.hpp.html">Program Listing for File graph_dijkstra.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_dijkstra.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graph_io.hpp.html">File graph_io.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_io.hpp.html#definition-src-graph-io-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graph_io.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graph_io.hpp.html">Program Listing for File graph_io.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_io.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_io.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_io.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graph_io.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspi.hpp.html">File graspi.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi.hpp.html#definition-src-graspi-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspi.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspi.hpp.html">Program Listing for File graspi.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspi_cc.hpp.html">File graspi_cc.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_cc.hpp.html#definition-src-graspi-cc-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspi_cc.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspi_cc.hpp.html">Program Listing for File graspi_cc.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_cc.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_cc.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_cc.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_cc.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspi_descriptors.hpp.html">File graspi_descriptors.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_descriptors.hpp.html#definition-src-graspi-descriptors-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspi_descriptors.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspi_descriptors.hpp.html">Program Listing for File graspi_descriptors.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_descriptors.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_descriptors.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_descriptors.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspi_predicates.hpp.html">File graspi_predicates.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_predicates.hpp.html#definition-src-graspi-predicates-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspi_predicates.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspi_predicates.hpp.html">Program Listing for File graspi_predicates.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_predicates.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_predicates.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_predicates.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_predicates.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspi_types.hpp.html">File graspi_types.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#definition-src-graspi-types-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspi_types.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspi_types.hpp.html">Program Listing for File graspi_types.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#defines">Defines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspi_types.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graspiAPI.hpp.html">File graspiAPI.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspiAPI.hpp.html#definition-src-graspiapi-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graspiAPI.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graspiAPI.hpp.html">Program Listing for File graspiAPI.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspiAPI.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspiAPI.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graspiAPI.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_main.cpp.html">File main.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#definition-src-main-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/main.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_main.cpp.html">Program Listing for File main.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_mainAPI.cpp.html">File mainAPI.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_mainAPI.cpp.html#definition-src-mainapi-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/mainAPI.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_mainAPI.cpp.html">Program Listing for File mainAPI.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_mainAPI.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_performance_indicators.hpp.html">File performance_indicators.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators.hpp.html#definition-src-performance-indicators-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_performance_indicators.hpp.html">Program Listing for File performance_indicators.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html">File performance_indicators_abs.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#definition-src-performance-indicators-abs-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators_abs.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_performance_indicators_abs.hpp.html">Program Listing for File performance_indicators_abs.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_abs.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html">File performance_indicators_charge_transport.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#definition-src-performance-indicators-charge-transport-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators_charge_transport.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_performance_indicators_charge_transport.hpp.html">Program Listing for File performance_indicators_charge_transport.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html">File performance_indicators_diss.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#definition-src-performance-indicators-diss-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators_diss.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_performance_indicators_diss.hpp.html">Program Listing for File performance_indicators_diss.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_performance_indicators_diss.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_time_check.hpp.html">File time_check.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_time_check.hpp.html#definition-src-time-check-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/time_check.hpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_time_check.hpp.html">Program Listing for File time_check.hpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_time_check.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_time_check.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_time_check.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_time_check.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

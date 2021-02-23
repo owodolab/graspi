@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File performance_indicators.hpp &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File performance_indicators.hpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_performance_indicators.hpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-performance-indicators-hpp">
+<span id="program-listing-file-src-performance-indicators-hpp"></span><h1>Program Listing for File performance_indicators.hpp<a class="headerlink" href="#program-listing-for-file-performance-indicators-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_performance_indicators.hpp.html#file-src-performance-indicators-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
+<span class="cm"> *  $Id$</span>
+<span class="cm"> **</span>
+<span class="cm"> *  File: performance_indicators.hpp</span>
+<span class="cm"> *  Created: May 9, 2012</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Author: Olga Wodo, Baskar Ganapathysubramanian</span>
+<span class="cm"> *  Copyright (c) 2012 Olga Wodo, Baskar Ganapathysubramanian</span>
+<span class="cm"> *  See accompanying LICENSE.</span>
+<span class="cm"> *</span>
+<span class="cm"> *  This file is part of GraSPI.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef PERFORMANCE_INDICATORS_HPP</span>
+<span class="cp">#define PERFORMANCE_INDICATORS_HPP</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;graspi_types.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;performance_indicators_abs.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;performance_indicators_diss.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;performance_indicators_charge_transport.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;graspi_descriptors.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+
+<span class="k">namespace</span> <span class="n">graspi</span> <span class="p">{</span>
+
+    <span class="kr">inline</span> <span class="kt">double</span> <span class="n">perfomance_indicator</span><span class="p">(</span> <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">,</span>
+                                       <span class="kt">double</span> <span class="n">pixelsize</span> <span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Light absorption morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="n">foo_w_abs</span> <span class="n">wfoo_abs</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">F_ABS</span> <span class="o">=</span> <span class="n">wf_abs</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d_a</span><span class="p">,</span><span class="n">wfoo_abs</span><span class="p">,</span><span class="n">pixelsize</span><span class="p">);</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Exciton diffusion and dissociation morphology descriptors:      //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">double</span> <span class="n">Ld</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">F_DISS</span> <span class="o">=</span> <span class="n">wf_diss</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">d_g</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">Ld</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span><span class="n">GREEN</span><span class="p">);</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Charge transport morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">distances</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span>
+        <span class="kt">double</span> <span class="n">black_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">RED</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span>
+        <span class="kt">double</span> <span class="n">white_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">F_CT</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">min</span> <span class="p">(</span><span class="n">black_tort_1</span><span class="p">,</span> <span class="n">white_tort_1</span><span class="p">);</span>
+
+
+        <span class="k">return</span> <span class="n">F_ABS</span> <span class="o">*</span> <span class="n">F_DISS</span><span class="p">.</span><span class="n">first</span> <span class="o">*</span> <span class="n">F_CT</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">// perfomance_indicator</span>
+
+
+    <span class="kr">inline</span> <span class="kt">void</span> <span class="n">all_perfomance_indicators_2phases</span><span class="p">(</span>
+                                                  <span class="n">graspi</span><span class="o">::</span><span class="n">DESC</span><span class="o">&amp;</span> <span class="n">descriptors</span><span class="p">,</span>
+                                                  <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">,</span>
+                                                  <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Light absorption morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="n">foo_w_abs</span> <span class="n">wfoo_abs</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">F_ABS</span> <span class="o">=</span> <span class="n">wf_abs</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d_a</span><span class="p">,</span><span class="n">wfoo_abs</span><span class="p">,</span><span class="n">pixelsize</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;ABS_wf_D&quot;</span><span class="p">,</span><span class="n">F_ABS</span><span class="p">);</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">n_useful</span> <span class="o">=</span> <span class="n">find_useful_cc</span><span class="p">(</span><span class="n">descriptors</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">);</span>
+        <span class="c1">//        int n_black_useful = n_useful.first;</span>
+        <span class="c1">//        int n_white_useful = n_useful.second;</span>
+
+        <span class="kt">double</span> <span class="n">Ld</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">F_DISS</span> <span class="o">=</span> <span class="n">wf_diss</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">d_g</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">Ld</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span><span class="n">GREEN</span><span class="p">);</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;DISS_wf10_D&quot;</span><span class="p">,</span><span class="n">F_DISS</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;DISS_f10_D&quot;</span><span class="p">,</span><span class="n">F_DISS</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">int_path</span> <span class="o">=</span>
+        <span class="n">identify_complementary_paths_from_green</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">);</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_e&quot;</span><span class="p">,</span><span class="n">int_path</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_conn&quot;</span><span class="p">,</span><span class="n">int_path</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">desc_tmp</span><span class="o">=</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">second</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_e_conn&quot;</span><span class="p">,</span><span class="n">desc_tmp</span><span class="p">);</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Charge transport morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">distances</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_blacks_conn_green_red</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_whites_conn_green_blue</span><span class="p">;</span>
+
+        <span class="c1">//identify_black_vertices_connected_directly_to_interface</span>
+        <span class="n">identify_useful_triple_black_white_green</span><span class="p">(</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span>
+                                                 <span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                                                 <span class="n">id_whites_conn_green_blue</span><span class="p">);</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_D_An&quot;</span><span class="p">,(</span><span class="kt">float</span><span class="p">)</span><span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_A_Ca&quot;</span><span class="p">,(</span><span class="kt">float</span><span class="p">)</span><span class="n">id_whites_conn_green_blue</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+
+        <span class="c1">// (1) determine the shorest distances from any black vertex to red and print to file</span>
+        <span class="c1">// (2) print to file only these distances corresponding to vertices adjacent to interface</span>
+        <span class="c1">// (3) compute tortuosity and print it</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">black_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">);</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_D_tort1&quot;</span><span class="p">,</span><span class="n">black_tort_1</span><span class="p">);</span>
+
+        <span class="c1">// repeat three above steps for distanced from any white to red</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">white_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_A_tort1&quot;</span><span class="p">,</span><span class="n">white_tort_1</span><span class="p">);</span>
+
+        <span class="c1">//        descriptors.print_descriptors_2_phase(std::cout);</span>
+
+
+    <span class="p">}</span> <span class="c1">// perfomance_indicator_only_desc</span>
+
+
+    <span class="kr">inline</span> <span class="kt">void</span> <span class="n">all_perfomance_indicators_2phases</span><span class="p">(</span>
+                                                  <span class="n">graspi</span><span class="o">::</span><span class="n">DESC</span><span class="o">&amp;</span> <span class="n">descriptors</span><span class="p">,</span>
+                                                  <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span>
+                                                  <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">,</span>
+                                                  <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">res_path</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Light absorption morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">;</span>
+        <span class="n">foo_w_abs</span> <span class="n">wfoo_abs</span><span class="p">;</span>
+        <span class="c1">//      foo_no_w_abs wfoo_abs;</span>
+        <span class="kt">double</span> <span class="n">F_ABS</span> <span class="o">=</span> <span class="n">wf_abs</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d_a</span><span class="p">,</span><span class="n">wfoo_abs</span><span class="p">,</span><span class="n">pixelsize</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;ABS_wf_D&quot;</span><span class="p">,</span><span class="n">F_ABS</span><span class="p">);</span>
+
+        <span class="c1">//      os &lt;&lt; &quot;[F ABS] Weighted fraction of black vertices: &quot; &lt;&lt; F_ABS &lt;&lt; std::endl;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">n_useful</span> <span class="o">=</span> <span class="n">find_useful_cc</span><span class="p">(</span><span class="n">descriptors</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">);</span>
+        <span class="c1">//      int n_black_useful = n_useful.first;</span>
+        <span class="c1">//      int n_white_useful = n_useful.second;</span>
+
+        <span class="kt">double</span> <span class="n">Ld</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesBlackToGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">wfilename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;WDistancesBlackToGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">F_DISS</span> <span class="o">=</span> <span class="n">wf_diss</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">d_g</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">Ld</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">wfilename</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span><span class="n">GREEN</span><span class="p">);</span>
+
+        <span class="c1">//      os &lt;&lt; &quot;[F DISS] Weighted fraction of black vertices in &quot; &lt;&lt; Ld &lt;&lt; &quot; distance to interface: &quot; &lt;&lt; F_DISS.first &lt;&lt; std::endl;</span>
+        <span class="c1">//      os &lt;&lt; &quot;[F DISS] Fraction of black vertices in &quot; &lt;&lt; Ld &lt;&lt; &quot; distance to interface: &quot; &lt;&lt; F_DISS.second &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;DISS_wf10_D&quot;</span><span class="p">,</span><span class="n">F_DISS</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;DISS_f10_D&quot;</span><span class="p">,</span><span class="n">F_DISS</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+
+
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">int_path</span> <span class="o">=</span>
+        <span class="n">identify_complementary_paths_from_green</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">);</span>
+        <span class="c1">//      os &lt;&lt; &quot;[F DISS] Number of interface edges: &quot; &lt;&lt; int_path.first &lt;&lt; std::endl;</span>
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of interface edges with complementary paths: &quot; &lt;&lt; int_path.second &lt;&lt; std::endl;</span>
+        <span class="c1">//      os &lt;&lt; &quot;[F CT] Fraction of interface with &quot; &lt;&lt; &quot;complementary paths to bottom and top: &quot; &lt;&lt; ((double)int_path.second)/((double)int_path.first) &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_e&quot;</span><span class="p">,</span><span class="n">int_path</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_conn&quot;</span><span class="p">,</span><span class="n">int_path</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">desc_tmp</span><span class="o">=</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">second</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_e_conn&quot;</span><span class="p">,</span><span class="n">desc_tmp</span><span class="p">);</span>
+
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Charge transport morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">distances</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_blacks_conn_green_red</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_whites_conn_green_blue</span><span class="p">;</span>
+
+        <span class="c1">//identify_black_vertices_connected_directly_to_interface</span>
+        <span class="n">identify_useful_triple_black_white_green</span><span class="p">(</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span>
+                                                 <span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                                                 <span class="n">id_whites_conn_green_blue</span><span class="p">);</span>
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of black interface vertices with path to top: &quot; &lt;&lt; id_blacks_conn_green_red.size() &lt;&lt; std::endl;</span>
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of white interface vertices with path to bottom: &quot; &lt;&lt; id_whites_conn_green_blue.size() &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_D_An&quot;</span><span class="p">,(</span><span class="kt">float</span><span class="p">)</span><span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_e_A_Ca&quot;</span><span class="p">,(</span><span class="kt">float</span><span class="p">)</span><span class="n">id_whites_conn_green_blue</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+
+        <span class="c1">// (1) determine the shorest distances from any black vertex to red and print to file</span>
+        <span class="c1">// (2) print to file only these distances corresponding to vertices adjacent to interface</span>
+        <span class="c1">// (3) compute tortuosity and print it</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToRedViaBlack.txt&quot;</span><span class="p">);</span>
+        <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                               <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">black_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">);</span>
+        <span class="c1">//      os &lt;&lt; &quot;[F CT] Fraction of black vertices with straight rising paths&quot;</span>
+        <span class="c1">//       &lt;&lt; &quot; (t=1): &quot; &lt;&lt; black_tort_1 &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_D_tort1&quot;</span><span class="p">,</span><span class="n">black_tort_1</span><span class="p">);</span>
+
+        <span class="c1">// repeat three above steps for distanced from any white to red</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToBlueViaWhite.txt&quot;</span><span class="p">);</span>
+        <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_whites_conn_green_blue</span><span class="p">,</span>
+                               <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">white_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">);</span>
+        <span class="c1">//      os &lt;&lt; &quot;[F CT] Fraction of white vertices with straight rising paths&quot;</span>
+        <span class="c1">//   &lt;&lt; &quot; (t=1): &quot; &lt;&lt;  white_tort_1 &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_A_tort1&quot;</span><span class="p">,</span><span class="n">white_tort_1</span><span class="p">);</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">print_descriptors_2_phase</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">);</span>
+
+
+    <span class="p">}</span> <span class="c1">// perfomance_indicator</span>
+
+
+    <span class="kr">inline</span> <span class="kt">void</span> <span class="n">all_perfomance_indicators_3phases</span><span class="p">(</span>
+                                                  <span class="n">graspi</span><span class="o">::</span><span class="n">DESC</span><span class="o">&amp;</span> <span class="n">descriptors</span><span class="p">,</span>
+                                                  <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span>
+                                                  <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">,</span>
+                                                  <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span>
+                                                  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">res_path</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Light absorption morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">;</span>
+        <span class="n">foo_w_abs</span> <span class="n">wfoo_abs</span><span class="p">;</span>
+        <span class="c1">//      foo_no_w_abs wfoo_abs;</span>
+        <span class="kt">double</span> <span class="n">F_ABS</span> <span class="o">=</span> <span class="n">wf_abs</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d_a</span><span class="p">,</span><span class="n">wfoo_abs</span><span class="p">,</span><span class="n">pixelsize</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F ABS] Weighted fraction of black vertices: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">F_ABS</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">n_useful</span> <span class="o">=</span> <span class="n">find_useful_cc</span><span class="p">(</span><span class="n">descriptors</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">);</span> <span class="c1">// , os</span>
+        <span class="c1">//      int n_black_useful = n_useful.first;</span>
+        <span class="c1">//      int n_white_useful = n_useful.second;</span>
+
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Exciton diffusion and dissociation morphology descriptors:      //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">double</span> <span class="n">Ld</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesBlackToGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">wfilename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;WDistancesBlackToGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">F_DISS</span> <span class="o">=</span> <span class="n">wf_diss</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">d_g</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">Ld</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">wfilename</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span><span class="n">GREEN</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F DISS] Weighted fraction of black vertices in &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">Ld</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; distance to interface: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">F_DISS</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F DISS] Fraction of black vertices in &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">Ld</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; distance to interface: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">F_DISS</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreyToLGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">wfilename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;WDistancesGreyToLGreen.txt&quot;</span><span class="p">);</span>
+        <span class="n">F_DISS</span> <span class="o">=</span> <span class="n">wf_diss</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">d_g</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">,</span><span class="n">Ld</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="n">wfilename</span><span class="p">,</span><span class="n">GREY</span><span class="p">,</span><span class="n">LGREEN</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F DISS] Weighted fraction of grey vertices in &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">Ld</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; distance to grey-white interface: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">F_DISS</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F DISS] Fraction of grey vertices in &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">Ld</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; distance to grey-white interface: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">F_DISS</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Morphology descriptors related to the interface                 //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">int_path</span> <span class="o">=</span>
+        <span class="n">identify_complementary_paths_from_green</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">vCC</span><span class="p">,</span><span class="n">CC</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F DISS] Number of interface edges: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">int_path</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[STATS] Number of interface edges with complementary paths: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">int_path</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F CT] Fraction of interface with &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="s">&quot;complementary paths to bottom and top: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">second</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">int_path</span><span class="p">.</span><span class="n">first</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">//*****************************************************************//</span>
+        <span class="c1">// Charge transport morphology descriptors:                        //</span>
+        <span class="c1">//*****************************************************************//</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">distances</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_blacks_conn_green_red</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">id_whites_conn_green_blue</span><span class="p">;</span>
+
+        <span class="c1">//identify_black_vertices_connected_directly_to_interface</span>
+        <span class="n">identify_useful_triple_black_white_green</span><span class="p">(</span> <span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span>
+                                                 <span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                                                 <span class="n">id_whites_conn_green_blue</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[STATS] Number of black interface vertices with path to top: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[STATS] Number of white interface vertices with path to bottom: &quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">id_whites_conn_green_blue</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// (1) determine the shorest distances from any black vertex to red and print to file</span>
+        <span class="c1">// (2) print to file only these distances corresponding to vertices adjacent to interface</span>
+        <span class="c1">// (3) compute tortuosity and print it</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToRedViaBlack.txt&quot;</span><span class="p">);</span>
+        <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                               <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityBlackToRed.txt&quot;</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">black_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F CT] Fraction of black vertices with straight rising paths&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="s">&quot; (t=1): &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">black_tort_1</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// repeat three above steps for distanced from any white to red</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToBlueViaWhite.txt&quot;</span><span class="p">);</span>
+        <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_whites_conn_green_blue</span><span class="p">,</span>
+                               <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityWhiteToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">white_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F CT] Fraction of white vertices with straight rising paths&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="s">&quot; (t=1): &quot;</span> <span class="o">&lt;&lt;</span>  <span class="n">white_tort_1</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// repeat three above steps for distanced from any grey to red</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreyToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">GREY</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityGreyToRed.txt&quot;</span><span class="p">);</span>
+        <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityGreyToRed.txt&quot;</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">grey_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span> <span class="n">RED</span><span class="p">,</span><span class="n">GREY</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F CT] Fraction of grey vertices with straight rising paths to top&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="s">&quot; (t=1): &quot;</span> <span class="o">&lt;&lt;</span>  <span class="n">grey_tort_1</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// repeat three above steps for distanced from any grey to blue</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreyToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">GREY</span><span class="p">,</span>
+                                                          <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
+                                                          <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;TortuosityGreyToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">id_t_filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;IdTortuosityGreyToBlue.txt&quot;</span><span class="p">);</span>
+        <span class="n">grey_tort_1</span>
+        <span class="o">=</span> <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span>
+                                         <span class="n">filename</span><span class="p">,</span> <span class="n">id_t_filename</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span><span class="n">GREY</span><span class="p">);</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[F CT] Fraction of grey vertices with straight rising paths to bottom&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="s">&quot; (t=1): &quot;</span> <span class="o">&lt;&lt;</span>  <span class="n">grey_tort_1</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+
+    <span class="p">}</span> <span class="c1">// perfomance_indicator</span>
+
+
+<span class="p">}</span> <span class="c1">// namespace graspi</span>
+
+<span class="cp">#endif </span><span class="c1">// PERFORMANCE_INDICATORS_HPP</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

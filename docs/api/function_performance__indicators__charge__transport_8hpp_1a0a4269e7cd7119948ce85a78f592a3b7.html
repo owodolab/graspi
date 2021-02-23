@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Function graspi::compute_shortest_distance_from_sourceC_to_targetC &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function graspi::determine_and_print_tortuosity" href="function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b.html" />
+    <link rel="prev" title="Function graspi::compute_pos_3D" href="function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+        
+      <li>Function graspi::compute_shortest_distance_from_sourceC_to_targetC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/function_performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="function-graspi-compute-shortest-distance-from-sourcec-to-targetc">
+<span id="exhale-function-performance-indicators-charge-transport-8hpp-1a0a4269e7cd7119948ce85a78f592a3b7"></span><h1>Function graspi::compute_shortest_distance_from_sourceC_to_targetC<a class="headerlink" href="#function-graspi-compute-shortest-distance-from-sourcec-to-targetc" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#file-src-performance-indicators-charge-transport-hpp"><span class="std std-ref">File performance_indicators_charge_transport.hpp</span></a></p></li>
+</ul>
+<div class="section" id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt id="_CPPv4N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE">
+<span id="_CPPv3N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE"></span><span id="_CPPv2N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE"></span><span id="graspi::compute_shortest_distance_from_sourceC_to_targetC__unsigned-i.unsigned-i.graph_tP.dim_g_tCR.vertex_colors_tCR.edge_weights_tCR.std::vector:float:R.ss"></span><span class="target" id="performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7"></span>void <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">compute_shortest_distance_from_sourceC_to_targetC</code><span class="sig-paren">(</span>unsigned int <em>sourceC</em>, unsigned int <em>targetC</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__g__t.html#_CPPv4N6graspi7dim_g_tE" title="graspi::dim_g_t">dim_g_t</a> &amp;<em>d_g</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>C</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, std::vector&lt;float&gt; &amp;<em>d</em>, std::string <em>filename</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b.html" class="btn btn-neutral float-right" title="Function graspi::determine_and_print_tortuosity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929.html" class="btn btn-neutral float-left" title="Function graspi::compute_pos_3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

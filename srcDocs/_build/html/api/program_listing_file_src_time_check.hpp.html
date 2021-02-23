@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File time_check.hpp &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File time_check.hpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_time_check.hpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-time-check-hpp">
+<span id="program-listing-file-src-time-check-hpp"></span><h1>Program Listing for File time_check.hpp<a class="headerlink" href="#program-listing-for-file-time-check-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_time_check.hpp.html#file-src-time-check-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/time_check.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
+<span class="cm"> *  $Id: time_check.hpp 38 2003-10-28 14:20:23Z zola $</span>
+<span class="cm"> **</span>
+<span class="cm"> *  File: time_check.hpp</span>
+<span class="cm"> *  Developed: Mar 25, 2003</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Institute of Computer &amp; Information Sciences</span>
+<span class="cm"> *  Czestochowa University of Technology</span>
+<span class="cm"> *  Dabrowskiego 73</span>
+<span class="cm"> *  42-200 Czestochowa, Poland</span>
+<span class="cm"> *  tel/fax: +48 (0....)34 3250589</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Author: Jaroslaw Zola &lt;zola@icis.pcz.pl&gt;</span>
+<span class="cm"> *  Copyright (c) 2003 Jaroslaw Zola &lt;zola@icis.pcz.pl&gt;</span>
+<span class="cm"> *  For copyright details please contact the author.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef TIME_CHECK_HPP</span>
+<span class="cp">#define TIME_CHECK_HPP</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;ctime&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/time.h&gt;</span><span class="cp"></span>
+
+
+<span class="k">class</span> <span class="nc">time_check</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">typedef</span> <span class="kt">unsigned</span> <span class="n">size_type</span><span class="p">;</span>
+
+    <span class="k">explicit</span> <span class="nf">time_check</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">size_type</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">128</span><span class="p">)</span>
+    <span class="o">:</span> <span class="n">name_</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">hbeg_</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span> <span class="n">hfin_</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span> <span class="n">pos_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">tpts_</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">ipts_</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">{}</span>
+
+
+    <span class="n">size_type</span> <span class="nf">size</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">pos_</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="n">size_type</span> <span class="nf">capacity</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">tpts_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="nf">start</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">hbeg_</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">beg_</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">// start</span>
+
+    <span class="kt">void</span> <span class="nf">stop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">hfin_</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fin_</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">// stop</span>
+
+
+    <span class="kt">void</span> <span class="nf">check</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">id</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">hbeg_</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos_</span> <span class="o">&lt;</span> <span class="n">tpts_</span><span class="p">.</span><span class="n">size</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="n">tpts_</span><span class="p">[</span><span class="n">pos_</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_time</span><span class="p">();</span>
+            <span class="n">ipts_</span><span class="p">[</span><span class="n">pos_</span><span class="p">]</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+            <span class="o">++</span><span class="n">pos_</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="c1">// check</span>
+
+
+    <span class="kt">double</span> <span class="nf">total</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">hbeg_</span> <span class="o">&amp;&amp;</span> <span class="n">hfin_</span><span class="p">)</span> <span class="o">?</span>
+        <span class="p">(</span><span class="n">tv2double</span><span class="p">(</span><span class="n">fin_</span><span class="p">)</span> <span class="o">-</span> <span class="n">tv2double</span><span class="p">(</span><span class="n">beg_</span><span class="p">))</span> <span class="o">:</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">// total</span>
+
+
+    <span class="kt">double</span> <span class="nf">at_point</span><span class="p">(</span><span class="n">size_type</span> <span class="n">n</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">((</span><span class="n">hbeg_</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">pos_</span><span class="p">)))</span> <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">tpts_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">tv2double</span><span class="p">(</span><span class="n">beg_</span><span class="p">))</span>
+        <span class="o">:</span> <span class="p">(</span><span class="n">tpts_</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">-</span> <span class="n">tpts_</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="p">}</span> <span class="c1">// at_point</span>
+
+
+    <span class="kt">double</span> <span class="nf">to_point</span><span class="p">(</span><span class="n">size_type</span> <span class="n">n</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">((</span><span class="n">hbeg_</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">pos_</span><span class="p">))</span> <span class="o">?</span> <span class="n">tpts_</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">:</span> <span class="mf">0.0</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">// to_point</span>
+
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">point_id</span><span class="p">(</span><span class="n">size_type</span> <span class="n">n</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">((</span><span class="n">hbeg_</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">pos_</span><span class="p">))</span> <span class="o">?</span> <span class="n">ipts_</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="c1">// point_id</span>
+
+
+    <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <span class="n">time_check</span><span class="o">&amp;</span><span class="p">);</span>
+
+    <span class="kt">double</span> <span class="nf">get_time</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="n">timeval</span> <span class="n">t</span><span class="p">;</span>
+        <span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">tv2double</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">// get_time</span>
+
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">double</span> <span class="n">tv2double</span><span class="p">(</span><span class="k">const</span> <span class="n">timeval</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">t</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.000001</span> <span class="o">*</span> <span class="n">t</span><span class="p">.</span><span class="n">tv_usec</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">// tv2double</span>
+
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name_</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="n">hbeg_</span><span class="p">;</span> <span class="c1">// true if start() called</span>
+    <span class="n">timeval</span> <span class="n">beg_</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="n">hfin_</span><span class="p">;</span> <span class="c1">// true if stop() called</span>
+    <span class="n">timeval</span> <span class="n">fin_</span><span class="p">;</span>
+
+    <span class="n">size_type</span> <span class="n">pos_</span><span class="p">;</span> <span class="c1">// number of checkpoints</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">tpts_</span><span class="p">;</span> <span class="c1">// values in the checkpoints</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">ipts_</span><span class="p">;</span> <span class="c1">// checkpoints ids</span>
+
+<span class="p">};</span> <span class="c1">// class time_check</span>
+
+
+
+<span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">time_check</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="p">.</span><span class="n">name_</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; time check:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">.</span><span class="n">pos_</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="p">.</span><span class="n">ipts_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;: +&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="p">.</span><span class="n">at_point</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;----------------</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">tt</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">total</span><span class="p">());</span>
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">ht</span> <span class="o">=</span> <span class="n">tt</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">mt</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span> <span class="o">%</span> <span class="mi">3600</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">st</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span> <span class="o">%</span> <span class="mi">3600</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span><span class="p">;</span>
+
+    <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;total: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="p">.</span><span class="n">total</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">ht</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">mt</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;       &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">ht</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;h:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">mt</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;m:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">st</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// operator &lt;&lt;</span>
+
+<span class="cp">#endif </span><span class="c1">// TIME_CHECK_HPP</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

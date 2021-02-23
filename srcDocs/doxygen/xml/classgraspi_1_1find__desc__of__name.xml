@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="classgraspi_1_1find__desc__of__name" kind="class" language="C++" prot="public">
     <compoundname>graspi::find_desc_of_name</compoundname>
-    <includes refid="graspi__predicates_8hpp" local="no">graspi_predicates.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classgraspi_1_1find__desc__of__name_1aa6818a38ed7ef6f520c93589bcb5b739" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -15,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="173" column="21" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="173" bodyend="-1"/>
+        <location file="src/graspi_predicates.hpp" line="173" column="21" bodyfile="src/graspi_predicates.hpp" bodystart="173" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="162" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="162" bodyend="162"/>
+        <location file="src/graspi_predicates.hpp" line="162" column="9" bodyfile="src/graspi_predicates.hpp" bodystart="162" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classgraspi_1_1find__desc__of__name_1a6be1fc66bb50201e0cb024577831b81b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -47,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="163" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="163" bodyend="164"/>
+        <location file="src/graspi_predicates.hpp" line="163" column="9" bodyfile="src/graspi_predicates.hpp" bodystart="163" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="classgraspi_1_1find__desc__of__name_1a8b235db704f92f1fbe6d448f74f9fd55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -64,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="166" column="14" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="166" bodyend="166"/>
+        <location file="src/graspi_predicates.hpp" line="166" column="14" bodyfile="src/graspi_predicates.hpp" bodystart="166" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="classgraspi_1_1find__desc__of__name_1ac8055e4aef0cbf282732ebead78c3886" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -81,14 +80,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="168" column="14" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="168" bodyend="170"/>
+        <location file="src/graspi_predicates.hpp" line="168" column="14" bodyfile="src/graspi_predicates.hpp" bodystart="168" bodyend="170"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" line="160" column="5" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/graspi_predicates.hpp" bodystart="160" bodyend="174"/>
+    <location file="src/graspi_predicates.hpp" line="160" column="5" bodyfile="src/graspi_predicates.hpp" bodystart="160" bodyend="174"/>
     <listofallmembers>
       <member refid="classgraspi_1_1find__desc__of__name_1aa6818a38ed7ef6f520c93589bcb5b739" prot="private" virt="non-virtual"><scope>graspi::find_desc_of_name</scope><name>desc_</name></member>
       <member refid="classgraspi_1_1find__desc__of__name_1ad5a50aeeda7ab1ac99ca5f39ae3837dd" prot="public" virt="non-virtual"><scope>graspi::find_desc_of_name</scope><name>find_desc_of_name</name></member>

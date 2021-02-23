@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File performance_indicators_charge_transport.hpp &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File performance_indicators_charge_transport.hpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_performance_indicators_charge_transport.hpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-performance-indicators-charge-transport-hpp">
+<span id="program-listing-file-src-performance-indicators-charge-transport-hpp"></span><h1>Program Listing for File performance_indicators_charge_transport.hpp<a class="headerlink" href="#program-listing-for-file-performance-indicators-charge-transport-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_performance_indicators_charge_transport.hpp.html#file-src-performance-indicators-charge-transport-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/performance_indicators_charge_transport.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
+<span class="cm"> *  $Id$</span>
+<span class="cm"> **</span>
+<span class="cm"> *  File: performance_indicators_charge_transport.hpp</span>
+<span class="cm"> *  Created: May 9, 2012</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Author: Olga Wodo, Baskar Ganapathysubramanian</span>
+<span class="cm"> *  Copyright (c) 2012 Olga Wodo, Baskar Ganapathysubramanian</span>
+<span class="cm"> *  See accompanying LICENSE.</span>
+<span class="cm"> *</span>
+<span class="cm"> *  This file is part of GraSPI.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef PERFORMANCE_INDICATORS_CT_HPP</span>
+<span class="cp">#define PERFORMANCE_INDICATORS_CT_HPP</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;graspi_types.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;graspi_descriptors.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">graspi</span> <span class="p">{</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">find_useful_cc</span><span class="p">(</span>
+                                      <span class="n">graspi</span><span class="o">::</span><span class="n">DESC</span><span class="o">&amp;</span> <span class="n">descriptors</span><span class="p">,</span>
+                                      <span class="n">graspi</span><span class="o">::</span><span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                      <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                      <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                      <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">){</span>
+
+        <span class="kt">int</span> <span class="n">n_of_white_ccs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_ccs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_black_ccs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_white_ccs_conn_to_bottom</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// usefull white components</span>
+        <span class="kt">int</span> <span class="n">n_of_black_ccs_conn_to_top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// usefull black components</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_ccs_conn_to_bottom</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// usefull grey components</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_ccs_conn_to_top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>     <span class="c1">// usefull grey components</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_ccs_conn_to_both</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// usefull grey components</span>
+        <span class="c1">// number of usefull white/black cells</span>
+        <span class="c1">// number of all white/black cells -&gt; fraction of useful</span>
+        <span class="kt">int</span> <span class="n">n_of_white_vertices</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_white_vertices_conn_to_bottom</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_vertices</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_vertices_conn_to_bottom</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_vertices_conn_to_top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_grey_vertices_conn_to_both</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_black_vertices</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_of_black_vertices_conn_to_top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">flag_n_phases</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">CC</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">color</span> <span class="o">==</span> <span class="n">WHITE</span><span class="p">){</span>
+                <span class="n">n_of_white_ccs</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">n_of_white_vertices</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">if_connected_to_bottom</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="n">n_of_white_ccs_conn_to_bottom</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">n_of_white_vertices_conn_to_bottom</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">){</span>
+                <span class="n">n_of_black_ccs</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">n_of_black_vertices</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">if_connected_to_top</span><span class="p">()</span> <span class="p">){</span>
+                    <span class="n">n_of_black_ccs_conn_to_top</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">n_of_black_vertices_conn_to_top</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">color</span> <span class="o">==</span> <span class="n">GREY</span><span class="p">){</span>
+                <span class="n">flag_n_phases</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+                <span class="n">n_of_grey_ccs</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">n_of_grey_vertices</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">if_connected_to_top</span><span class="p">()</span> <span class="p">){</span>
+                    <span class="n">n_of_grey_ccs_conn_to_top</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">n_of_grey_vertices_conn_to_top</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">if_connected_to_bottom</span><span class="p">()</span> <span class="p">){</span>
+                    <span class="n">n_of_grey_ccs_conn_to_bottom</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">n_of_grey_vertices_conn_to_bottom</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">if_connected_to_top_and_bottom</span><span class="p">()</span> <span class="p">){}</span>
+                <span class="n">n_of_grey_ccs_conn_to_both</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">n_of_grey_vertices_conn_to_both</span> <span class="o">+=</span> <span class="n">CC</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">;</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of black connected components: &quot; &lt;&lt; n_of_black_ccs &lt;&lt; std::endl</span>
+        <span class="c1">//   &lt;&lt; &quot;[STATS] Number of white connected components: &quot; &lt;&lt;  n_of_white_ccs &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_D&quot;</span><span class="p">,</span><span class="n">n_of_black_ccs</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_A&quot;</span><span class="p">,</span><span class="n">n_of_white_ccs</span><span class="p">);</span>
+
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">flag_n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+            <span class="c1">//          os &lt;&lt; &quot;[STATS] Number of grey connected components: &quot; &lt;&lt; n_of_grey_ccs &lt;&lt; std::endl;</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_M&quot;</span><span class="p">,</span><span class="n">n_of_grey_ccs</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of black connected components connected to top: &quot;</span>
+        <span class="c1">//   &lt;&lt; n_of_black_ccs_conn_to_top &lt;&lt; std::endl</span>
+        <span class="c1">//   &lt;&lt; &quot;[STATS] Number of white connected components connected to bottom: &quot;</span>
+        <span class="c1">//   &lt;&lt; n_of_white_ccs_conn_to_bottom &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_D_An&quot;</span><span class="p">,</span><span class="n">n_of_black_ccs_conn_to_top</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_A_Ca&quot;</span><span class="p">,</span><span class="n">n_of_white_ccs_conn_to_bottom</span><span class="p">);</span>
+
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">flag_n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+            <span class="c1">//    os &lt;&lt; &quot;[STATS] Number of grey connected components connected to top: &quot;</span>
+            <span class="c1">//       &lt;&lt; n_of_grey_ccs_conn_to_top &lt;&lt; std::endl</span>
+            <span class="c1">//       &lt;&lt; &quot;[STATS] Number of grey connected components connected to bottom: &quot;</span>
+            <span class="c1">//       &lt;&lt; n_of_grey_ccs_conn_to_bottom &lt;&lt; std::endl</span>
+            <span class="c1">//       &lt;&lt; &quot;[STATS] Number of grey connected components connected to both: &quot;</span>
+            <span class="c1">//          &lt;&lt; n_of_grey_ccs_conn_to_both &lt;&lt; std::endl;</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_M_An&quot;</span><span class="p">,</span><span class="n">n_of_grey_ccs_conn_to_top</span><span class="p">);</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_M_Ca&quot;</span><span class="p">,</span><span class="n">n_of_grey_ccs_conn_to_bottom</span><span class="p">);</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_CC_M_AnCa&quot;</span><span class="p">,</span><span class="n">n_of_grey_ccs_conn_to_both</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="c1">//     os &lt;&lt; &quot;[STATS] Number of vertices: &quot;</span>
+        <span class="c1">//   &lt;&lt; n_of_black_vertices + n_of_white_vertices &lt;&lt; std::endl;</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_n&quot;</span><span class="p">,</span><span class="n">n_of_black_vertices</span> <span class="o">+</span> <span class="n">n_of_white_vertices</span><span class="p">);</span>
+
+
+        <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of black vertices: &quot;</span>
+        <span class="c1">//   &lt;&lt; n_of_black_vertices &lt;&lt; std::endl</span>
+        <span class="c1">//   &lt;&lt; &quot;[STATS] Number of white vertices: &quot;</span>
+        <span class="c1">//   &lt;&lt; n_of_white_vertices &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_n_D&quot;</span><span class="p">,</span><span class="n">n_of_black_vertices</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_n_A&quot;</span><span class="p">,</span><span class="n">n_of_white_vertices</span><span class="p">);</span>
+
+
+        <span class="k">if</span><span class="p">(</span><span class="n">flag_n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+            <span class="c1">//      os &lt;&lt; &quot;[STATS] Number of grey vertices: &quot; &lt;&lt; n_of_grey_vertices &lt;&lt; std::endl;</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;STAT_n_M&quot;</span><span class="p">,</span><span class="n">n_of_grey_vertices</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//      os &lt;&lt; &quot;[F ABS] Fraction of black vertices: &quot;</span>
+        <span class="c1">//   &lt;&lt; (double)n_of_black_vertices</span>
+        <span class="c1">//    / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices) &lt;&lt; std::endl;</span>
+
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;ABS_f_D&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)</span><span class="n">n_of_black_vertices</span>
+                                <span class="o">/</span> <span class="p">(</span><span class="n">n_of_black_vertices</span><span class="o">+</span><span class="n">n_of_white_vertices</span><span class="o">+</span><span class="n">n_of_grey_vertices</span><span class="p">));</span>
+
+
+        <span class="k">if</span><span class="p">(</span><span class="n">flag_n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="c1">//         os &lt;&lt; &quot;[F ABS] Fraction of grey vertices: &quot;</span>
+            <span class="c1">//         &lt;&lt; (double)n_of_grey_vertices</span>
+            <span class="c1">//         / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices) &lt;&lt; std::endl;</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;ABS_f_M&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)</span><span class="n">n_of_grey_vertices</span>
+                                    <span class="o">/</span> <span class="p">(</span><span class="n">n_of_black_vertices</span><span class="o">+</span><span class="n">n_of_white_vertices</span><span class="o">+</span><span class="n">n_of_grey_vertices</span><span class="p">));</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">flag_n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+            <span class="c1">//         os &lt;&lt; &quot;[F CT] Fraction of black and grey vertices connected to top: &quot;</span>
+            <span class="c1">//          &lt;&lt; (double)(n_of_black_vertices_conn_to_top+n_of_grey_vertices_conn_to_top)</span>
+            <span class="c1">//          /(n_of_black_vertices+n_of_grey_vertices)</span>
+            <span class="c1">//          &lt;&lt; std::endl</span>
+            <span class="c1">//          &lt;&lt; &quot;[F CT] Fraction of white and grey vertices connected to bottom: &quot;</span>
+            <span class="c1">//          &lt;&lt; (double)(n_of_white_vertices_conn_to_bottom+n_of_grey_vertices_conn_to_bottom)</span>
+            <span class="c1">//          /(n_of_white_vertices+n_of_grey_vertices)</span>
+            <span class="c1">//          &lt;&lt; std::endl;</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_conn_DM_An&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)(</span><span class="n">n_of_black_vertices_conn_to_top</span><span class="o">+</span><span class="n">n_of_grey_vertices_conn_to_top</span><span class="p">)</span>
+                                    <span class="o">/</span><span class="p">(</span><span class="n">n_of_black_vertices</span><span class="o">+</span><span class="n">n_of_grey_vertices</span><span class="p">)</span> <span class="p">);</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_conn_AM_Ca&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)(</span><span class="n">n_of_white_vertices_conn_to_bottom</span><span class="o">+</span><span class="n">n_of_grey_vertices_conn_to_bottom</span><span class="p">)</span>
+                                    <span class="o">/</span><span class="p">(</span><span class="n">n_of_white_vertices</span><span class="o">+</span><span class="n">n_of_grey_vertices</span><span class="p">));</span>
+
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+            <span class="c1">//          os &lt;&lt; &quot;[F CT] Fraction of useful vertices - w/o islands: &quot; &lt;&lt;</span>
+            <span class="c1">//          (double)( n_of_black_vertices_conn_to_top</span>
+            <span class="c1">//                   +</span>
+            <span class="c1">//                   n_of_white_vertices_conn_to_bottom</span>
+            <span class="c1">//                   ) / (n_of_black_vertices+n_of_white_vertices)</span>
+            <span class="c1">//          &lt;&lt; std::endl;</span>
+            <span class="c1">//          os &lt;&lt; &quot;[F CT] Fraction of black vertices connected to top: &quot;</span>
+            <span class="c1">//          &lt;&lt; (double)n_of_black_vertices_conn_to_top/n_of_black_vertices</span>
+            <span class="c1">//          &lt;&lt; std::endl</span>
+            <span class="c1">//          &lt;&lt; &quot;[F CT] Fraction of white vertices connected to bottom: &quot;</span>
+            <span class="c1">//          &lt;&lt; (double)n_of_white_vertices_conn_to_bottom/n_of_white_vertices</span>
+            <span class="c1">//          &lt;&lt; std::endl;</span>
+
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_conn_D&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)(</span><span class="n">n_of_black_vertices_conn_to_top</span><span class="o">+</span><span class="n">n_of_white_vertices_conn_to_bottom</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_of_black_vertices</span><span class="o">+</span><span class="n">n_of_white_vertices</span><span class="p">));</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_conn_D_An&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)</span><span class="n">n_of_black_vertices_conn_to_top</span><span class="o">/</span><span class="n">n_of_black_vertices</span><span class="p">);</span>
+            <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_conn_A_Ca&quot;</span><span class="p">,(</span><span class="kt">double</span><span class="p">)</span><span class="n">n_of_white_vertices_conn_to_bottom</span><span class="o">/</span><span class="n">n_of_white_vertices</span><span class="p">);</span>
+
+
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n_of_black_vertices_conn_to_top</span><span class="p">,</span>
+                                  <span class="n">n_of_white_vertices_conn_to_bottom</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+
+
+    <span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span>
+    <span class="n">identify_complementary_paths_from_green</span><span class="p">(</span>
+                                            <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                            <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                            <span class="k">const</span> <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                                            <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                            <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span> <span class="p">){</span>
+
+        <span class="kt">int</span> <span class="n">n_1st_order_edges_conn_blue_red</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_1st_order_edges</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">graph_t</span><span class="o">::</span><span class="n">edge_iterator</span> <span class="n">e</span><span class="p">,</span> <span class="n">e_end</span><span class="p">;</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">edges</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(;</span> <span class="n">e</span> <span class="o">!=</span> <span class="n">e_end</span><span class="p">;</span> <span class="o">++</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">vertex_t</span> <span class="n">s</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">source</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+            <span class="n">vertex_t</span> <span class="n">t</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">),</span>
+                                                      <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">));</span>
+            <span class="n">edge_colors_t</span><span class="o">::</span><span class="n">const_iterator</span> <span class="n">edge</span> <span class="o">=</span> <span class="n">L</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+            <span class="kt">char</span> <span class="n">edge_color</span> <span class="o">=</span> <span class="n">edge</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+
+            <span class="c1">// find first order edges connectiong black and white</span>
+            <span class="k">if</span><span class="p">(</span>
+               <span class="p">(</span> <span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">+</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>  <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">edge_color</span> <span class="o">==</span> <span class="sc">&#39;f&#39;</span> <span class="p">)</span>
+               <span class="p">){</span>
+                <span class="n">n_1st_order_edges</span><span class="o">++</span><span class="p">;</span>
+
+                <span class="n">vertex_t</span> <span class="n">black_vertex</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+                <span class="n">vertex_t</span> <span class="n">white_vertex</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">BLACK</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="n">black_vertex</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span>
+                    <span class="n">white_vertex</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="k">if</span><span class="p">(</span>
+                   <span class="p">(</span><span class="n">CC</span><span class="p">[</span><span class="n">vCC</span><span class="p">[</span><span class="n">black_vertex</span><span class="p">]</span> <span class="p">].</span><span class="n">if_connected_to_top</span><span class="p">()</span> <span class="p">)</span>
+                   <span class="o">&amp;&amp;</span>
+                   <span class="p">(</span><span class="n">CC</span><span class="p">[</span><span class="n">vCC</span><span class="p">[</span><span class="n">white_vertex</span><span class="p">]</span> <span class="p">].</span><span class="n">if_connected_to_bottom</span><span class="p">()</span> <span class="p">)</span>
+                   <span class="p">){</span>
+                    <span class="n">n_1st_order_edges_conn_blue_red</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span><span class="c1">//if first order int</span>
+        <span class="p">}</span> <span class="c1">// for e</span>
+
+        <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n_1st_order_edges</span><span class="p">,</span>
+                                  <span class="n">n_1st_order_edges_conn_blue_red</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//identify_complementary_paths_from_green</span>
+
+
+    <span class="kr">inline</span> <span class="kt">void</span>
+    <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span>
+                                                      <span class="n">COLOR</span> <span class="n">sourceC</span><span class="p">,</span>
+                                                      <span class="n">COLOR</span> <span class="n">targetC</span><span class="p">,</span>
+                                                      <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                                      <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                                                      <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                                      <span class="k">const</span> <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                                      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span>
+                                                      <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+                                                      <span class="p">){</span>
+        <span class="n">vertex_t</span> <span class="n">source</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">id</span><span class="p">(</span><span class="n">sourceC</span><span class="p">);</span>
+        <span class="n">connect_same_color_and_relevant_meta_vertex</span> <span class="nf">pred</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">);</span>
+        <span class="n">determine_shortest_distances</span><span class="p">(</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss_out</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="n">c</span> <span class="o">==</span> <span class="n">targetC</span> <span class="p">)</span>
+                    <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">fabs</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span> <span class="p">)</span>
+                    <span class="p">)</span> <span class="p">{</span>
+                    <span class="n">oss_out</span> <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">f_out</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">oss_out</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">oss_out</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">size</span><span class="p">();</span>
+            <span class="n">f_out</span><span class="p">.</span><span class="n">write</span> <span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">size</span><span class="p">);</span>
+            <span class="n">f_out</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span><span class="c1">//compute_shortest_distance_from_black_to_red</span>
+
+
+
+
+    <span class="kr">inline</span> <span class="kt">void</span>
+    <span class="n">identify_useful_triple_black_white_green</span><span class="p">(</span> <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                             <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                                             <span class="k">const</span> <span class="n">vertex_ccs_t</span><span class="o">&amp;</span> <span class="n">vCC</span><span class="p">,</span>
+                                             <span class="k">const</span> <span class="n">ccs_t</span><span class="o">&amp;</span> <span class="n">CC</span><span class="p">,</span>
+                                             <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
+                                             <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">id_whites_conn_green_blue</span>
+                                             <span class="p">){</span>
+        <span class="c1">//identify set of all black vertices with connection to green and path to red</span>
+        <span class="c1">//identify set of all white vertices with connection to green and path to blue</span>
+        <span class="n">connect_relevant_meta_vertex</span> <span class="n">pred_black</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+        <span class="n">connect_relevant_meta_vertex</span> <span class="nf">pred_white</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">vCC</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">);</span>
+
+        <span class="n">graph_t</span><span class="o">::</span><span class="n">edge_iterator</span> <span class="n">e</span><span class="p">,</span> <span class="n">e_end</span><span class="p">;</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_end</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">edges</span><span class="p">(</span><span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(;</span> <span class="n">e</span> <span class="o">!=</span> <span class="n">e_end</span><span class="p">;</span> <span class="o">++</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">vertex_t</span> <span class="n">s</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">source</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+            <span class="n">vertex_t</span> <span class="n">t</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="p">((</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="n">GREEN</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">BLACK</span> <span class="p">))</span>
+                <span class="o">||</span>
+                <span class="p">((</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">GREEN</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="n">BLACK</span> <span class="p">)</span> <span class="p">)</span>
+                <span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">pred_black</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">)</span> <span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">pred_black</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">)</span> <span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="p">((</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="n">GREEN</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">WHITE</span> <span class="p">))</span>
+                <span class="o">||</span>
+                <span class="p">((</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="n">GREEN</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="n">WHITE</span> <span class="p">)</span> <span class="p">)</span>
+                <span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">pred_white</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">)</span> <span class="n">id_whites_conn_green_blue</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span> <span class="n">pred_white</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">)</span> <span class="n">id_whites_conn_green_blue</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span><span class="c1">//identify_useful_triple_black_white_green</span>
+
+
+    <span class="kr">inline</span> <span class="kt">void</span>
+    <span class="n">identify_black_vertices_connected_to_green</span><span class="p">(</span>
+                                               <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">d_red</span><span class="p">,</span>
+                                               <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">id_blacks_conn_green_red</span>
+                                               <span class="p">){</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">(</span><span class="s">&quot;DistancesGreenToRedViaBlack.txt&quot;</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss_g_r_b</span><span class="p">;</span>
+
+        <span class="c1">//      unsigned int black_int = id_blacks_conn_green_red.size();</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">d_green_to_red_via_black</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">iter</span><span class="p">(</span><span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span>  <span class="n">end</span><span class="p">(</span><span class="n">id_blacks_conn_green_red</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="k">for</span> <span class="p">(;</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">end</span><span class="p">;</span> <span class="o">++</span><span class="n">iter</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">d_green_to_red_via_black</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">d_red</span><span class="p">[</span><span class="o">*</span><span class="n">iter</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
+            <span class="n">oss_g_r_b</span> <span class="o">&lt;&lt;</span>  <span class="n">d_red</span><span class="p">[</span><span class="o">*</span><span class="n">iter</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">copy</span><span class="p">(</span> <span class="n">d_green_to_red_via_black</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">d_green_to_red_via_black</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+             <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">oss_g_r_b</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">));</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">f_out_g_r_b</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">oss_g_r_b</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">f_out_g_r_b</span><span class="p">.</span><span class="n">write</span> <span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">size</span><span class="p">);</span>
+        <span class="n">f_out_g_r_b</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span><span class="c1">//identify_black_vertices_connected_to_green</span>
+
+    <span class="kr">inline</span> <span class="kt">void</span> <span class="n">print_distances_of_ids</span><span class="p">(</span>
+                                       <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">ids</span><span class="p">,</span>
+                                       <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span>
+                                       <span class="p">){</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss</span><span class="p">;</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">iter</span><span class="p">(</span><span class="n">ids</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span>  <span class="n">end</span><span class="p">(</span><span class="n">ids</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="k">for</span> <span class="p">(;</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">end</span><span class="p">;</span> <span class="o">++</span><span class="n">iter</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">oss</span> <span class="o">&lt;&lt;</span>  <span class="n">d</span><span class="p">[</span><span class="o">*</span><span class="n">iter</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">f_out</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">oss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">size</span><span class="p">);</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span><span class="c1">//identify_black_vertices_connected_to_green</span>
+
+
+    <span class="kr">inline</span> <span class="kt">double</span>
+    <span class="n">determine_and_print_tortuosity</span><span class="p">(</span> <span class="k">const</span> <span class="n">graspi</span><span class="o">::</span><span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">vertex_colors</span><span class="p">,</span>
+                                   <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                                   <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span>
+                                   <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span>
+                                   <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename_t</span><span class="p">,</span>
+                                   <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename_id_t</span><span class="p">,</span>
+                                   <span class="n">COLOR</span> <span class="n">c_source</span><span class="p">,</span>
+                                   <span class="n">COLOR</span> <span class="n">c_target</span><span class="p">){</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss_out_t</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss_out_id_t</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">tort_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_useful</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// useful means vertices with positive and finite distances</span>
+        <span class="kt">double</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">position_source</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">position_source</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">c_source</span> <span class="o">==</span> <span class="n">BLUE</span><span class="p">)</span> <span class="n">position_source</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">total_n</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">){</span><span class="c1">//2D</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="n">j</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()){</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">vertex_colors</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">==</span> <span class="n">c_target</span><span class="p">){</span>
+                            <span class="n">n_useful</span><span class="o">++</span><span class="p">;</span>
+                            <span class="kt">double</span> <span class="n">h_diff</span>
+                            <span class="o">=</span> <span class="n">fabs</span><span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">position_source</span><span class="o">-</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">pixelsize</span><span class="p">;</span>
+
+                            <span class="k">if</span> <span class="p">(</span> <span class="n">fabs</span><span class="p">(</span><span class="n">h_diff</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-20</span> <span class="p">)</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                            <span class="k">else</span> <span class="n">t</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">/</span><span class="n">h_diff</span><span class="p">;</span>
+
+                            <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                <span class="n">tort_1</span><span class="o">++</span><span class="p">;</span>
+                            <span class="p">}</span>
+                            <span class="n">oss_out_t</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                            <span class="n">oss_out_id_t</span> <span class="o">&lt;&lt;</span> <span class="n">id</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span>
+                            <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">h_diff</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span><span class="c1">//i</span>
+            <span class="p">}</span><span class="c1">//j</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="c1">//3D</span>
+            <span class="n">total_n</span> <span class="o">*=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                    <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="p">(</span> <span class="n">j</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">*</span> <span class="n">k</span><span class="p">);</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()){</span>
+                            <span class="k">if</span><span class="p">(</span><span class="n">vertex_colors</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">==</span> <span class="n">c_target</span><span class="p">){</span>
+                                <span class="n">n_useful</span><span class="o">++</span><span class="p">;</span>
+                                <span class="kt">double</span> <span class="n">h_diff</span>
+                                <span class="o">=</span> <span class="n">fabs</span><span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">position_source</span><span class="o">-</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">pixelsize</span><span class="p">;</span>
+
+                                <span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">h_diff</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">1e-20</span><span class="p">)</span>  <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                <span class="k">else</span> <span class="n">t</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">/</span><span class="n">h_diff</span><span class="p">;</span>
+
+                                <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                    <span class="n">tort_1</span><span class="o">++</span><span class="p">;</span>
+                                <span class="p">}</span>
+                                <span class="n">oss_out_t</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                                <span class="n">oss_out_id_t</span> <span class="o">&lt;&lt;</span> <span class="n">id</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span>
+                                <span class="o">&lt;&lt;</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">h_diff</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span><span class="c1">//i</span>
+                <span class="p">}</span><span class="c1">//j</span>
+            <span class="p">}</span><span class="c1">//k</span>
+        <span class="p">}</span><span class="c1">//end-3D</span>
+
+
+        <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span> <span class="n">f_out</span><span class="p">(</span><span class="n">filename_t</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">oss_out_t</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">oss_out_t</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">write</span> <span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">size</span><span class="p">);</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename_id_t</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+        <span class="n">buffer</span> <span class="o">=</span> <span class="n">oss_out_id_t</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">oss_out_id_t</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">write</span> <span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="n">size</span><span class="p">);</span>
+        <span class="n">f_out</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">n_useful</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">tort_1</span><span class="o">/</span><span class="n">n_useful</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kr">inline</span> <span class="kt">double</span>
+    <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="k">const</span> <span class="n">graspi</span><span class="o">::</span><span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">vertex_colors</span><span class="p">,</span>
+                         <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                         <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span>
+                         <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span>
+                         <span class="n">COLOR</span> <span class="n">c_source</span><span class="p">,</span>
+                         <span class="n">COLOR</span> <span class="n">c_target</span><span class="p">){</span>
+
+        <span class="kt">int</span> <span class="n">tort_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n_useful</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// useful means vertices with positive and finite distances</span>
+        <span class="kt">double</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">position_source</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">position_source</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">c_source</span> <span class="o">==</span> <span class="n">BLUE</span><span class="p">)</span> <span class="n">position_source</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">total_n</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">){</span><span class="c1">//2D</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="n">j</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()){</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">vertex_colors</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">==</span> <span class="n">c_target</span><span class="p">){</span>
+                            <span class="n">n_useful</span><span class="o">++</span><span class="p">;</span>
+                            <span class="kt">double</span> <span class="n">h_diff</span>
+                            <span class="o">=</span> <span class="n">fabs</span><span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">position_source</span><span class="o">-</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">pixelsize</span><span class="p">;</span>
+
+                            <span class="k">if</span> <span class="p">(</span> <span class="n">fabs</span><span class="p">(</span><span class="n">h_diff</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-20</span> <span class="p">)</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                            <span class="k">else</span> <span class="n">t</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">/</span><span class="n">h_diff</span><span class="p">;</span>
+
+                            <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                <span class="n">tort_1</span><span class="o">++</span><span class="p">;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span><span class="c1">//i</span>
+            <span class="p">}</span><span class="c1">//j</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="c1">//3D</span>
+            <span class="n">total_n</span> <span class="o">*=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                    <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="p">(</span> <span class="n">j</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">*</span> <span class="n">k</span><span class="p">);</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">&lt;</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()){</span>
+                            <span class="k">if</span><span class="p">(</span><span class="n">vertex_colors</span><span class="p">[</span><span class="n">id</span><span class="p">]</span> <span class="o">==</span> <span class="n">c_target</span><span class="p">){</span>
+                                <span class="n">n_useful</span><span class="o">++</span><span class="p">;</span>
+                                <span class="kt">double</span> <span class="n">h_diff</span>
+                                <span class="o">=</span> <span class="n">fabs</span><span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">position_source</span><span class="o">-</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">pixelsize</span><span class="p">;</span>
+
+                                <span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">h_diff</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">1e-20</span><span class="p">)</span>  <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                <span class="k">else</span> <span class="n">t</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">/</span><span class="n">h_diff</span><span class="p">;</span>
+
+                                <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="p">{</span>
+                                    <span class="n">t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+                                    <span class="n">tort_1</span><span class="o">++</span><span class="p">;</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span><span class="c1">//i</span>
+                <span class="p">}</span><span class="c1">//j</span>
+            <span class="p">}</span><span class="c1">//k</span>
+        <span class="p">}</span><span class="c1">//end-3D</span>
+
+
+        <span class="k">if</span><span class="p">(</span><span class="n">n_useful</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">tort_1</span><span class="o">/</span><span class="n">n_useful</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+
+<span class="p">}</span><span class="c1">//graspi-namespace</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

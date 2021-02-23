@@ -6,11 +6,14 @@
     <includes local="no">string</includes>
     <includes local="no">vector</includes>
     <includes local="no">sys/time.h</includes>
-    <includedby refid="main_8cpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/main.cpp</includedby>
-    <includedby refid="main_a_p_i_8cpp" local="yes">/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/mainAPI.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="main_a_p_i_8cpp" local="yes">src/mainAPI.cpp</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
       <node id="1">
-        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/time_check.hpp</label>
+        <label>src/time_check.hpp</label>
         <link refid="time__check_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -20,9 +23,6 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
       </node>
       <node id="2">
         <label>ctime</label>
@@ -34,24 +34,6 @@
         <label>sys/time.h</label>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1">
-        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/time_check.hpp</label>
-        <link refid="time__check_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/mainAPI.cpp</label>
-        <link refid="main_a_p_i_8cpp"/>
-      </node>
-      <node id="2">
-        <label>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classtime__check" prot="public">time_check</innerclass>
       <sectiondef kind="func">
       <memberdef kind="function" id="time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -73,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/time_check.hpp" line="141" column="8" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/time_check.hpp" bodystart="141" bodyend="162"/>
+        <location file="src/time_check.hpp" line="141" column="8" bodyfile="src/time_check.hpp" bodystart="141" bodyend="162"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -109,16 +91,16 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="classtime__check" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtime__check" kindref="compound">time_check</ref><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31" refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>size_type;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="37" refid="classtime__check_1abe9c1ae866d898e9e92474822ac84394" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1abe9c1ae866d898e9e92474822ac84394" kindref="member">time_check</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/><ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/>n<sp/>=<sp/>128)</highlight></codeline>
+<codeline lineno="37" refid="classtime__check_1abe9c1ae866d898e9e92474822ac84394" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1abe9c1ae866d898e9e92474822ac84394" kindref="member">time_check</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>size_type<sp/>n<sp/>=<sp/>128)</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>name_(name),<sp/>hbeg_(false),<sp/>hfin_(false),<sp/>pos_(0),</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>tpts_(n,<sp/>0.0),<sp/>ipts_(n,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="44" refid="classtime__check_1a0489b9aa63325598c6abc64faaea64a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/><ref refid="classtime__check_1a0489b9aa63325598c6abc64faaea64a2" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos_;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="classtime__check_1a0489b9aa63325598c6abc64faaea64a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_type<sp/><ref refid="classtime__check_1a0489b9aa63325598c6abc64faaea64a2" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos_;<sp/>}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="48" refid="classtime__check_1afe50b049747f263f4dd926beaba8de07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/><ref refid="classtime__check_1afe50b049747f263f4dd926beaba8de07" kindref="member">capacity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tpts_.size();<sp/>}</highlight></codeline>
+<codeline lineno="48" refid="classtime__check_1afe50b049747f263f4dd926beaba8de07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_type<sp/><ref refid="classtime__check_1afe50b049747f263f4dd926beaba8de07" kindref="member">capacity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tpts_.size();<sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="53" refid="classtime__check_1aa5da84d6b22069b9ad2e484081e50700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1aa5da84d6b22069b9ad2e484081e50700" kindref="member">start</ref>()<sp/>{</highlight></codeline>
@@ -134,7 +116,7 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="69" refid="classtime__check_1aa434d70404b96ea86ca8ef87039ad1b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1aa434d70404b96ea86ca8ef87039ad1b0" kindref="member">check</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((hbeg_)<sp/>&amp;&amp;<sp/>(pos_<sp/>&lt;<sp/>tpts_.size()))<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tpts_[pos_]<sp/>=<sp/><ref refid="classtime__check_1a75e169967d55124c1e93313fe6cc3f1d" kindref="member">get_time</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tpts_[pos_]<sp/>=<sp/>get_time();</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ipts_[pos_]<sp/>=<sp/>id;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++pos_;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -147,26 +129,26 @@
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>total</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="88" refid="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b" kindref="member">at_point</ref>(<ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88" refid="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b" kindref="member">at_point</ref>(size_type<sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!((hbeg_)<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/>pos_)))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>1)<sp/>?<sp/>(tpts_[0]<sp/>-<sp/>tv2double(beg_))</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(tpts_[n]<sp/>-<sp/>tpts_[n-1]);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>at_point</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="97" refid="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6" kindref="member">to_point</ref>(<ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97" refid="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6" kindref="member">to_point</ref>(size_type<sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((hbeg_)<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/>pos_))<sp/>?<sp/>tpts_[n]<sp/>:<sp/>0.0;</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>to_point</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="104" refid="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2" kindref="member">point_id</ref>(<ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104" refid="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2" kindref="member">point_id</ref>(size_type<sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((hbeg_)<sp/>&amp;&amp;<sp/>(n<sp/>&lt;<sp/>pos_))<sp/>?<sp/>ipts_[n]<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>point_id</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classtime__check_1a0a0975558a6e417fc264d58682dc5cab" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtime__check" kindref="compound">time_check</ref>&amp;);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/>operator&lt;&lt;(std::ostream&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtime__check" kindref="compound">time_check</ref>&amp;);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="111" refid="classtime__check_1a75e169967d55124c1e93313fe6cc3f1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtime__check_1a75e169967d55124c1e93313fe6cc3f1d" kindref="member">get_time</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_time()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeval<sp/>t;</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gettimeofday(&amp;t,<sp/>0);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tv2double(t);</highlight></codeline>
@@ -187,7 +169,7 @@
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hfin_;<sp/></highlight><highlight class="comment">//<sp/>true<sp/>if<sp/>stop()<sp/>called</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>timeval<sp/>fin_;</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtime__check_1a284eb6af7fe037fad1639667544d7ff9" kindref="member">size_type</ref><sp/>pos_;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>checkpoints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>size_type<sp/>pos_;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>checkpoints</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>tpts_;<sp/></highlight><highlight class="comment">//<sp/>values<sp/>in<sp/>the<sp/>checkpoints</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>ipts_;<sp/></highlight><highlight class="comment">//<sp/>checkpoints<sp/>ids</highlight><highlight class="normal"></highlight></codeline>
@@ -196,7 +178,7 @@
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141" refid="time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="time__check_8hpp_1a3d52c6659b398697f569cf3d5aa00a24" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtime__check" kindref="compound">time_check</ref>&amp;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/>operator&lt;&lt;(std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtime__check" kindref="compound">time_check</ref>&amp;<sp/>t)<sp/>{</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>t.name_<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>time<sp/>check:\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>i<sp/>=<sp/>0;</highlight></codeline>
@@ -221,6 +203,6 @@
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TIME_CHECK_HPP</highlight></codeline>
     </programlisting>
-    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/time_check.hpp"/>
+    <location file="src/time_check.hpp"/>
   </compounddef>
 </doxygen>

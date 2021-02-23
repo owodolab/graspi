@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
   
@@ -30,6 +31,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -94,6 +97,9 @@
 <li class="toctree-l1"><a class="reference internal" href="basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Library API</a></li>
 </ul>
 
             
@@ -162,8 +168,24 @@
   <div class="section" id="graspi-functionality">
 <h1>GraSPI functionality<a class="headerlink" href="#graspi-functionality" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> computes a library of descriptors for a segmented microstructure
-and computes descriptors that are relevant for organic solar cells performance.
-The package computes two types of descriptors: scalar descriptors and array descriptors.
+and computes descriptors that are relevant for organic solar cells performance.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> assumes that input microstructure is segmented into two phases: BLACK and WHITE.
+In our application, organic solar cells, BLACK pixels correspond to electron-donating materials,
+and WHITE pixels correspond to electron-accepting material - as marked in the figure below.
+Three meta-vertices are added to the network:</p>
+<ul class="simple">
+<li><p>BLUE corresponds to cathode,</p></li>
+<li><p>RED corresponds to anode,</p></li>
+<li><p>GREEN corresponds to the interface.</p></li>
+</ul>
+<p>As graph is being constructed, the meta-vertices are added to the graph. For the
+morphology inputed as an array, the BLUE vertex is added to all vertices in the first row,
+and RED vertex is added to all vertices corresponding to the last row in the input file.
+<code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> reads the colors of the pixels starting from the bottom left corner.
+GREEN vertices are added as the graph is constructed, when BLACK pixel has any WHITE
+voxel in the neighborhood, two additional edges are added (between BLACK and GREEN, and between WHITE and GREEN).</p>
+<a class="reference internal image-reference" href="_images/MorphToGraphAllSteps.png"><img alt="_images/MorphToGraphAllSteps.png" src="_images/MorphToGraphAllSteps.png" style="width: 600px;" /></a>
+<p>The package computes two types of descriptors: scalar descriptors and array descriptors.
 The scalar descriptors are directed to the standard output, while array descriptors are directed to the corresponding file.
 The array descriptors corresponds to the shortest distances and are saved in the following files:</p>
 <ul class="simple">
@@ -184,7 +206,7 @@ The infinity distances are maintained to maintain capability to map back the dis
 <p><code class="docutils literal notranslate"><span class="pre">GraSPI</span></code> provides one function where a set of descriptors are computed - see documentation for more details:</p>
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb">
-<span id="_CPPv3N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb"></span><span id="_CPPv2N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb"></span><span id="graspi::compute_descriptors_only__iP.unsigned-iCR.unsigned-iCR.unsigned-iCR.floatCR.bCR"></span><span class="target" id="namespacegraspi_1a294849c801959ea7513ffb782d103f98"></span>std::vector&lt;desc_t&gt; <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">compute_descriptors_only</code><span class="sig-paren">(</span>int *<em>p_colors</em>, <em class="property">const</em> unsigned int &amp;<em>nx</em>, <em class="property">const</em> unsigned int &amp;<em>ny</em>, <em class="property">const</em> unsigned int &amp;<em>nz</em> = 1, <em class="property">const</em> float &amp;<em>pixelsize</em> = 1.0, <em class="property">const</em> bool &amp;<em>if_per</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb"></span><span id="_CPPv2N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb"></span><span id="graspi::compute_descriptors_only__iP.unsigned-iCR.unsigned-iCR.unsigned-iCR.floatCR.bCR"></span><span class="target" id="graspi_a_p_i_8hpp_1a294849c801959ea7513ffb782d103f98"></span>std::vector&lt;<a class="reference internal" href="api/typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html#_CPPv4N6graspi6desc_tE" title="graspi::desc_t">desc_t</a>&gt; <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">compute_descriptors_only</code><span class="sig-paren">(</span>int *<em>p_colors</em>, <em class="property">const</em> unsigned int &amp;<em>nx</em>, <em class="property">const</em> unsigned int &amp;<em>ny</em>, <em class="property">const</em> unsigned int &amp;<em>nz</em> = 1, <em class="property">const</em> float &amp;<em>pixelsize</em> = 1.0, <em class="property">const</em> bool &amp;<em>if_per</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi24compute_descriptors_onlyEPiRKjRKjRKjRKfRKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This function computes descriptors of morphology defined on structured matrix</p>
 <p>This function computes a set of descriptors of morphology <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>the vector of descriptors, where each descriptor is a pair (std::pair&lt;float,std::string&gt;) consisting of descriptor’s value (float) and name (string) </p>

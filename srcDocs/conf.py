@@ -34,15 +34,35 @@ release = 'July 2020'
 # ones.
 extensions = [
               "sphinx_rtd_theme",
-              "breathe"
+              "breathe",
+              "exhale"
               ]
 
 # Breathe Configuration
-
+#breathe_projects = {
+#    "GraSPI": "xml/",
+#}
 breathe_projects = {
     "GraSPI": "doxygen/xml/",
 }
+
 breathe_default_project = "GraSPI"
+
+# Setup the exhale extension
+exhale_args = {
+    # These arguments are required
+    "containmentFolder":     "./api",
+    "rootFileName":          "library_root.rst",
+    "rootFileTitle":         "Library API",
+    "doxygenStripFromPath":  "..",
+    # Suggested optional arguments
+    "createTreeView":        True,
+    # TIP: if using the sphinx-bootstrap-theme, you need
+    # "treeViewIsBootstrap": True,
+    "exhaleExecutesDoxygen": True,
+    "exhaleDoxygenStdin":    "INPUT = ../src"
+}
+
 
 
 # Tell sphinx what the primary language being documented is.

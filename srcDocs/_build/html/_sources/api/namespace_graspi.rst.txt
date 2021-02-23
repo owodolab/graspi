@@ -1,0 +1,150 @@
+
+.. _namespace_graspi:
+
+Namespace graspi
+================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structgraspi_1_1_c_c`
+
+- :ref:`exhale_struct_structgraspi_1_1_d_e_s_c`
+
+- :ref:`exhale_struct_structgraspi_1_1dim__a__t`
+
+- :ref:`exhale_struct_structgraspi_1_1dim__g__t`
+
+- :ref:`exhale_struct_structgraspi_1_1foo__no__w__abs`
+
+- :ref:`exhale_struct_structgraspi_1_1foo__w__abs`
+
+- :ref:`exhale_struct_structgraspi_1_1foo__w__diss`
+
+- :ref:`exhale_class_classgraspi_1_1connect__color__green`
+
+- :ref:`exhale_class_classgraspi_1_1connect__relevant__meta__vertex`
+
+- :ref:`exhale_class_classgraspi_1_1connect__same__color`
+
+- :ref:`exhale_class_classgraspi_1_1connect__same__color__and__relevant__meta__vertex`
+
+- :ref:`exhale_class_classgraspi_1_1find__desc__of__name`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601`
+
+- :ref:`exhale_function_performance__indicators_8hpp_1a2e4749cd6042c411d70aa47b9554befa`
+
+- :ref:`exhale_function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67`
+
+- :ref:`exhale_function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852`
+
+- :ref:`exhale_function_graspi_8hpp_1a5f1bb071296a4badb95419918641de77`
+
+- :ref:`exhale_function_graspi_a_p_i_8hpp_1a294849c801959ea7513ffb782d103f98`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1ab9c0f50386d5c15fc51f6b99d8ac4270`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a3683cbb89913ef8416bf241640d23929`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b`
+
+- :ref:`exhale_function_graph__cc_8hpp_1aea5b1a326446657e7287655d78ce757c`
+
+- :ref:`exhale_function_graph__cc_8hpp_1a0127f742b9a0a14a9f5dccb2acd56548`
+
+- :ref:`exhale_function_graph__dijkstra_8hpp_1a28e3a15b3334d5b397a3d34372e03cfe`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a5bba1fdf9b55141a186eabaf238d8553`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a8271c9ba4fea31400bdb2794601fa005`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a9cf2d83b96f6a2237f46fb338666d5cf`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1ae255b5ecc645b49c4d3bf1dc87a73528`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a8a9d93f04353b4b1b2905656a2e50b2c`
+
+- :ref:`exhale_function_graph__cc_8hpp_1af0904f04b234b1219639b64e22b424d3`
+
+- :ref:`exhale_function_performance__indicators__diss_8hpp_1a198a729cde1836cb5d6e79d870e82fd2`
+
+- :ref:`exhale_function_performance__indicators__diss_8hpp_1add6ca43f27b7b5f15d15536d332596db`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1a4cf5e5deebbc874bdda865d78e0bf3ec`
+
+- :ref:`exhale_function_performance__indicators__diss_8hpp_1ac200e273b19362a1b0d8e3f264f3a641`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d`
+
+- :ref:`exhale_function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d`
+
+- :ref:`exhale_function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae`
+
+- :ref:`exhale_function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b`
+
+- :ref:`exhale_function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde`
+
+- :ref:`exhale_function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9`
+
+- :ref:`exhale_function_graph__io_8hpp_1a7834b811f17d737eb30e0d0ef522d161`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1a3b45d4541b18f373faf7d0827ad8e4a8`
+
+- :ref:`exhale_function_graph__constructors_8hpp_1aa06fd4851c6fa0e57c56bfc6ef70fac0`
+
+- :ref:`exhale_function_performance__indicators__abs_8hpp_1aeb3009f425a24b4a6bc0a67ba59a2082`
+
+- :ref:`exhale_function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc`
+
+- :ref:`exhale_function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1aca225ce3c337d13a7889284679d62493`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1af2094bc8f309097cb0761fcbc246682b`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a2b298407124b7b3c351ca7eb3d7196cc`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a832030346ce3d5af00fb9a8c521996d1`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d`
+
+- :ref:`exhale_typedef_graspi__types_8hpp_1a4cbb0f11b7c424b7949e42ab9e49eee5`

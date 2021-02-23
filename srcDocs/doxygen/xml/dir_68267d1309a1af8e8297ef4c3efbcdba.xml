@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
-    <compoundname>/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src</compoundname>
+    <compoundname>src</compoundname>
     <innerfile refid="graph__cc_8hpp">graph_cc.hpp</innerfile>
     <innerfile refid="graph__constructors_8cpp">graph_constructors.cpp</innerfile>
     <innerfile refid="graph__constructors_8hpp">graph_constructors.hpp</innerfile>
@@ -24,6 +24,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/"/>
+    <location file="src/"/>
   </compounddef>
 </doxygen>

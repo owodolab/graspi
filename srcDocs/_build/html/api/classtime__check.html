@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class time_check &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function graspi::add_edge_to_graph" href="function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601.html" />
+    <link rel="prev" title="Class find_desc_of_name" href="classgraspi_1_1find__desc__of__name.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+        
+      <li>Class time_check</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classtime__check.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-time-check">
+<span id="exhale-class-classtime-check"></span><h1>Class time_check<a class="headerlink" href="#class-time-check" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_time_check.hpp.html#file-src-time-check-hpp"><span class="std std-ref">File time_check.hpp</span></a></p></li>
+</ul>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv410time_check">
+<span id="_CPPv310time_check"></span><span id="_CPPv210time_check"></span><span id="time_check"></span><span class="target" id="classtime__check"></span><em class="property">class </em><code class="sig-name descname">time_check</code><a class="headerlink" href="#_CPPv410time_check" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Tool for program execution checkpointing. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N10time_check9size_typeE">
+<span id="_CPPv3N10time_check9size_typeE"></span><span id="_CPPv2N10time_check9size_typeE"></span><span id="time_check::size_type"></span><span class="target" id="classtime__check_1a284eb6af7fe037fad1639667544d7ff9"></span><em class="property">typedef </em>unsigned <code class="sig-name descname">size_type</code><a class="headerlink" href="#_CPPv4N10time_check9size_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N10time_check10time_checkEPKc9size_type">
+<span id="_CPPv3N10time_check10time_checkEPKc9size_type"></span><span id="_CPPv2N10time_check10time_checkEPKc9size_type"></span><span id="time_check::time_check__cCP.size_type"></span><span class="target" id="classtime__check_1abe9c1ae866d898e9e92474822ac84394"></span><code class="sig-name descname">time_check</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>name</em> = &quot;&quot;, <a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <em>n</em> = 128<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10time_check10time_checkEPKc9size_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructs <a class="reference internal" href="#classtime__check"><span class="std std-ref">time_check</span></a>. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: name of the object. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: maximal number of check points. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check4sizeEv">
+<span id="_CPPv3NK10time_check4sizeEv"></span><span id="_CPPv2NK10time_check4sizeEv"></span><span id="time_check::sizeC"></span><span class="target" id="classtime__check_1a0489b9aa63325598c6abc64faaea64a2"></span><a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>number of stored checkpoints. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check8capacityEv">
+<span id="_CPPv3NK10time_check8capacityEv"></span><span id="_CPPv2NK10time_check8capacityEv"></span><span id="time_check::capacityC"></span><span class="target" id="classtime__check_1afe50b049747f263f4dd926beaba8de07"></span><a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <code class="sig-name descname">capacity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check8capacityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>maximal number of checkpoints. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10time_check5startEv">
+<span id="_CPPv3N10time_check5startEv"></span><span id="_CPPv2N10time_check5startEv"></span><span id="time_check::start"></span><span class="target" id="classtime__check_1aa5da84d6b22069b9ad2e484081e50700"></span>void <code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10time_check5startEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Starts checkpointing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10time_check4stopEv">
+<span id="_CPPv3N10time_check4stopEv"></span><span id="_CPPv2N10time_check4stopEv"></span><span id="time_check::stop"></span><span class="target" id="classtime__check_1a201d9270174505322fdee709629a5d3d"></span>void <code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10time_check4stopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Stops checkpointing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10time_check5checkERKNSt6stringE">
+<span id="_CPPv3N10time_check5checkERKNSt6stringE"></span><span id="_CPPv2N10time_check5checkERKNSt6stringE"></span><span id="time_check::check__ssCR"></span><span class="target" id="classtime__check_1aa434d70404b96ea86ca8ef87039ad1b0"></span>void <code class="sig-name descname">check</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10time_check5checkERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates checkpoint. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: name of the checkpoint. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check5totalEv">
+<span id="_CPPv3NK10time_check5totalEv"></span><span id="_CPPv2NK10time_check5totalEv"></span><span id="time_check::totalC"></span><span class="target" id="classtime__check_1a04ab99fd2a5eaf66998e2eb869807482"></span>double <code class="sig-name descname">total</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check5totalEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>time from <a class="reference internal" href="#classtime__check_1aa5da84d6b22069b9ad2e484081e50700"><span class="std std-ref">start()</span></a> to <a class="reference internal" href="#classtime__check_1a201d9270174505322fdee709629a5d3d"><span class="std std-ref">stop()</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check8at_pointE9size_type">
+<span id="_CPPv3NK10time_check8at_pointE9size_type"></span><span id="_CPPv2NK10time_check8at_pointE9size_type"></span><span id="time_check::at_point__size_typeC"></span><span class="target" id="classtime__check_1a03a2b06b04f8f28513d93e5edf50758b"></span>double <code class="sig-name descname">at_point</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <em>n</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check8at_pointE9size_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>time between points n and n-1. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check8to_pointE9size_type">
+<span id="_CPPv3NK10time_check8to_pointE9size_type"></span><span id="_CPPv2NK10time_check8to_pointE9size_type"></span><span id="time_check::to_point__size_typeC"></span><span class="target" id="classtime__check_1ad05013ee81bc1040e96d16be3407a3a6"></span>double <code class="sig-name descname">to_point</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <em>n</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check8to_pointE9size_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>time to point n. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check8point_idE9size_type">
+<span id="_CPPv3NK10time_check8point_idE9size_type"></span><span id="_CPPv2NK10time_check8point_idE9size_type"></span><span id="time_check::point_id__size_typeC"></span><span class="target" id="classtime__check_1afc6f9709c04b874b4ebed5c134e76fb2"></span>std::string <code class="sig-name descname">point_id</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N10time_check9size_typeE" title="time_check::size_type">size_type</a> <em>n</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check8point_idE9size_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>id of the n’th point </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10time_check8get_timeEv">
+<span id="_CPPv3NK10time_check8get_timeEv"></span><span id="_CPPv2NK10time_check8get_timeEv"></span><span id="time_check::get_timeC"></span><span class="target" id="classtime__check_1a75e169967d55124c1e93313fe6cc3f1d"></span>double <code class="sig-name descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10time_check8get_timeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Friends</p>
+<dl class="cpp function">
+<dt id="_CPPv4N10time_checklsERNSt7ostreamERK10time_check">
+<span id="_CPPv3N10time_checklsERNSt7ostreamERK10time_check"></span><span id="_CPPv2N10time_checklsERNSt7ostreamERK10time_check"></span><span id="time_check::lshift-operator__osR.time_checkCR"></span><span class="target" id="classtime__check_1a0a0975558a6e417fc264d58682dc5cab"></span><em class="property">friend</em> std::ostream &amp;<code class="sig-name descname">operator&lt;&lt;</code><span class="sig-paren">(</span>std::ostream&amp;, <em class="property">const</em> <a class="reference internal" href="#_CPPv410time_check" title="time_check">time_check</a>&amp;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10time_checklsERNSt7ostreamERK10time_check" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601.html" class="btn btn-neutral float-right" title="Function graspi::add_edge_to_graph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classgraspi_1_1find__desc__of__name.html" class="btn btn-neutral float-left" title="Class find_desc_of_name" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

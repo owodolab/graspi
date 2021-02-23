@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Function graspi::build_graph(std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;) &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function graspi::build_graph(const std::string&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" href="function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5.html" />
+    <link rel="prev" title="Function graspi::all_perfomance_indicators_3phases" href="function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+        
+      <li>Function graspi::build_graph(std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="function-graspi-build-graph-std-istream-graph-t-dim-g-t-vertex-colors-t-edge-weights-t-edge-colors-t">
+<span id="exhale-function-graph-constructors-8hpp-1aee448ce90f643a56015935134950fef8"></span><h1>Function graspi::build_graph(std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)<a class="headerlink" href="#function-graspi-build-graph-std-istream-graph-t-dim-g-t-vertex-colors-t-edge-weights-t-edge-colors-t" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_graph_constructors.hpp.html#file-src-graph-constructors-hpp"><span class="std std-ref">File graph_constructors.hpp</span></a></p></li>
+</ul>
+<div class="section" id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Unable to resolve multiple matches for function “graspi::build_graph” with arguments (std::istream&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;) in doxygen xml output for project “GraSPI” from directory: doxygen/xml/.
+Potential matches:
+</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="kt">bool</span> <span class="n">build_graph</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="n">graph_t</span> <span class="o">*&amp;</span><span class="n">G</span><span class="p">,</span> <span class="n">dim_g_t</span> <span class="o">&amp;</span><span class="n">d_g</span><span class="p">,</span> <span class="n">vertex_colors_t</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">,</span> <span class="n">edge_weights_t</span> <span class="o">&amp;</span><span class="n">W</span><span class="p">,</span> <span class="n">edge_colors_t</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">)</span>
+<span class="o">-</span> <span class="kt">bool</span> <span class="n">build_graph</span><span class="p">(</span><span class="n">graph_t</span> <span class="o">*&amp;</span><span class="n">G</span><span class="p">,</span> <span class="k">const</span> <span class="n">dim_g_t</span> <span class="o">&amp;</span><span class="n">d_g</span><span class="p">,</span> <span class="n">vertex_colors_t</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">,</span> <span class="n">dim_a_t</span> <span class="o">&amp;</span><span class="n">d_a</span><span class="p">,</span> <span class="n">edge_weights_t</span> <span class="o">&amp;</span><span class="n">W</span><span class="p">,</span> <span class="n">edge_colors_t</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">,</span> <span class="kt">double</span> <span class="n">pixelsize</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">if_per_on_size</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span>
+<span class="o">-</span> <span class="kt">bool</span> <span class="n">build_graph</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">is</span><span class="p">,</span> <span class="n">graph_t</span> <span class="o">*&amp;</span><span class="n">G</span><span class="p">,</span> <span class="n">dim_g_t</span> <span class="o">&amp;</span><span class="n">d_g</span><span class="p">,</span> <span class="n">vertex_colors_t</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">,</span> <span class="n">edge_weights_t</span> <span class="o">&amp;</span><span class="n">W</span><span class="p">,</span> <span class="n">edge_colors_t</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5.html" class="btn btn-neutral float-right" title="Function graspi::build_graph(const std::string&amp;, graph_t *&amp;, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4.html" class="btn btn-neutral float-left" title="Function graspi::all_perfomance_indicators_3phases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

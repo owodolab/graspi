@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File graspi_types.hpp &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File graspi_types.hpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_graspi_types.hpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-graspi-types-hpp">
+<span id="program-listing-file-src-graspi-types-hpp"></span><h1>Program Listing for File graspi_types.hpp<a class="headerlink" href="#program-listing-for-file-graspi-types-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_graspi_types.hpp.html#file-src-graspi-types-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/graspi_types.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
+<span class="cm"> *  $Id$</span>
+<span class="cm"> **</span>
+<span class="cm"> *  File: graspi_types.hpp</span>
+<span class="cm"> *  Created: May 8, 2012</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Author: Olga Wodo, Baskar Ganapathysubramanian</span>
+<span class="cm"> *  Copyright (c) 2012 Olga Wodo, Baskar Ganapthysubramanian</span>
+<span class="cm"> *  See accompanying LICENSE.</span>
+<span class="cm"> *</span>
+<span class="cm"> *  This file is part of GraSPI.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef GRASPI_TYPES_HPP</span>
+<span class="cp">#define GRASPI_TYPES_HPP</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;boost/graph/adjacency_list.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#define COLOR unsigned int</span>
+
+<span class="cp">#define BLACK   0 </span><span class="c1">// donor     (D)</span>
+<span class="cp">#define WHITE   1 </span><span class="c1">// acceptor  (A)</span>
+<span class="cp">#define GREY    3 </span><span class="c1">// mixed     (D+A)</span>
+
+<span class="cp">#define BLUE   10 </span><span class="c1">// cathode   (neg/bottom)</span>
+<span class="cp">#define RED    20 </span><span class="c1">// anode     (pos/top)</span>
+
+<span class="cp">#define GREEN  30 </span><span class="c1">// interface (I D/A)</span>
+<span class="cp">#define DGREEN 31 </span><span class="c1">// interface (I D/D+A)</span>
+<span class="cp">#define LGREEN 32 </span><span class="c1">// interface (I A/D+A)</span>
+
+<span class="k">namespace</span> <span class="n">graspi</span> <span class="p">{</span>
+
+    <span class="c1">// graph type</span>
+    <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">adjacency_list</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">setS</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">vecS</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">undirectedS</span><span class="p">,</span>
+                <span class="n">boost</span><span class="o">::</span><span class="n">no_property</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">no_property</span><span class="o">&gt;</span> <span class="n">graph_t</span><span class="p">;</span>
+
+    <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span><span class="n">graph_t</span><span class="o">&gt;::</span><span class="n">vertex_descriptor</span> <span class="n">vertex_t</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span><span class="n">graph_t</span><span class="o">&gt;::</span><span class="n">edge_descriptor</span>   <span class="n">edge_descriptor_t</span><span class="p">;</span>
+
+    <span class="c1">// vertex properties</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">COLOR</span><span class="o">&gt;</span> <span class="n">vertex_colors_t</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span>   <span class="n">vertex_ccs_t</span><span class="p">;</span>
+
+    <span class="c1">// edge properties</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span><span class="kt">char</span> <span class="o">&gt;</span>         <span class="n">edge_colors_t</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">edge_descriptor_t</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span>          <span class="n">edge_map_t</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">associative_property_map</span><span class="o">&lt;</span><span class="n">edge_map_t</span><span class="o">&gt;</span> <span class="n">edge_weights_t</span><span class="p">;</span>
+
+    <span class="c1">// cc type</span>
+    <span class="k">struct</span> <span class="n">CC</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">CC</span><span class="o">&gt;</span> <span class="n">ccs_t</span><span class="p">;</span>
+
+    <span class="c1">// descriptor type;</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">desc_t</span><span class="p">;</span>
+
+    <span class="c1">// descriptor dimension of graph vertices</span>
+    <span class="k">struct</span> <span class="n">dim_g_t</span> <span class="p">{</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_phases</span><span class="p">;</span>           <span class="c1">//number of phases (currently 2 or 3)</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_bulk</span><span class="p">;</span>             <span class="c1">//all BLACK,WHITE and GREY vertices</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_basic</span><span class="p">;</span>       <span class="c1">//basic meta vertices (anode, cathode)</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="c1">//interfacial meta vertices between</span>
+        <span class="c1">// (BLACK/WHITE), (BLACK/GREY), (WHITE/GREY)</span>
+        <span class="k">explicit</span> <span class="nf">dim_g_t</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_phases</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                         <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">bulk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">meta</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="o">:</span> <span class="n">n_phases</span><span class="p">(</span><span class="n">n_phases</span><span class="p">),</span> <span class="n">n_bulk</span><span class="p">(</span><span class="n">bulk</span><span class="p">),</span> <span class="n">n_meta_basic</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">n_meta_interfacial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="n">n_meta_interfacial</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="nf">n_total</span><span class="p">()</span>     <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="n">n_meta_basic</span><span class="o">+</span><span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">n_meta</span><span class="p">()</span>      <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_basic</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">n_meta_int</span><span class="p">()</span>  <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">n_meta_total</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_basic</span><span class="o">+</span><span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="nf">id</span><span class="p">(</span><span class="n">COLOR</span> <span class="n">c</span><span class="p">)</span><span class="k">const</span><span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">BLUE</span><span class="p">)</span>   <span class="k">return</span> <span class="n">id_blue</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">RED</span><span class="p">)</span>    <span class="k">return</span> <span class="n">id_red</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">GREEN</span><span class="p">)</span>  <span class="k">return</span> <span class="n">id_green</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">DGREEN</span><span class="p">)</span>  <span class="k">return</span> <span class="n">id_dgreen</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">LGREEN</span><span class="p">)</span>  <span class="k">return</span> <span class="n">id_lgreen</span><span class="p">();</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="nf">id_blue</span><span class="p">()</span> <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="p">;</span>   <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">id_red</span><span class="p">()</span>  <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">id_green</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">id_dgreen</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="nf">id_lgreen</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">};</span> <span class="c1">// struct dim_g_t</span>
+
+    <span class="c1">// dimension descriptor</span>
+    <span class="k">struct</span> <span class="n">dim_a_t</span> <span class="p">{</span>
+        <span class="k">explicit</span> <span class="n">dim_a_t</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                         <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="o">:</span> <span class="n">nx</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">ny</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">nz</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nx</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">ny</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">nz</span><span class="p">;</span>
+
+    <span class="p">};</span> <span class="c1">// struct dim_t</span>
+
+<span class="p">}</span> <span class="c1">// namespace graspi</span>
+
+<span class="cp">#endif </span><span class="c1">// GRASPI_TYPES_HPP</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

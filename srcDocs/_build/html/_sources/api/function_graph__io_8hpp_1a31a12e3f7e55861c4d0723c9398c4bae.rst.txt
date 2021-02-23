@@ -1,0 +1,13 @@
+.. _exhale_function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae:
+
+Function graspi::output_graph(const std::string&, graph_t \*, dim_g_t&, vertex_colors_t&, edge_weights_t&, edge_colors_t&)
+==========================================================================================================================
+
+- Defined in :ref:`file_src_graph_io.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graspi::output_graph(const std::string&, graph_t *, dim_g_t&, vertex_colors_t&, edge_weights_t&, edge_colors_t&)

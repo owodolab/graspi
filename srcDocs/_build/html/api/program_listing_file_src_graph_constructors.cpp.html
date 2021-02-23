@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File graph_constructors.cpp &mdash; GraSPI July 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GraSPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../graspiFunctionality.html">GraSPI functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputFormats.html">Input Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exampleOfUsage.html">Example of usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listOfDescriptors.html">List of Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicDefinitions.html">Basic Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basicOperationsOnGraphs.html">Basic Operations On Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GraSPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File graph_constructors.cpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_src_graph_constructors.cpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-graph-constructors-cpp">
+<span id="program-listing-file-src-graph-constructors-cpp"></span><h1>Program Listing for File graph_constructors.cpp<a class="headerlink" href="#program-listing-for-file-graph-constructors-cpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_graph_constructors.cpp.html#file-src-graph-constructors-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/graph_constructors.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;graph_constructors.hpp&quot;</span><span class="cp"></span>
+
+<span class="kt">bool</span> <span class="n">graspi</span><span class="o">::</span><span class="n">build_graph</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span>
+                         <span class="n">graph_t</span><span class="o">*&amp;</span> <span class="n">G</span><span class="p">,</span>
+                         <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                         <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                         <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                         <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">ifstream</span> <span class="n">f</span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">build_graph</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// build_graph</span>
+
+
+<span class="kt">bool</span> <span class="n">graspi</span><span class="o">::</span><span class="n">build_graph</span><span class="p">(</span><span class="n">graph_t</span><span class="o">*&amp;</span> <span class="n">G</span><span class="p">,</span> <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                         <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                         <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                         <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                         <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">if_per_on_size</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="n">graspi</span><span class="o">::</span><span class="n">initlize_colors_meta_vertices</span><span class="p">(</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span> <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span> <span class="p">){</span>
+
+    <span class="c1">//    std::cerr &lt;&lt; &quot;Test: &quot; &lt;&lt; C.size() &lt;&lt; &quot; &quot; &lt;&lt; d_g.n_bulk &lt;&lt; std::endl;</span>
+
+    <span class="n">C</span><span class="p">[</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="p">]</span>   <span class="o">=</span> <span class="n">BLUE</span><span class="p">;</span>  <span class="c1">// bottom electrode</span>
+    <span class="n">C</span><span class="p">[</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">RED</span><span class="p">;</span>   <span class="c1">// top electrode</span>
+    <span class="n">C</span><span class="p">[</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">GREEN</span><span class="p">;</span> <span class="c1">// meta vertex - I D/A</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+        <span class="n">C</span><span class="p">[</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">DGREEN</span><span class="p">;</span> <span class="c1">// meta vertex - I D/D+A</span>
+        <span class="n">C</span><span class="p">[</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">LGREEN</span><span class="p">;</span> <span class="c1">// meta vertex - I A/D+A</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Container</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">graspi</span><span class="o">::</span><span class="n">update_graph</span><span class="p">(</span><span class="k">const</span> <span class="n">Container</span><span class="o">&amp;</span> <span class="n">M</span><span class="p">,</span> <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span>
+                          <span class="n">graph_t</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">,</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                          <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                          <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                          <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// no error checking</span>
+    <span class="n">C</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span> <span class="n">M</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">+</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_meta</span><span class="p">()</span> <span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+    <span class="c1">//      initlize_color_meta_vertices( C, d_g );</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// update_graph</span>
+
+
+<span class="cm">/*</span>
+<span class="cm"> * Function adds/updates edges to the graph</span>
+<span class="cm"> * between interface meta-vertex and bulk vertices</span>
+<span class="cm"> * with corresponding attributes</span>
+<span class="cm"> * s      - source vertex to be checked</span>
+<span class="cm"> * meta_t - meta vertex to which edge is linked</span>
+<span class="cm"> * w,o    - attributes of new edges</span>
+<span class="cm"> */</span>
+
+<span class="kt">bool</span> <span class="n">graspi</span><span class="o">::</span><span class="n">build_graph</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">is</span><span class="p">,</span>
+                         <span class="n">graph_t</span><span class="o">*&amp;</span> <span class="n">G</span><span class="p">,</span>
+                         <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                         <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                         <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                         <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">){</span>
+
+    <span class="c1">// n is size of graphe w/o special vertices</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">is</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Problem with istream!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">n_of_vertices</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">green_vertex</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="n">getline</span><span class="p">(</span><span class="n">is</span><span class="p">,</span><span class="n">tmp</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">istringstream</span> <span class="n">iss</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">is</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Problem with input file - line &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+            <span class="k">delete</span> <span class="n">G</span><span class="p">;</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+            <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">n_of_vertices</span><span class="p">;</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n_of_vertices</span><span class="p">;</span>
+            <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span> <span class="o">=</span> <span class="n">n_of_vertices</span><span class="p">;</span>
+            <span class="n">G</span> <span class="o">=</span> <span class="k">new</span> <span class="n">graspi</span><span class="o">::</span><span class="n">graph_t</span><span class="p">(</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_total</span><span class="p">()</span> <span class="p">);</span>
+            <span class="n">C</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_total</span><span class="p">(),</span> <span class="mi">13</span><span class="p">);</span>
+            <span class="n">initlize_colors_meta_vertices</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d_g</span><span class="p">);</span>
+            <span class="n">green_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+                <span class="n">dgreen_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span>
+                <span class="n">lgreen_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n_of_vertices</span> <span class="p">)</span> <span class="p">){</span>
+            <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+            <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
+            <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+            <span class="kt">char</span> <span class="n">o</span><span class="p">;</span>
+            <span class="k">do</span><span class="p">{</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">o</span><span class="p">;</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">iss</span> <span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">==</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">o</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">add_edge_to_graph</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span>
+                                  <span class="n">green_vertex</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span>
+                                  <span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">L</span><span class="p">);</span>
+
+            <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">iss</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">n_of_vertices</span> <span class="p">){</span>
+            <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+            <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">];</span>
+            <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+            <span class="kt">char</span> <span class="n">o</span><span class="p">;</span>
+            <span class="k">do</span><span class="p">{</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
+                <span class="n">iss</span> <span class="o">&gt;&gt;</span> <span class="n">o</span><span class="p">;</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">iss</span> <span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">==</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">t</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">o</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">add_edge_to_graph</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span>
+                                  <span class="n">green_vertex</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span>
+                                  <span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">L</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">iss</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">n_of_vertices</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">is</span><span class="p">);</span>
+
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span><span class="c1">//build_graph</span>
+
+
+
+<span class="kt">bool</span> <span class="n">graspi</span><span class="o">::</span><span class="n">build_graph</span><span class="p">(</span><span class="n">graph_t</span><span class="o">*&amp;</span> <span class="n">G</span><span class="p">,</span> <span class="k">const</span> <span class="n">dim_g_t</span><span class="o">&amp;</span> <span class="n">d_g</span><span class="p">,</span>
+                         <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                         <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                         <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">,</span>
+                         <span class="kt">double</span> <span class="n">pixelsize</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">if_per_on_size</span>
+                         <span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">G</span> <span class="o">=</span> <span class="k">new</span> <span class="n">graspi</span><span class="o">::</span><span class="n">graph_t</span><span class="p">(</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_total</span><span class="p">()</span> <span class="p">);</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="p">;</span>
+<span class="cp">#ifdef DEBUG</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;n: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">initlize_colors_meta_vertices</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_g</span> <span class="p">);</span>
+    <span class="kt">int</span> <span class="n">green_vertex</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">;</span>
+    <span class="n">green_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d_g</span><span class="p">.</span><span class="n">n_phases</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+        <span class="n">dgreen_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span>
+        <span class="n">lgreen_vertex</span> <span class="o">=</span> <span class="n">d_g</span><span class="p">.</span><span class="n">n_bulk</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">ngbr_size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">ngbr_size</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">char</span><span class="o">&gt;*</span> <span class="n">ngbr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">char</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">ngbr_size</span><span class="p">];</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">generate_ngbr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">d_a</span><span class="p">,</span><span class="n">ngbr</span><span class="p">,</span><span class="n">if_per_on_size</span><span class="p">);</span>
+
+                <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="p">(</span> <span class="n">j</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">*</span> <span class="n">k</span> <span class="p">);</span>
+                <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i_ngbr</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i_ngbr</span> <span class="o">&lt;</span> <span class="n">ngbr_size</span><span class="p">;</span> <span class="n">i_ngbr</span><span class="o">++</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">ngbr</span><span class="p">[</span><span class="n">i_ngbr</span><span class="p">].</span><span class="n">first</span><span class="p">;</span>
+                    <span class="kt">char</span> <span class="n">o</span> <span class="o">=</span> <span class="n">ngbr</span><span class="p">[</span><span class="n">i_ngbr</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
+                    <span class="kt">double</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">pixelsize</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">o</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span><span class="p">)</span> <span class="n">w</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">pixelsize</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">o</span> <span class="o">==</span> <span class="sc">&#39;t&#39;</span><span class="p">)</span> <span class="n">w</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">pixelsize</span><span class="p">;</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">==</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+                    <span class="c1">// for metavertices corresponding to electrode correct indices</span>
+                    <span class="c1">// old: cathode has index:-1 in the inputdata</span>
+                    <span class="c1">// new: cathode has index: n_bulk+1 (appended at the end)</span>
+                    <span class="c1">// similar operation applied to anode</span>
+                    <span class="c1">// anode has index : n_bulk+2</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+                        <span class="n">t</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                        <span class="n">o</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span>
+                        <span class="n">w</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+                    <span class="p">}</span>
+<span class="cp">#ifdef DEBUG</span>
+                    <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;( &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;,&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; )&quot;</span>
+                    <span class="o">&lt;&lt;</span> <span class="n">o</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; , &quot;</span>
+                    <span class="o">&lt;&lt;</span> <span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="cp">#endif</span>
+                    <span class="n">add_edge_to_graph</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span>
+                                      <span class="n">green_vertex</span><span class="p">,</span>
+                                      <span class="n">dgreen_vertex</span><span class="p">,</span>
+                                      <span class="n">lgreen_vertex</span><span class="p">,</span>
+                                      <span class="n">G</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="n">L</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span><span class="c1">//i</span>
+        <span class="p">}</span><span class="c1">//j</span>
+    <span class="p">}</span><span class="c1">//k</span>
+
+    <span class="k">delete</span><span class="p">[]</span> <span class="n">ngbr</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span> <span class="c1">// build_graph</span>
+
+
+<span class="kt">void</span> <span class="n">graspi</span><span class="o">::</span><span class="n">add_edge_to_graph</span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="kt">char</span> <span class="n">o</span><span class="p">,</span> <span class="kt">double</span> <span class="n">w</span><span class="p">,</span>
+                               <span class="kt">int</span> <span class="n">green_vertex</span><span class="p">,</span>
+                               <span class="kt">int</span> <span class="n">dgreen_vertex</span><span class="p">,</span>
+                               <span class="kt">int</span> <span class="n">lgreen_vertex</span><span class="p">,</span>
+                               <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                               <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">,</span>
+                               <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                               <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">graspi</span><span class="o">::</span><span class="n">edge_descriptor_t</span> <span class="n">e</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">e_res</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_res</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">e_res</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_res</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">add_edge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">),</span>
+                                                  <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">));</span>
+        <span class="n">W</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">;</span>
+        <span class="n">L</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+        <span class="c1">//add edge between white and green</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">s</span><span class="p">,</span> <span class="n">green_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+        <span class="c1">//add edge between black and green</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">t</span><span class="p">,</span> <span class="n">green_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//I D/A</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
+        <span class="c1">//add edge between black and dgreen</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">s</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+        <span class="c1">//add edge between grey and green</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">t</span><span class="p">,</span> <span class="n">dgreen_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//I D/D+A</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">C</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">){</span>
+        <span class="c1">//add edge between white and lgreen</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">s</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+        <span class="c1">//add edge between grey and lgreen</span>
+        <span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="n">t</span><span class="p">,</span> <span class="n">lgreen_vertex</span><span class="p">,</span>
+                                          <span class="n">w</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">L</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//I A/D+A</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">graspi</span><span class="o">::</span><span class="n">make_update_edge_with_meta_vertex</span><span class="p">(</span> <span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">meta_t</span><span class="p">,</span>
+                                               <span class="kt">double</span> <span class="n">w</span><span class="p">,</span> <span class="kt">char</span> <span class="n">o</span><span class="p">,</span>
+                                               <span class="n">graph_t</span><span class="o">*</span> <span class="n">G</span><span class="p">,</span>
+                                               <span class="n">edge_weights_t</span><span class="o">&amp;</span> <span class="n">W</span><span class="p">,</span>
+                                               <span class="n">edge_colors_t</span><span class="o">&amp;</span> <span class="n">L</span><span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="c1">//add edges between source and target_metavertex</span>
+    <span class="n">graspi</span><span class="o">::</span><span class="n">edge_descriptor_t</span> <span class="n">e</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">e_res</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_res</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">meta_t</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">e_res</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">meta_t</span><span class="p">),</span>
+                                                  <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">meta_t</span><span class="p">));</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_res</span><span class="p">)</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">add_edge</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">meta_t</span><span class="p">,</span> <span class="o">*</span><span class="n">G</span><span class="p">);</span>
+        <span class="n">W</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+        <span class="n">L</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">o</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span> <span class="c1">// if edge exist check if current distance is shorter</span>
+        <span class="c1">// and change accordingly</span>
+        <span class="kt">float</span> <span class="n">existing_distance</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">w</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">existing_distance</span><span class="p">){</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">meta_t</span><span class="p">),</span>
+                                                      <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">meta_t</span><span class="p">));</span>
+            <span class="n">W</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="c1">// determine the position in row-wise array on the basis of index i_x and i_y</span>
+<span class="kt">int</span> <span class="n">graspi</span><span class="o">::</span><span class="n">compute_pos_2D</span><span class="p">(</span><span class="kt">int</span> <span class="n">i_x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i_y</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                           <span class="kt">bool</span> <span class="n">if_per_on_sides</span><span class="p">){</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="p">)</span>  <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">if_per_on_sides</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>     <span class="n">i_x</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="p">)</span> <span class="n">i_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">i_x</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="p">)</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">i_x</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="n">i_y</span> <span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// determine the position in row-wise array on the basis of index i_x and i_y</span>
+<span class="kt">int</span> <span class="n">graspi</span><span class="o">::</span><span class="n">compute_pos_3D</span><span class="p">(</span><span class="kt">int</span> <span class="n">i_x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i_y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i_z</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                           <span class="kt">bool</span> <span class="n">if_per_on_sides</span><span class="p">){</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="n">i_z</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">i_z</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="p">)</span>  <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">if_per_on_sides</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>     <span class="n">i_x</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="p">)</span> <span class="n">i_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>     <span class="n">i_y</span> <span class="o">=</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="p">)</span> <span class="n">i_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span>
+           <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span> <span class="n">i_x</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="p">)</span>
+           <span class="o">||</span>
+           <span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span> <span class="n">i_y</span> <span class="o">==</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="p">)</span>
+           <span class="p">)</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">i_x</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">nx</span> <span class="o">*</span> <span class="p">(</span><span class="n">i_y</span> <span class="o">+</span> <span class="n">d_a</span><span class="p">.</span><span class="n">ny</span> <span class="o">*</span> <span class="n">i_z</span><span class="p">)</span> <span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// generate 2D neighborhood for 2D case</span>
+<span class="kt">void</span> <span class="n">graspi</span><span class="o">::</span><span class="n">generate_ngbr</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">dim_a_t</span><span class="o">&amp;</span> <span class="n">d_a</span><span class="p">,</span>
+                           <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">char</span><span class="o">&gt;*</span> <span class="n">ngbr</span><span class="p">,</span>
+                           <span class="kt">bool</span> <span class="n">if_per_on_sides</span> <span class="p">){</span>
+    <span class="c1">// 2D</span>
+    <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">d_a</span><span class="p">.</span><span class="n">nz</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_2D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>  <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="c1">// 3D</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>   <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">first</span>  <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">first</span>  <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr WN</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span>     <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">second</span>  <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">second</span>  <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">18</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">19</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">20</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">21</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span>  <span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">22</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">23</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span>  <span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">24</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr WN</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">25</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">compute_pos_3D</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span>     <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">if_per_on_sides</span><span class="p">);</span>    <span class="c1">// ngbr WN</span>
+
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr N</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">18</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr NE</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">19</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr E</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">20</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr ES</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">21</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr S</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">22</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr SW</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">23</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span> <span class="c1">// ngbr W</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">24</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;t&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+        <span class="n">ngbr</span><span class="p">[</span><span class="mi">25</span><span class="p">].</span><span class="n">second</span> <span class="o">=</span> <span class="sc">&#39;f&#39;</span><span class="p">;</span> <span class="c1">// ngbr WN</span>
+
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Olga Wodo, Baskar Ganapathysubramanian, Jaroslaw Zola
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="structgraspi_1_1foo__w__abs" kind="struct" language="C++" prot="public">
     <compoundname>graspi::foo_w_abs</compoundname>
-    <includes refid="performance__indicators__abs_8hpp" local="no">performance_indicators_abs.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structgraspi_1_1foo__w__abs_1a3308d2550f163f64c5ff6d247b89a5ca" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -15,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" line="24" column="16" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" bodystart="24" bodyend="-1"/>
+        <location file="src/performance_indicators_abs.hpp" line="24" column="16" bodyfile="src/performance_indicators_abs.hpp" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -35,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" line="25" column="9" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" bodystart="25" bodyend="25"/>
+        <location file="src/performance_indicators_abs.hpp" line="25" column="9" bodyfile="src/performance_indicators_abs.hpp" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="structgraspi_1_1foo__w__abs_1a5bc2f679db09fd9d3c5d1497948282f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -52,14 +51,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" line="26" column="16" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" bodystart="26" bodyend="26"/>
+        <location file="src/performance_indicators_abs.hpp" line="26" column="16" bodyfile="src/performance_indicators_abs.hpp" bodystart="26" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" line="23" column="5" bodyfile="/Users/owodo/MINE/PROJECTS/GraSPI/GraSPI/src/performance_indicators_abs.hpp" bodystart="23" bodyend="27"/>
+    <location file="src/performance_indicators_abs.hpp" line="23" column="5" bodyfile="src/performance_indicators_abs.hpp" bodystart="23" bodyend="27"/>
     <listofallmembers>
       <member refid="structgraspi_1_1foo__w__abs_1a1122cf7c99cde8bf2f5e18b279086357" prot="public" virt="non-virtual"><scope>graspi::foo_w_abs</scope><name>foo_w_abs</name></member>
       <member refid="structgraspi_1_1foo__w__abs_1a3308d2550f163f64c5ff6d247b89a5ca" prot="public" virt="non-virtual"><scope>graspi::foo_w_abs</scope><name>Lexp</name></member>
