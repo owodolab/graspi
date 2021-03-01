@@ -20,6 +20,14 @@ using std::vector;
 
 namespace graspi {
 
+/// This function computes skeletal of a  morphology defined on a structured matrix
+///
+/// This function computes a set of descriptors of morphology
+/// @param inputdataMatrix is the input morphology stored as a 2D matrix
+/// @param nx is the number of voxels in x-direction
+/// @param ny is the number of voxels in y-direction
+/// @return the 2D skeletal matrix of the thinned morphology
+
  
 typedef struct{
     int row,col;
@@ -99,6 +107,7 @@ int thinTest2(int** dataMatrix, int row, int col, const int phasePixel, const in
 int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
  
     int firstny = 1, firstnx = 1, lastny, lastnx, i, j, count, endflag;
+    pixel* delpixel; //pixels for deletion
     int p = 15; //padding
     const int bgPixel = 0;
     const int phasePixel = 1;
@@ -140,7 +149,7 @@ int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
     file.close();
 
     count = 0;
-    pixel* delpixel = new pixel [(lastny-firstny+1)*(lastnx-firstnx+1)]; //pixels for deletion
+    delpixel = (pixel*)malloc((lastny-firstny+1)*(lastnx-firstnx+1)*sizeof(pixel));
     do{
     // Record start time
         auto start = std::chrono::high_resolution_clock::now();

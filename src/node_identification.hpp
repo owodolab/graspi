@@ -8,8 +8,8 @@
 #ifndef node_identification_h
 #define node_identification_h
 
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -17,7 +17,16 @@
 #include <string>
 
 
-//namespace graspi {
+namespace graspi {
+
+/// This function computes skeletal descriptors of morphology defined on structured matrix
+///
+/// This function computes a set of descriptors of morphology
+/// @param skeletonMatrix is the thinned morphology stored as a 2D matrix of pixel positions corresponding to the skeleton
+/// @param nx is the number of voxels in x-direction
+/// @param ny is the number of voxels in y-direction
+/// @param phasePixel is the value of the pixel that corresponds to the skeleton in skeletonMatrix
+/// @return the vector of descriptors, where each descriptor is a pair (std::pair<float,std::string>) consisting of descriptor's value (float) and name (string)
 
   typedef struct{
       int row;
@@ -29,11 +38,11 @@ typedef struct{
     int even;
     int odd;
     bool direction[8];
+    node neighbors[8];
 }neighbor;
 
 neighbor* getNeighbors(node* thispixel, node* skeleton, int skelsize){ //Number of neighbors that belong to the image
-    neighbor* neighbordata;
-    neighbordata =(neighbor*)malloc(9 * sizeof(neighbor));
+    neighbor* neighbordata = new neighbor [9];
     neighbordata->count = 0;
     node neighbors[8] = {{thispixel->row, thispixel->col - 1}, {thispixel->row - 1, thispixel->col - 1}, {thispixel->row - 1, thispixel->col}, {thispixel->row - 1, thispixel->col + 1}, {thispixel->row, thispixel->col + 1}, {thispixel->row + 1, thispixel->col + 1}, {thispixel->row + 1, thispixel->col}, {thispixel->row + 1,
         thispixel->col - 1}};
@@ -45,6 +54,8 @@ neighbor* getNeighbors(node* thispixel, node* skeleton, int skelsize){ //Number 
         for(int j=0; j < skelsize; j++){
             if (neighbors[i].row == skeleton[j].row && neighbors[i].col == skeleton[j].col){
                 neighbordata->direction[i] = 1;
+                neighbordata->neighbors[neighbordata->count].row = neighbors[i].row;
+                neighbordata->neighbors[neighbordata->count].col = neighbors[i].col;
                 neighbordata->count++ ;
                 if(i % 2 == 0) {
                     neighbordata->even++;
@@ -124,7 +135,8 @@ int identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) 
     }
 
     // Identify junction nodes from potential junction nodes
-    
+    node* delpixel = new node[skelpixel];
+    int del = 0;
     for(int i = 0; i < potjunctcount; i++) {
         node* curpixel = new node;
 //        curpixel = (node*)malloc(sizeof(node));
@@ -134,10 +146,74 @@ int identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) 
         first_neighbors = getNeighbors(curpixel, skeleton, skelpixel - 1);
 //        potJunc_neighbors = (neighbor*)malloc(sizeof(neighbor));
         potJunc_neighbors = getNeighbors(curpixel, potentialJunction, potjunctcount);
+        bool delflag = 0;
+        for (int j = 0; j < endcount; j++){
+            for (int k = 0; k < first_neighbors->count; k++) {
+                if (branchEnd[j].row == first_neighbors->neighbors[k].row && branchEnd[j].col == first_neighbors->neighbors[k].col) {
+                    delpixel[del].row = curpixel->row;
+                    delpixel[del].col = curpixel->col;
+                    del++;
+                    delflag = 1;
+                    continue;
+            }
+            
+            }
+            if (delflag == 1) {
+                delflag = 0;
+                continue;
+            }
+            
+        }
+        if (potJunc_neighbors->count > 0 && first_neighbors->odd == 2) {
+            if ((first_neighbors->direction[0] == 1 && first_neighbors->direction[4] == 1) ||
+                (first_neighbors->direction[2] == 1 && first_neighbors->direction[6] == 1)) {
+                delpixel[del].row = curpixel->row;
+                delpixel[del].col = curpixel->col;
+                del++;
+                delflag = 1;
+                continue;
+                
+            }
+            if (delflag == 1) {
+                delflag = 0;
+                continue;
+            }
+            
+        }
+        delete first_neighbors;
+        delete potJunc_neighbors;
+    }
+    
+    node* updatedpotentialJunction = new node [(ny+1)*(nx+1)];
+    for (int d = 0; d < del; d++) {
+        for (int i = 0; i < potjunctcount; i++) {
+            if (potentialJunction[i].row == delpixel[i].row &&
+                potentialJunction[i].col == delpixel[i].col) {
+                
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    delete [] delpixel;
 
+    
+    for(int i = 0; i < potjunctcount; i++) {
+        
+        node* curpixel = new node;
+        curpixel = &potentialJunction[i];
+        neighbor* potJunc_neighbors = new neighbor;
+        neighbor* first_neighbors = new neighbor;
+        first_neighbors = getNeighbors(curpixel, skeleton, skelpixel - 1);
+        potJunc_neighbors = getNeighbors(curpixel, potentialJunction, potjunctcount);
+        node* delpixel = new node[skelpixel];
+        
         
     }
     return 0;
 }
-//}
+}
 #endif /* node_identification_h */
