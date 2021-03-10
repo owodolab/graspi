@@ -10,7 +10,7 @@
 #include "graspi.hpp"
 #include "skeletonization.hpp"
 #include "thinning2D.hpp"
-#include "skeletal-descriptors.hpp"
+#include "skeletal_descriptors.hpp"
 
 int main(int argc, char *argv[]) {
  

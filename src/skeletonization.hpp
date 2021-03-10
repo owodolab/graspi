@@ -20,18 +20,18 @@ using std::vector;
 
 namespace graspi {
 
-/// This function computes skeletal of a  morphology defined on a structured matrix
-///
-/// This function computes a set of descriptors of morphology
-/// @param inputdataMatrix is the input morphology stored as a 2D matrix
-/// @param nx is the number of voxels in x-direction
-/// @param ny is the number of voxels in y-direction
-/// @return the 2D skeletal matrix of the thinned morphology
-
  
 typedef struct{
     int row,col;
 }pixel;
+
+/// This function initializes a 2D image matrix with back-ground pixels
+///
+/// @param inputMatrix is the input stored as a 2D matrix
+/// @param ncol is the number of voxels in x-direction
+/// @param nrow is the number of voxels in y-direction
+/// @param initValue is the value of the background pixel
+/// @return the initialized 2D image matrix 
 
 int** initializeSkelMatrix(int** inputMatrix, int ncol, int nrow, int initValue) {
     
@@ -43,6 +43,13 @@ int** initializeSkelMatrix(int** inputMatrix, int ncol, int nrow, int initValue)
     return inputMatrix;
 }
 
+/// This function adds a mirrored-padding to the image matrix
+///
+/// @param dataMatrix is the input morphology stored as a 2D matrix
+/// @param p is the number pixels to be padded in each direction
+/// @param nx is the number of voxels in x-direction
+/// @param ny is the number of voxels in y-direction
+/// @return the 2D data matrix of the padded morphology
  
 int** mirrorPadding(int** dataMatrix, int p, int nx, int ny) { // padding the image with reflection of the image itself
 
@@ -52,7 +59,7 @@ int** mirrorPadding(int** dataMatrix, int p, int nx, int ny) { // padding the im
             dataMatrix[(ny+(p-1)) + i][j] = dataMatrix[(ny+p) - i][j];
         }
     }
-    
+     
     for(int i = 0; i < ny + (2*p); i++) { // Flip 20 pixels of matrix horizontally on both sides
         for(int j = 1; j < (p+1); j++) {
             dataMatrix[i][p - j] = dataMatrix[i][j + (p-1)];
@@ -61,6 +68,14 @@ int** mirrorPadding(int** dataMatrix, int p, int nx, int ny) { // padding the im
     }
     return dataMatrix;
 }
+
+/// This function computes for a pixel, the count of neighbors that belong to the phase to be thinned 
+///
+/// @param dataMatrix is the input morphology stored as a 2D matrix
+/// @param row is the row position of the pixel 
+/// @param col is the column position of the pixel
+/// @param phasePixel is the pixel value of the phase of interest
+/// @return the count of local eight neighbors that belong to the phase of interest
 
 int getNeighbors(int** dataMatrix, int row, int col, const int phasePixel){ //Number of neighbors that belong to the image
 
@@ -73,6 +88,15 @@ int getNeighbors(int** dataMatrix, int row, int col, const int phasePixel){ //Nu
             +(dataMatrix[row][col-1]==phasePixel) //P8
             +(dataMatrix[row-1][col-1]==phasePixel)); //P9
 }
+
+/// This function computes for a pixel, the transitions from background pixel to phase pixel, as required for the thinning algorithm (refer the Zhang-Suen thinning algorithm) 
+///
+/// @param dataMatrix is the input morphology stored as a 2D matrix
+/// @param row is the row position of the pixel 
+/// @param col is the column position of the pixel
+/// @param phasePixel is the pixel value of the phase of interest
+/// @param bgPixel is the pixel value of the background
+/// @return the count of transitions from the bgPixel to the phasePixel
  
 int getTransitions(int** dataMatrix, int row,int col, const int phasePixel, const int bgPixel){//Number of transitions from background pixel to phase pixel
     return(((dataMatrix[row-1][col]==bgPixel && dataMatrix[row-1][col+1]==phasePixel) //P2P3
@@ -85,6 +109,14 @@ int getTransitions(int** dataMatrix, int row,int col, const int phasePixel, cons
             +(dataMatrix[row-1][col-1]==bgPixel && dataMatrix[row-1][col]==phasePixel))); //P9P2
 }
 
+/// This function computes the first set of tests to mark the pixel for deletion(refer the Zhang-Suen thinning algorithm) 
+///
+/// @param dataMatrix is the input morphology stored as a 2D matrix
+/// @param row is the row position of the pixel 
+/// @param col is the column position of the pixel
+/// @param phasePixel is the pixel value of the phase of interest
+/// @param bgPixel is the pixel value of the background
+/// @return true/false if the pixel satisfies/dissatisfies the thinning criteria
 
 int thinTest1(int** dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
     int neighbours = getNeighbors(dataMatrix, row, col, phasePixel);
@@ -95,6 +127,15 @@ int thinTest1(int** dataMatrix, int row, int col, const int phasePixel, const in
         && (dataMatrix[row][col+1]==bgPixel||dataMatrix[row+1][col]==bgPixel||dataMatrix[row][col-1]==bgPixel)); //P4, P6, P8 Condition 4
 }
 
+/// This function computes the second set of tests to mark the pixel for deletion(refer the Zhang-Suen thinning algorithm) 
+///
+/// @param dataMatrix is the input morphology stored as a 2D matrix
+/// @param row is the row position of the pixel 
+/// @param col is the column position of the pixel
+/// @param phasePixel is the pixel value of the phase of interest
+/// @param bgPixel is the pixel value of the background
+/// @return true/false if the pixel satisfies/dissatisfies the thinning criteria
+
 int thinTest2(int** dataMatrix, int row, int col, const int phasePixel, const int bgPixel){
     int neighbours = getNeighbors(dataMatrix, row, col, phasePixel);
  
@@ -103,6 +144,13 @@ int thinTest2(int** dataMatrix, int row, int col, const int phasePixel, const in
         && (dataMatrix[row-1][col]==bgPixel||dataMatrix[row][col+1]==bgPixel||dataMatrix[row][col-1]==bgPixel) // P2, P4, P8 Condition 3
         && (dataMatrix[row-1][col]==bgPixel||dataMatrix[row+1][col]==bgPixel||dataMatrix[row][col-1]==bgPixel)); // P2, P6, P8 Condition 4
 }
+
+/// This function computes skeletal of a  morphology defined on a structured matrix
+///
+/// @param inputdataMatrix is the input morphology stored as a 2D matrix
+/// @param nx is the number of voxels in x-direction
+/// @param ny is the number of voxels in y-direction
+/// @return the 2D skeletal matrix of the thinned morphology
  
 int** skeletonization2D(int** inputdataMatrix, int nx, int ny){
  
