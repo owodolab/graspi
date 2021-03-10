@@ -177,7 +177,8 @@
 <dl class="cpp struct">
 <dt id="_CPPv4N6graspi4DESCE">
 <span id="_CPPv3N6graspi4DESCE"></span><span id="_CPPv2N6graspi4DESCE"></span><span id="graspi::DESC"></span><span class="target" id="structgraspi_1_1_d_e_s_c"></span><em class="property">struct </em><code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">DESC</code><a class="headerlink" href="#_CPPv4N6graspi4DESCE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>structure storing the list of descriptors </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi4DESC4DESCEv">
@@ -187,22 +188,43 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi4DESC28initiate_descriptors_2_phaseEv">
 <span id="_CPPv3N6graspi4DESC28initiate_descriptors_2_phaseEv"></span><span id="_CPPv2N6graspi4DESC28initiate_descriptors_2_phaseEv"></span><span id="graspi::DESC::initiate_descriptors_2_phase"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1a8ee9209eb910c66a45358f2c629ada19"></span>void <code class="sig-name descname">initiate_descriptors_2_phase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi4DESC28initiate_descriptors_2_phaseEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>set of methods to initiate the descriptors when TWO-phase morphology is considered </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi4DESC25print_descriptors_2_phaseERNSt7ostreamE">
 <span id="_CPPv3N6graspi4DESC25print_descriptors_2_phaseERNSt7ostreamE"></span><span id="_CPPv2N6graspi4DESC25print_descriptors_2_phaseERNSt7ostreamE"></span><span id="graspi::DESC::print_descriptors_2_phase__osR"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1a653f629bd7ff3e2e6e8b9aa1001c81e4"></span>void <code class="sig-name descname">print_descriptors_2_phase</code><span class="sig-paren">(</span>std::ostream &amp;<em>os</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi4DESC25print_descriptors_2_phaseERNSt7ostreamE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This method prints the values of descriptors of TWO-phase morphology to the stream os</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code>: is the outputstream the descriptors should be send to </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi4DESC28initiate_descriptors_3_phaseEv">
 <span id="_CPPv3N6graspi4DESC28initiate_descriptors_3_phaseEv"></span><span id="_CPPv2N6graspi4DESC28initiate_descriptors_3_phaseEv"></span><span id="graspi::DESC::initiate_descriptors_3_phase"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1a28288568c0ad73655591a62e423db7d2"></span>void <code class="sig-name descname">initiate_descriptors_3_phase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi4DESC28initiate_descriptors_3_phaseEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This method initiates the descriptors when THREE-phase morphology is considered. </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi4DESC11update_descENSt6stringEf">
 <span id="_CPPv3N6graspi4DESC11update_descENSt6stringEf"></span><span id="_CPPv2N6graspi4DESC11update_descENSt6stringEf"></span><span id="graspi::DESC::update_desc__ss.float"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1a374ce4fd135df1c1e8b3ab2f735bc540"></span>bool <code class="sig-name descname">update_desc</code><span class="sig-paren">(</span>std::string <em>desc_name</em>, float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi4DESC11update_descENSt6stringEf" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This function updates the value of the descriptor with name <a class="reference internal" href="classgraspi_1_1find__desc__of__name.html#classgraspi_1_1find__desc__of__name"><span class="std std-ref">find_desc_of_name</span></a></p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the status of the update </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_name</span></code>: is the name of descriptor to be updated </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: is the value of the descriptor to be updated with </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -210,12 +232,14 @@
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi4DESC4descE">
 <span id="_CPPv3N6graspi4DESC4descE"></span><span id="_CPPv2N6graspi4DESC4descE"></span><span id="graspi::DESC::desc__std::vector:desc_t:"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1a3262511865a157ac66c048341fbbbd75"></span>std::vector&lt;<a class="reference internal" href="typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html#_CPPv4N6graspi6desc_tE" title="graspi::desc_t">desc_t</a>&gt; <code class="sig-name descname">desc</code><a class="headerlink" href="#_CPPv4N6graspi4DESC4descE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>the vector of descriptors </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi4DESC9find_descE">
 <span id="_CPPv3N6graspi4DESC9find_descE"></span><span id="_CPPv2N6graspi4DESC9find_descE"></span><span id="graspi::DESC::find_desc__find_desc_of_name"></span><span class="target" id="structgraspi_1_1_d_e_s_c_1ab0125765af60578528ae778ba74611e7"></span><a class="reference internal" href="classgraspi_1_1find__desc__of__name.html#_CPPv4N6graspi17find_desc_of_nameE" title="graspi::find_desc_of_name">find_desc_of_name</a> <code class="sig-name descname">find_desc</code><a class="headerlink" href="#_CPPv4N6graspi4DESC9find_descE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The predicate used to identify descriptor of a given name. </p>
+</dd></dl>
 
 </div>
 </dd></dl>

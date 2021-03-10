@@ -186,12 +186,11 @@
 
 <span class="k">namespace</span> <span class="n">graspi</span><span class="p">{</span>
 
+
     <span class="k">struct</span> <span class="n">CC</span><span class="p">{</span>
         <span class="n">COLOR</span> <span class="n">color</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">if_connected_to_electrode</span><span class="p">;</span>
-        <span class="c1">// 0 - does not connected, 1 - connected to bottom</span>
-        <span class="c1">// 2 - connected to top,   3 - connected to both</span>
 
         <span class="n">CC</span><span class="p">()</span><span class="o">:</span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
         <span class="n">if_connected_to_electrode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
@@ -199,6 +198,7 @@
         <span class="kt">bool</span> <span class="n">if_connected_to_top_or_bottom</span><span class="p">()</span><span class="k">const</span><span class="p">{</span>
             <span class="k">return</span> <span class="p">(</span><span class="n">if_connected_to_electrode</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">);</span>
         <span class="p">}</span>
+
         <span class="kt">bool</span> <span class="n">if_connected_to_top_and_bottom</span><span class="p">()</span><span class="k">const</span><span class="p">{</span>
             <span class="k">return</span> <span class="p">(</span><span class="n">if_connected_to_electrode</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">);</span>
         <span class="p">}</span>

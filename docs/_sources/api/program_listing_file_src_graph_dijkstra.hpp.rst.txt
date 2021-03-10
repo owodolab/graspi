@@ -32,7 +32,6 @@ Program Listing for File graph_dijkstra.hpp
    
    
    namespace graspi {
-       
        template<typename Pred>
        inline void determine_shortest_distances(graph_t*G,
                                                 const edge_weights_t& W,
@@ -44,7 +43,7 @@ Program Listing for File graph_dijkstra.hpp
            std::vector<vertex_t> p(n);
            std::fill(d.begin(), d.end(), 0.0);
            for (unsigned int i = 0; i < n; ++i) p[i] = i;
-           
+   
            boost::dijkstra_shortest_paths(FG, source,
                                           boost::predecessor_map(&p[0])
                                           .

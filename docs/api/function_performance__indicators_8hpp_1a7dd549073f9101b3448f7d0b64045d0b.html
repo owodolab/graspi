@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Function graspi::print_distances_of_ids" href="function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.html" />
-    <link rel="prev" title="Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" /> 
+    <link rel="prev" title="Function graspi::output_graph" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -177,7 +177,25 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi20perfomance_indicatorEP7graph_tRK7dim_g_tRK15vertex_colors_tRK7dim_a_tRK14edge_weights_tRK13edge_colors_tRK12vertex_ccs_tRK5ccs_td">
 <span id="_CPPv3N6graspi20perfomance_indicatorEP7graph_tRK7dim_g_tRK15vertex_colors_tRK7dim_a_tRK14edge_weights_tRK13edge_colors_tRK12vertex_ccs_tRK5ccs_td"></span><span id="_CPPv2N6graspi20perfomance_indicatorEP7graph_tRK7dim_g_tRK15vertex_colors_tRK7dim_a_tRK14edge_weights_tRK13edge_colors_tRK12vertex_ccs_tRK5ccs_td"></span><span id="graspi::perfomance_indicator__graph_tP.dim_g_tCR.vertex_colors_tCR.dim_a_tCR.edge_weights_tCR.edge_colors_tCR.vertex_ccs_tCR.ccs_tCR.double"></span><span class="target" id="performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b"></span>double <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">perfomance_indicator</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__g__t.html#_CPPv4N6graspi7dim_g_tE" title="graspi::dim_g_t">dim_g_t</a> &amp;<em>d_g</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>C</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__a__t.html#_CPPv4N6graspi7dim_a_tE" title="graspi::dim_a_t">dim_a_t</a> &amp;<em>d_a</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html#_CPPv4N6graspi13edge_colors_tE" title="graspi::edge_colors_t">edge_colors_t</a> &amp;<em>L</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a832030346ce3d5af00fb9a8c521996d1.html#_CPPv4N6graspi12vertex_ccs_tE" title="graspi::vertex_ccs_t">vertex_ccs_t</a> &amp;<em>vCC</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1aca225ce3c337d13a7889284679d62493.html#_CPPv4N6graspi5ccs_tE" title="graspi::ccs_t">ccs_t</a> &amp;<em>CC</em>, double <em>pixelsize</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi20perfomance_indicatorEP7graph_tRK7dim_g_tRK15vertex_colors_tRK7dim_a_tRK14edge_weights_tRK13edge_colors_tRK12vertex_ccs_tRK5ccs_td" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This function computes performance indicator of morphology stored as graph</p>
+<p>This function computes a set of descriptors of morphology represented as a graph <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the the product of three descriptors: F_ABS * F_DISS.first * F_CT </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the pointer to the input graph </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_g</span></code>: is the reference to the struct storing the dimension of graph vertices </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: is the reference to the vector storing the labels/colors of vertices in the graph G </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_a</span></code>: is the reference to the struct storing dimensions of the morphology represented as a array </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">W</span></code>: is the reference to the map storing the weights of the edges </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code>: is the reference to the map storing the labels/colors of the edges in graph G </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vCC</span></code>: is the reference to the vector storing indices of the connected components (<a class="reference internal" href="structgraspi_1_1_c_c.html#structgraspi_1_1_c_c"><span class="std std-ref">CC</span></a>) of each vector in the graph </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="structgraspi_1_1_c_c.html#structgraspi_1_1_c_c"><span class="std std-ref"><span class="pre">CC</span></span></a></code>: is the reference to the vector of <a class="reference internal" href="structgraspi_1_1_c_c.html#structgraspi_1_1_c_c"><span class="std std-ref">CC</span></a>, </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pixelsize</span></code>: is the physical unit of the voxel (distances will be rescaled according to this value) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>
@@ -193,7 +211,7 @@
         <a href="function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.html" class="btn btn-neutral float-right" title="Function graspi::print_distances_of_ids" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" class="btn btn-neutral float-left" title="Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" class="btn btn-neutral float-left" title="Function graspi::output_graph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

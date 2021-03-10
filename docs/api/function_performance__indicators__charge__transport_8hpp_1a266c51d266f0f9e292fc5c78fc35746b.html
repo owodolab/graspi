@@ -177,7 +177,24 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi30determine_and_print_tortuosityERKN6graspi15vertex_colors_tERK7dim_a_tdRKNSt6vectorIfEERKNSt6stringERKNSt6stringEjj">
 <span id="_CPPv3N6graspi30determine_and_print_tortuosityERKN6graspi15vertex_colors_tERK7dim_a_tdRKNSt6vectorIfEERKNSt6stringERKNSt6stringEjj"></span><span id="_CPPv2N6graspi30determine_and_print_tortuosityERKN6graspi15vertex_colors_tERK7dim_a_tdRKNSt6vectorIfEERKNSt6stringERKNSt6stringEjj"></span><span id="graspi::determine_and_print_tortuosity__graspi::vertex_colors_tCR.dim_a_tCR.double.std::vector:float:CR.ssCR.ssCR.unsigned-i.unsigned-i"></span><span class="target" id="performance__indicators__charge__transport_8hpp_1a266c51d266f0f9e292fc5c78fc35746b"></span>double <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">determine_and_print_tortuosity</code><span class="sig-paren">(</span><em class="property">const</em> graspi::<a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>vertex_colors</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__a__t.html#_CPPv4N6graspi7dim_a_tE" title="graspi::dim_a_t">dim_a_t</a> &amp;<em>d_a</em>, double <em>pixelsize</em>, <em class="property">const</em> std::vector&lt;float&gt; &amp;<em>d</em>, <em class="property">const</em> std::string &amp;<em>filename_t</em>, <em class="property">const</em> std::string &amp;<em>filename_id_t</em>, unsigned int <em>c_source</em>, unsigned int <em>c_target</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi30determine_and_print_tortuosityERKN6graspi15vertex_colors_tERK7dim_a_tdRKNSt6vectorIfEERKNSt6stringERKNSt6stringEjj" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The function to determine and print the tortuosity of paths between source and target vertices</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the fraction of straight rising paths (with toruosity = 1) </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vertex_colors</span></code>: is the reference to the vector storing the labels/colors of vertices in the graph G </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_a</span></code>: is the reference to the struct storing dimensions of the morphology represented as a array </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pixelsize</span></code>: is the physical unit of the voxel (distances will be rescaled according to this value) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: is the reference to the vector of path length (distances) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename_t</span></code>: is the name of the file to save the toruosity of pathways analyzed </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename_id_t</span></code>: is the name of the file to save the index and the tortuosity of pathways analyzed </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c_source</span></code>: is the color/label of the source vertex </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c_target</span></code>: is the color/label of the targetted vertices </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>

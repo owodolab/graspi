@@ -177,7 +177,20 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi13generate_ngbrEiiiRK7dim_a_tPNSt4pairIicEEb">
 <span id="_CPPv3N6graspi13generate_ngbrEiiiRK7dim_a_tPNSt4pairIicEEb"></span><span id="_CPPv2N6graspi13generate_ngbrEiiiRK7dim_a_tPNSt4pairIicEEb"></span><span id="graspi::generate_ngbr__i.i.i.dim_a_tCR.std::pair:i.c:P.b"></span><span class="target" id="graph__constructors_8hpp_1a9cf2d83b96f6a2237f46fb338666d5cf"></span>void <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">generate_ngbr</code><span class="sig-paren">(</span>int <em>i</em>, int <em>j</em>, int <em>k</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__a__t.html#_CPPv4N6graspi7dim_a_tE" title="graspi::dim_a_t">dim_a_t</a> &amp;<em>d_a</em>, std::pair&lt;int, char&gt; *<em>ngbr</em>, bool <em>if_per_on_sides</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi13generate_ngbrEiiiRK7dim_a_tPNSt4pairIicEEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This function generates the neigborhood for a vertex in the array (indices of neighbors are generated)</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code>: is the index in x-direction of the vertex under consideration </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">j</span></code>: is the index in y-direction of the vertex under consideration </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code>: is the index in z-direction of the vertex under consideration </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_a</span></code>: is the reference to the struct storing dimensions of the morphology represented as a array </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ngbr</span></code>: is the pointer to pairs of neighbors (this is the pointer that points to the beginning of vector of neigbors that will be created as an output from this function) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if_per_on_size</span></code>: is the flag on periodicity, if it is on, then periodicity is reinforcef when generating neigbors </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>

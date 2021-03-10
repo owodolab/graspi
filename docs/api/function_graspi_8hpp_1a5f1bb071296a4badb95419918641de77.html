@@ -177,7 +177,22 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi19compute_descriptorsERN6graspi15vertex_colors_tERKjRKjRKjRKfRKbRKNSt6stringE">
 <span id="_CPPv3N6graspi19compute_descriptorsERN6graspi15vertex_colors_tERKjRKjRKjRKfRKbRKNSt6stringE"></span><span id="_CPPv2N6graspi19compute_descriptorsERN6graspi15vertex_colors_tERKjRKjRKjRKfRKbRKNSt6stringE"></span><span id="graspi::compute_descriptors__graspi::vertex_colors_tR.unsigned-iCR.unsigned-iCR.unsigned-iCR.floatCR.bCR.ssCR"></span><span class="target" id="graspi_8hpp_1a5f1bb071296a4badb95419918641de77"></span>std::vector&lt;<a class="reference internal" href="typedef_graspi__types_8hpp_1a3c842c2d176bde6ed3a1a52a5ff16d31.html#_CPPv4N6graspi6desc_tE" title="graspi::desc_t">desc_t</a>&gt; <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">compute_descriptors</code><span class="sig-paren">(</span>graspi::<a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>vertex_colors</em>, <em class="property">const</em> unsigned int &amp;<em>nx</em>, <em class="property">const</em> unsigned int &amp;<em>ny</em>, <em class="property">const</em> unsigned int &amp;<em>nz</em> = 1, <em class="property">const</em> float &amp;<em>pixelsize</em> = 1.0, <em class="property">const</em> bool &amp;<em>if_per</em> = true, <em class="property">const</em> std::string &amp;<em>res_path</em> = &quot;./&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi19compute_descriptorsERN6graspi15vertex_colors_tERKjRKjRKjRKfRKbRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This function computes descriptors of morphology defined on structured matrix</p>
+<p>This function computes a set of descriptors of morphology And it is cythonized to be used in python <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the vector of descriptors, where each descriptor is a pair (std::pair&lt;float,std::string&gt;) consisting of descriptor’s value (float) and name (string) </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vertex_colors</span></code>: is the morphology stored as an array of colors (row-wise order of matrix) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nx</span></code>: is the number of voxels in x-direction </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ny</span></code>: is the number of voxels in y-direction </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nz</span></code>: is the number of voxels in z-direction (default value is 1) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pixelsize</span></code>: is the physical unit of the voxel (distances will be rescaled according to this value) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if_per</span></code>: is the flag setting the periodicity on sides (true value means periodicity on sides, for 2D - in x-dir, for 3D - in x and y-diretion) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>

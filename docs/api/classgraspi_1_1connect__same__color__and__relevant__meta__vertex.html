@@ -177,22 +177,41 @@
 <dl class="cpp class">
 <dt id="_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertexE">
 <span id="_CPPv3N6graspi43connect_same_color_and_relevant_meta_vertexE"></span><span id="_CPPv2N6graspi43connect_same_color_and_relevant_meta_vertexE"></span><span id="graspi::connect_same_color_and_relevant_meta_vertex"></span><span class="target" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex"></span><em class="property">class </em><code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">connect_same_color_and_relevant_meta_vertex</code><a class="headerlink" href="#_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertexE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>This is predicate to filter the graph that connects vertices to the relevant meta-vertex</p>
+<p>Predicate used to filter original graph to find the shortest distances from source vertex - the meta-vertex of relevance and any other vertices where edges between vertices exist only if they connect vertices of the same color or are connected to top or bottom meta-vertices. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexEv">
 <span id="_CPPv3N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexEv"></span><span id="_CPPv2N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexEv"></span><span id="graspi::connect_same_color_and_relevant_meta_vertex::connect_same_color_and_relevant_meta_vertex"></span><span class="target" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a71c5fd7bcae2f32b28a4cdc0c0fdb193"></span><code class="sig-name descname">connect_same_color_and_relevant_meta_vertex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The constructor. </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexERK7graph_tRK15vertex_colors_t">
 <span id="_CPPv3N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexERK7graph_tRK15vertex_colors_t"></span><span id="_CPPv2N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexERK7graph_tRK15vertex_colors_t"></span><span id="graspi::connect_same_color_and_relevant_meta_vertex::connect_same_color_and_relevant_meta_vertex__graph_tCR.vertex_colors_tCR"></span><span class="target" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a52e2a2de7a4262587c2860d1ad8530a1"></span><code class="sig-name descname">connect_same_color_and_relevant_meta_vertex</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> &amp;<em>G</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>C</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi43connect_same_color_and_relevant_meta_vertex43connect_same_color_and_relevant_meta_vertexERK7graph_tRK15vertex_colors_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The constructor</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the reference to the graph to be filtered </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: is the reference to the vector storing the labels/colors of vertices in the graph G </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi43connect_same_color_and_relevant_meta_vertexclERK17edge_descriptor_t">
 <span id="_CPPv3NK6graspi43connect_same_color_and_relevant_meta_vertexclERK17edge_descriptor_t"></span><span id="_CPPv2NK6graspi43connect_same_color_and_relevant_meta_vertexclERK17edge_descriptor_t"></span><span id="graspi::connect_same_color_and_relevant_meta_vertex::call-operator__edge_descriptor_tCRC"></span><span class="target" id="classgraspi_1_1connect__same__color__and__relevant__meta__vertex_1a2271fbebf7835deabbb77e408d90bad8"></span>bool <code class="sig-name descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1af2094bc8f309097cb0761fcbc246682b.html#_CPPv4N6graspi17edge_descriptor_tE" title="graspi::edge_descriptor_t">edge_descriptor_t</a> &amp;<em>e</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi43connect_same_color_and_relevant_meta_vertexclERK17edge_descriptor_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The operator to filter the graph, this is where the condition of edge filtering is defined <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">e</span></code>: is the edge to be checked </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </dd></dl>

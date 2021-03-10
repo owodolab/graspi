@@ -171,6 +171,7 @@
 <span class="cm"> **</span>
 <span class="cm"> *  File: graspi_types.hpp</span>
 <span class="cm"> *  Created: May 8, 2012</span>
+<span class="cm"> *  Last modified: March 2021</span>
 <span class="cm"> *</span>
 <span class="cm"> *  Author: Olga Wodo, Baskar Ganapathysubramanian</span>
 <span class="cm"> *  Copyright (c) 2012 Olga Wodo, Baskar Ganapthysubramanian</span>
@@ -188,49 +189,53 @@
 
 <span class="cp">#define COLOR unsigned int</span>
 
-<span class="cp">#define BLACK   0 </span><span class="c1">// donor     (D)</span>
-<span class="cp">#define WHITE   1 </span><span class="c1">// acceptor  (A)</span>
-<span class="cp">#define GREY    3 </span><span class="c1">// mixed     (D+A)</span>
+<span class="cp">#define BLACK   0</span>
 
-<span class="cp">#define BLUE   10 </span><span class="c1">// cathode   (neg/bottom)</span>
-<span class="cp">#define RED    20 </span><span class="c1">// anode     (pos/top)</span>
+<span class="cp">#define WHITE   1</span>
 
-<span class="cp">#define GREEN  30 </span><span class="c1">// interface (I D/A)</span>
-<span class="cp">#define DGREEN 31 </span><span class="c1">// interface (I D/D+A)</span>
-<span class="cp">#define LGREEN 32 </span><span class="c1">// interface (I A/D+A)</span>
+<span class="cp">#define GREY    3</span>
+
+<span class="cp">#define BLUE   10</span>
+
+<span class="cp">#define RED    20</span>
+
+<span class="cp">#define GREEN  30</span>
+
+<span class="cp">#define DGREEN 31</span>
+
+<span class="cp">#define LGREEN 32</span>
 
 <span class="k">namespace</span> <span class="n">graspi</span> <span class="p">{</span>
 
-    <span class="c1">// graph type</span>
     <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">adjacency_list</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">setS</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">vecS</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">undirectedS</span><span class="p">,</span>
                 <span class="n">boost</span><span class="o">::</span><span class="n">no_property</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">no_property</span><span class="o">&gt;</span> <span class="n">graph_t</span><span class="p">;</span>
 
     <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span><span class="n">graph_t</span><span class="o">&gt;::</span><span class="n">vertex_descriptor</span> <span class="n">vertex_t</span><span class="p">;</span>
+
     <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span><span class="n">graph_t</span><span class="o">&gt;::</span><span class="n">edge_descriptor</span>   <span class="n">edge_descriptor_t</span><span class="p">;</span>
 
-    <span class="c1">// vertex properties</span>
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">COLOR</span><span class="o">&gt;</span> <span class="n">vertex_colors_t</span><span class="p">;</span>
+
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span>   <span class="n">vertex_ccs_t</span><span class="p">;</span>
 
-    <span class="c1">// edge properties</span>
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span><span class="kt">char</span> <span class="o">&gt;</span>         <span class="n">edge_colors_t</span><span class="p">;</span>
+
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">edge_descriptor_t</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span>          <span class="n">edge_map_t</span><span class="p">;</span>
+
     <span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">associative_property_map</span><span class="o">&lt;</span><span class="n">edge_map_t</span><span class="o">&gt;</span> <span class="n">edge_weights_t</span><span class="p">;</span>
 
-    <span class="c1">// cc type</span>
     <span class="k">struct</span> <span class="n">CC</span><span class="p">;</span>
+
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">CC</span><span class="o">&gt;</span> <span class="n">ccs_t</span><span class="p">;</span>
 
-    <span class="c1">// descriptor type;</span>
     <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">desc_t</span><span class="p">;</span>
 
-    <span class="c1">// descriptor dimension of graph vertices</span>
     <span class="k">struct</span> <span class="n">dim_g_t</span> <span class="p">{</span>
-        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_phases</span><span class="p">;</span>           <span class="c1">//number of phases (currently 2 or 3)</span>
-        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_bulk</span><span class="p">;</span>             <span class="c1">//all BLACK,WHITE and GREY vertices</span>
-        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_basic</span><span class="p">;</span>       <span class="c1">//basic meta vertices (anode, cathode)</span>
-        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="c1">//interfacial meta vertices between</span>
-        <span class="c1">// (BLACK/WHITE), (BLACK/GREY), (WHITE/GREY)</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_phases</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_bulk</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_basic</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_meta_interfacial</span><span class="p">;</span>
+
         <span class="k">explicit</span> <span class="nf">dim_g_t</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">n_phases</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
                          <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">bulk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                          <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">meta</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
@@ -239,8 +244,11 @@
         <span class="p">}</span>
 
         <span class="kt">int</span> <span class="nf">n_total</span><span class="p">()</span>     <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="n">n_meta_basic</span><span class="o">+</span><span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
+
         <span class="kt">int</span> <span class="nf">n_meta</span><span class="p">()</span>      <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_basic</span><span class="p">;</span> <span class="p">}</span>
+
         <span class="kt">int</span> <span class="nf">n_meta_int</span><span class="p">()</span>  <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
+
         <span class="kt">int</span> <span class="nf">n_meta_total</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_meta_basic</span><span class="o">+</span><span class="n">n_meta_interfacial</span><span class="p">;</span> <span class="p">}</span>
 
         <span class="kt">int</span> <span class="nf">id</span><span class="p">(</span><span class="n">COLOR</span> <span class="n">c</span><span class="p">)</span><span class="k">const</span><span class="p">{</span>
@@ -259,8 +267,8 @@
         <span class="kt">int</span> <span class="nf">id_lgreen</span><span class="p">()</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">n_bulk</span><span class="o">+</span><span class="mi">4</span><span class="p">;</span> <span class="p">}</span>
     <span class="p">};</span> <span class="c1">// struct dim_g_t</span>
 
-    <span class="c1">// dimension descriptor</span>
     <span class="k">struct</span> <span class="n">dim_a_t</span> <span class="p">{</span>
+
         <span class="k">explicit</span> <span class="n">dim_a_t</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                          <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
         <span class="o">:</span> <span class="n">nx</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">ny</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">nz</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>

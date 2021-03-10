@@ -177,62 +177,83 @@
 <dl class="cpp struct">
 <dt id="_CPPv4N6graspi7dim_g_tE">
 <span id="_CPPv3N6graspi7dim_g_tE"></span><span id="_CPPv2N6graspi7dim_g_tE"></span><span id="graspi::dim_g_t"></span><span class="target" id="structgraspi_1_1dim__g__t"></span><em class="property">struct </em><code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">dim_g_t</code><a class="headerlink" href="#_CPPv4N6graspi7dim_g_tE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>structure storing dimensions of graph vertices </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi7dim_g_t7dim_g_tEjjj">
 <span id="_CPPv3N6graspi7dim_g_t7dim_g_tEjjj"></span><span id="_CPPv2N6graspi7dim_g_t7dim_g_tEjjj"></span><span id="graspi::dim_g_t::dim_g_t__unsigned-i.unsigned-i.unsigned-i"></span><span class="target" id="structgraspi_1_1dim__g__t_1a40d82de12658b228d7b05360a597bbfd"></span><code class="sig-name descname">dim_g_t</code><span class="sig-paren">(</span>unsigned int <em>n_phases</em> = 2, unsigned int <em>bulk</em> = 0, unsigned int <em>meta</em> = 2<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi7dim_g_t7dim_g_tEjjj" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>constructor</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n_phases</span></code>: is the number of phases considered </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bulk</span></code>: is the number of bulk vertieces </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code>: is the number of meta vertices associated with the {2,3}-phase morphology </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t7n_totalEv">
 <span id="_CPPv3NK6graspi7dim_g_t7n_totalEv"></span><span id="_CPPv2NK6graspi7dim_g_t7n_totalEv"></span><span id="graspi::dim_g_t::n_totalC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a3795d7675d95b65b2efe0cb2096f12f2"></span>int <code class="sig-name descname">n_total</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t7n_totalEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the total number of vertices in the graph (bulk and meta vertices) </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t6n_metaEv">
 <span id="_CPPv3NK6graspi7dim_g_t6n_metaEv"></span><span id="_CPPv2NK6graspi7dim_g_t6n_metaEv"></span><span id="graspi::dim_g_t::n_metaC"></span><span class="target" id="structgraspi_1_1dim__g__t_1aa86a784784e82d825bfdfe7136262629"></span>int <code class="sig-name descname">n_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t6n_metaEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the number of basic meta vertices (e.g., top and bottom electrode) </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t10n_meta_intEv">
 <span id="_CPPv3NK6graspi7dim_g_t10n_meta_intEv"></span><span id="_CPPv2NK6graspi7dim_g_t10n_meta_intEv"></span><span id="graspi::dim_g_t::n_meta_intC"></span><span class="target" id="structgraspi_1_1dim__g__t_1ade3192552be4452533df24aa8f5925c8"></span>int <code class="sig-name descname">n_meta_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t10n_meta_intEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the number of interfacial meta vertices </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t12n_meta_totalEv">
 <span id="_CPPv3NK6graspi7dim_g_t12n_meta_totalEv"></span><span id="_CPPv2NK6graspi7dim_g_t12n_meta_totalEv"></span><span id="graspi::dim_g_t::n_meta_totalC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a98651ea280e0c84ebe5816f4b19b6d10"></span>int <code class="sig-name descname">n_meta_total</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t12n_meta_totalEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the number of all meta vertices (basic and interfacial) </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t2idEj">
 <span id="_CPPv3NK6graspi7dim_g_t2idEj"></span><span id="_CPPv2NK6graspi7dim_g_t2idEj"></span><span id="graspi::dim_g_t::id__unsigned-iC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a0acc215898943d9ae168c5c6aa1a089d"></span>int <code class="sig-name descname">id</code><span class="sig-paren">(</span>unsigned int <em>c</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t2idEj" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of meta vertex of color c </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t7id_blueEv">
 <span id="_CPPv3NK6graspi7dim_g_t7id_blueEv"></span><span id="_CPPv2NK6graspi7dim_g_t7id_blueEv"></span><span id="graspi::dim_g_t::id_blueC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a0b35cff96f23f37472799c55f6568cd6"></span>int <code class="sig-name descname">id_blue</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t7id_blueEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of blue meta-vertex </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t6id_redEv">
 <span id="_CPPv3NK6graspi7dim_g_t6id_redEv"></span><span id="_CPPv2NK6graspi7dim_g_t6id_redEv"></span><span id="graspi::dim_g_t::id_redC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a4d995fd743bedb0e0e086e109e124520"></span>int <code class="sig-name descname">id_red</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t6id_redEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of red meta-vertex </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t8id_greenEv">
 <span id="_CPPv3NK6graspi7dim_g_t8id_greenEv"></span><span id="_CPPv2NK6graspi7dim_g_t8id_greenEv"></span><span id="graspi::dim_g_t::id_greenC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a70006cff1e6dd0b7a2b50f757bef7136"></span>int <code class="sig-name descname">id_green</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t8id_greenEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of green meta-vertex </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t9id_dgreenEv">
 <span id="_CPPv3NK6graspi7dim_g_t9id_dgreenEv"></span><span id="_CPPv2NK6graspi7dim_g_t9id_dgreenEv"></span><span id="graspi::dim_g_t::id_dgreenC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a4377b0716aada9fc02dda60b2835687e"></span>int <code class="sig-name descname">id_dgreen</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t9id_dgreenEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of dark green meta-vertex </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK6graspi7dim_g_t9id_lgreenEv">
 <span id="_CPPv3NK6graspi7dim_g_t9id_lgreenEv"></span><span id="_CPPv2NK6graspi7dim_g_t9id_lgreenEv"></span><span id="graspi::dim_g_t::id_lgreenC"></span><span class="target" id="structgraspi_1_1dim__g__t_1a07b646930f673d35f9970636740360c7"></span>int <code class="sig-name descname">id_lgreen</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK6graspi7dim_g_t9id_lgreenEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>returns the index of light green meta-vertex </p>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -240,22 +261,26 @@
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi7dim_g_t8n_phasesE">
 <span id="_CPPv3N6graspi7dim_g_t8n_phasesE"></span><span id="_CPPv2N6graspi7dim_g_t8n_phasesE"></span><span id="graspi::dim_g_t::n_phases__unsigned-i"></span><span class="target" id="structgraspi_1_1dim__g__t_1a7fa86bb960b6745a04ecefbfa3c70e3c"></span>unsigned int <code class="sig-name descname">n_phases</code><a class="headerlink" href="#_CPPv4N6graspi7dim_g_t8n_phasesE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>number of phases (currently 2 or 3) </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi7dim_g_t6n_bulkE">
 <span id="_CPPv3N6graspi7dim_g_t6n_bulkE"></span><span id="_CPPv2N6graspi7dim_g_t6n_bulkE"></span><span id="graspi::dim_g_t::n_bulk__unsigned-i"></span><span class="target" id="structgraspi_1_1dim__g__t_1aba6836ec0fd234d0eb9b59e7dc81acd7"></span>unsigned int <code class="sig-name descname">n_bulk</code><a class="headerlink" href="#_CPPv4N6graspi7dim_g_t6n_bulkE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>all BLACK,WHITE and GREY vertices </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi7dim_g_t12n_meta_basicE">
 <span id="_CPPv3N6graspi7dim_g_t12n_meta_basicE"></span><span id="_CPPv2N6graspi7dim_g_t12n_meta_basicE"></span><span id="graspi::dim_g_t::n_meta_basic__unsigned-i"></span><span class="target" id="structgraspi_1_1dim__g__t_1ac0a97dadacffaee4792bd3288bd91901"></span>unsigned int <code class="sig-name descname">n_meta_basic</code><a class="headerlink" href="#_CPPv4N6graspi7dim_g_t12n_meta_basicE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>basic meta vertices (anode, cathode) </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N6graspi7dim_g_t18n_meta_interfacialE">
 <span id="_CPPv3N6graspi7dim_g_t18n_meta_interfacialE"></span><span id="_CPPv2N6graspi7dim_g_t18n_meta_interfacialE"></span><span id="graspi::dim_g_t::n_meta_interfacial__unsigned-i"></span><span class="target" id="structgraspi_1_1dim__g__t_1a551ab74282ea97b07ec371924c22a3ae"></span>unsigned int <code class="sig-name descname">n_meta_interfacial</code><a class="headerlink" href="#_CPPv4N6graspi7dim_g_t18n_meta_interfacialE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>interfacial meta vertices between (BLACK/WHITE), (BLACK/GREY), (WHITE/GREY) </p>
+</dd></dl>
 
 </div>
 </dd></dl>

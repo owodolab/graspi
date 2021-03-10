@@ -21,25 +21,37 @@
 #include <boost/graph/filtered_graph.hpp>
 
 namespace graspi{
-    
+    /// find the connected components
+    ///
+    /// This function finds the connected components where each component consists of vertices of the same color
+    /// @param G is the graph
+    /// @param C is the vector with the colors of vertices
+    /// @param cVV is the vector storing the indices of the connected component of each vertex, this vector is initialized and filled as a result of this function execution
     inline void identify_connected_components(
                                               graspi::graph_t* G,
                                               const vertex_colors_t& C,
                                               vertex_ccs_t& vCC ){
-        
+
         connect_same_color pred(*G, C);
         boost::filtered_graph<graspi::graph_t,connect_same_color> FG(*G, pred);
-        
+
         int size_of_G = boost::num_vertices(*G);
         vCC.resize(size_of_G, 0);
-        
+
         boost::connected_components(FG, &vCC[0]);
     }//identify_connected_components
-    
+
+
+    /// This function determines the number of connected components
+    ///
+    /// This function determines the number of connected components once the connected components are identified for each vertex in the graph
+    /// @param vCC is the vector storing the indices of the connected component of each vertex
+    /// @param d_g is the structure storing basic informations about the graph dimensionality
+    /// return the number of connected components (without the meta vertices)
     inline int determine_number_of_CCs(
                                        const graspi::vertex_ccs_t& vCC,
                                        const graspi::dim_g_t& d_g){
-        
+
         int max_index = 0;
         // find max index
         for (unsigned int i = 0; i < vCC.size(); ++i) {
@@ -51,20 +63,27 @@ namespace graspi{
         // correct nOfCC - subtract meta vertices that are identified as separate CC
         return number_of_conn_comp - d_g.n_meta_total();
     }//determine_number_of_CCs
-    
-    
-    
+
+
+    /// This function determines the basic statistics of graph in terms of connected components
+    ///
+    /// This function determines the statistics of the graph related to the connected components
+    /// @param G is the input graph
+    /// @param d_g is the structure storing basic informations about the graph dimensionality
+    /// @param CCs is structure storing information about individual components (e.g. if the CC is connected to meta vertex)
+    /// @param C is the vector with the colors of vertices
+    /// @param vCC is the vector storing the indices of the connected component of each vertex
     inline void
     determine_basic_stats_of_ccs( graspi::graph_t* G,
                                  const graspi::dim_g_t& d_g,
                                  graspi::ccs_t& CCs,
                                  const graspi::vertex_colors_t& C,
                                  const graspi::vertex_ccs_t&   vCCs ){
-        
+
         std::vector<int>::const_iterator it = max_element( vCCs.begin(),
                                                           vCCs.end() );
         CCs.resize( (*it)+1 );
-        
+
 #ifdef DEBUG
         std::cout << "Total number of connected components" << *it << std::endl;
 #endif
@@ -72,9 +91,9 @@ namespace graspi{
             CCs[vCCs[i]].color = C[i];
             CCs[vCCs[i]].size++;
         }
-        
+
         unsigned int size_of_G = boost::num_vertices(*G);
-        
+
         // determine all vertices connected to the bottom electrode
         std::set<int> comp_conn_to_electrode;
         graspi::vertex_t source = d_g.id_blue(); // bottom electrode index
@@ -83,20 +102,20 @@ namespace graspi{
         for (; u != u_end; ++u) {
             comp_conn_to_electrode.insert(vCCs[*u]);
         }
-        
+
 #ifdef DEBUG
         std::cout << "Id of connected components connected to bottom " << std::endl;
         copy(comp_conn_to_electrode.begin(), comp_conn_to_electrode.end(),
              std::ostream_iterator<int>(std::cout, " "));
         std::cout << std::endl;
 #endif
-        
+
         // pass info about connectivity to bottom electrode to data of components
         for(unsigned int  i = 0; i < CCs.size(); i++ ){
             if( comp_conn_to_electrode.find(i) != comp_conn_to_electrode.end() )
                 CCs[i].if_connected_to_electrode += 1;
         }
-        
+
         // determine all vertices connected to the top electrode
         comp_conn_to_electrode.clear();
         source = d_g.id_red(); // top electrode index
@@ -104,7 +123,7 @@ namespace graspi{
         for (; u != u_end; ++u) {
             comp_conn_to_electrode.insert(vCCs[*u]);
         }
-        
+
 #ifdef DEBUG
         std::cout << "Id of connected components conn to top " << std::endl;
         std::set<int>::iterator its = comp_conn_to_electrode.begin();
@@ -115,17 +134,17 @@ namespace graspi{
         }
         std::cout << std::endl;
 #endif
-        
-        
+
+
         // pass info about connectivity to top electrode to data of components
         for(unsigned int  i = 0; i < CCs.size(); i++ ){
             if( comp_conn_to_electrode.find(i) != comp_conn_to_electrode.end() )
                 CCs[i].if_connected_to_electrode += 2;
         }
     }//determine_basic_stats_of_ccs
-    
-    
-    
-    
+
+
+
+
 }
 #endif

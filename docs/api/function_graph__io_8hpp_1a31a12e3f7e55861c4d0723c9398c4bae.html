@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;) &mdash; GraSPI July 2020 documentation</title>
+  <title>Function graspi::output_graph &mdash; GraSPI July 2020 documentation</title>
   
 
   
@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Function graspi::perfomance_indicator" href="function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b.html" />
-    <link rel="prev" title="Function graspi::output_graph(std::ostream&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" href="function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.html" /> 
+    <link rel="prev" title="Function graspi::make_update_edge_with_meta_vertex" href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -148,7 +148,7 @@
         
           <li><a href="library_root.html">Library API</a> &raquo;</li>
         
-      <li>Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)</li>
+      <li>Function graspi::output_graph</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -167,23 +167,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="function-graspi-output-graph-const-std-string-graph-t-dim-g-t-vertex-colors-t-edge-weights-t-edge-colors-t">
-<span id="exhale-function-graph-io-8hpp-1a31a12e3f7e55861c4d0723c9398c4bae"></span><h1>Function graspi::output_graph(const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)<a class="headerlink" href="#function-graspi-output-graph-const-std-string-graph-t-dim-g-t-vertex-colors-t-edge-weights-t-edge-colors-t" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-graspi-output-graph">
+<span id="exhale-function-graph-io-8hpp-1a31a12e3f7e55861c4d0723c9398c4bae"></span><h1>Function graspi::output_graph<a class="headerlink" href="#function-graspi-output-graph" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_src_graph_io.hpp.html#file-src-graph-io-hpp"><span class="std std-ref">File graph_io.hpp</span></a></p></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenfunction: Unable to resolve multiple matches for function “graspi::output_graph” with arguments (const std::string&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;) in doxygen xml output for project “GraSPI” from directory: doxygen/xml/.
-Potential matches:
+<dl class="cpp function">
+<dt id="_CPPv4N6graspi12output_graphERKNSt6stringEP7graph_tR7dim_g_tR15vertex_colors_tR14edge_weights_tR13edge_colors_t">
+<span id="_CPPv3N6graspi12output_graphERKNSt6stringEP7graph_tR7dim_g_tR15vertex_colors_tR14edge_weights_tR13edge_colors_t"></span><span id="_CPPv2N6graspi12output_graphERKNSt6stringEP7graph_tR7dim_g_tR15vertex_colors_tR14edge_weights_tR13edge_colors_t"></span><span id="graspi::output_graph__ssCR.graph_tP.dim_g_tR.vertex_colors_tR.edge_weights_tR.edge_colors_tR"></span><span class="target" id="graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae"></span>bool <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">output_graph</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <a class="reference internal" href="structgraspi_1_1dim__g__t.html#_CPPv4N6graspi7dim_g_tE" title="graspi::dim_g_t">dim_g_t</a> &amp;<em>d_g</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>C</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html#_CPPv4N6graspi13edge_colors_tE" title="graspi::edge_colors_t">edge_colors_t</a> &amp;<em>L</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function outputs the structure of the graph to the file with the given name.</p>
+<p>This function outputs the structure of the to the file with the given name <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: is the filename the structure is sent to </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the input graph </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_g</span></code>: is the struct storing the dimension of graph vertices </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: is the vector storing the labels/colors of vertices in the graph G </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">W</span></code>: is the map storing the weights of the edges </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code>: is the map storing the labels/colors of the edges in graph G </p></li>
+</ul>
+</dd>
+</dl>
 </p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="kt">bool</span> <span class="n">output_graph</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="n">graph_t</span> <span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">dim_g_t</span> <span class="o">&amp;</span><span class="n">d_g</span><span class="p">,</span> <span class="n">vertex_colors_t</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">,</span> <span class="n">edge_weights_t</span> <span class="o">&amp;</span><span class="n">W</span><span class="p">,</span> <span class="n">edge_colors_t</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">)</span>
-<span class="o">-</span> <span class="kt">bool</span> <span class="n">output_graph</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">graph_t</span> <span class="o">*</span><span class="n">G</span><span class="p">,</span> <span class="n">dim_g_t</span> <span class="o">&amp;</span><span class="n">d_g</span><span class="p">,</span> <span class="n">vertex_colors_t</span> <span class="o">&amp;</span><span class="n">C</span><span class="p">,</span> <span class="n">edge_weights_t</span> <span class="o">&amp;</span><span class="n">W</span><span class="p">,</span> <span class="n">edge_colors_t</span> <span class="o">&amp;</span><span class="n">L</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+</dd></dl>
+
 </div>
 </div>
 
@@ -198,7 +206,7 @@ Potential matches:
         <a href="function_performance__indicators_8hpp_1a7dd549073f9101b3448f7d0b64045d0b.html" class="btn btn-neutral float-right" title="Function graspi::perfomance_indicator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.html" class="btn btn-neutral float-left" title="Function graspi::output_graph(std::ostream&amp;, graph_t *, dim_g_t&amp;, vertex_colors_t&amp;, edge_weights_t&amp;, edge_colors_t&amp;)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html" class="btn btn-neutral float-left" title="Function graspi::make_update_edge_with_meta_vertex" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

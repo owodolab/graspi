@@ -22,22 +22,24 @@
 #include "graspi_descriptors.hpp"
 #include "graspi.hpp"
 
+#if !defined(DOXYGEN_SHOULD_SKIP_THIS)
+            // function declaration and/or implementation
 
 int main(int argc, char** argv){
-    
+
     /**********************************************************************
      * Basic variables to parse command line (filename and flags)          *
      * Followed by basic command line parsing                              *
      *                                                                     *
      **********************************************************************/
-    
+
     int infile_flag = -1;    // format 0=array, 1-graph
     std::string infile_name; //filename to read data from
     float pixelsize = 1.0;
     bool if_per = 0;         // if periodic BC (0-false, 1-true)
     int n_of_phases = 2;    // number of phases (default 2)
     std::string res_path("./");
-    
+
     for (int i = 1; i < (argc-1); i++){
         std::string param(argv[i]);
         if (param == std::string("-g")) {
@@ -77,7 +79,7 @@ int main(int argc, char** argv){
     << " res_path" << res_path << std::endl;
     std::cout << "-------------------------------------------" << std::endl;
 #endif
-    
+
     if ( (argc == 1) || (infile_flag == -1) ) {
         std::cout << std::endl
         << "GraSPI accepts input data in two formats:"
@@ -93,8 +95,8 @@ int main(int argc, char** argv){
         << std::endl << std::endl;
         return 0;
     }
-    
-    
+
+
     /**********************************************************************
      * Graph definition and declaration                                    *
      *(list of containers to store labels of vertices and edges etc)       *
@@ -103,12 +105,12 @@ int main(int argc, char** argv){
     graspi::dim_g_t d_g(n_of_phases,0,3); //structure storing basic dimensions of G
     graspi::dim_a_t d_a;                     //structure storing color array dimensions
     graspi::vertex_colors_t vertex_colors;   //container storing colors of vertices
-    
+
     /***********************************************************************
      * Graph construction                                                  *
      *                                                                     *
      **********************************************************************/
-    
+
     if(infile_flag == 0){
         if( !graspi::read_array(infile_name, vertex_colors, d_a, d_g) ){
             std::cout << "Problem with input file - "
@@ -116,12 +118,14 @@ int main(int argc, char** argv){
             << std::endl;
             return -1;
         }
-        
+
     }
-    
+
     std::vector<graspi::desc_t> descriptors=graspi::compute_descriptors(vertex_colors, d_a.nx, d_a.ny, d_a.nz, pixelsize, if_per, res_path);
-    
-    
-    
+
+
+
     return 0;
 }
+
+#endif // DOXYGEN_SHOULD_SKIP_THIS

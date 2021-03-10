@@ -18,14 +18,22 @@
 #include "graspi_descriptors.hpp"
 
 namespace graspi {
-    
+
+    /// The function to find useful connected components
+    /// @param descriptors is the reference to the descriptors
+    /// @param G is the pointer to the graph to be analyzed
+    /// @param C is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param vCC is the reference to the vector storing indices of the connected components (CC) of each vector in the graph
+    /// @param CC is the reference to the vector of CC
+    /// @return the pair of numbers: the total number of BLACK vertices connected to the top
+    /// and the total number of WHITE vertices connected to the bottom
     std::pair<int,int> find_useful_cc(
                                       graspi::DESC& descriptors,
                                       graspi::graph_t* G,
                                       const vertex_colors_t& C,
                                       const vertex_ccs_t& vCC,
                                       const ccs_t& CC){
-        
+
         int n_of_white_ccs = 0;
         int n_of_grey_ccs = 0;
         int n_of_black_ccs = 0;
@@ -44,9 +52,9 @@ namespace graspi {
         int n_of_grey_vertices_conn_to_both = 0;
         int n_of_black_vertices = 0;
         int n_of_black_vertices_conn_to_top = 0;
-        
+
         int flag_n_phases = 2;
-        
+
         for(unsigned int i = 0; i < CC.size(); i++){
             if( CC[i].color == WHITE){
                 n_of_white_ccs++;
@@ -80,29 +88,29 @@ namespace graspi {
                 n_of_grey_ccs_conn_to_both++;
                 n_of_grey_vertices_conn_to_both += CC[i].size;
             }
-            
+
         }
         //      os << "[STATS] Number of black connected components: " << n_of_black_ccs << std::endl
         //	 << "[STATS] Number of white connected components: " <<  n_of_white_ccs << std::endl;
-        
+
         descriptors.update_desc("STAT_CC_D",n_of_black_ccs);
         descriptors.update_desc("STAT_CC_A",n_of_white_ccs);
-        
-        
+
+
         if( flag_n_phases == 3){
             //          os << "[STATS] Number of grey connected components: " << n_of_grey_ccs << std::endl;
             descriptors.update_desc("STAT_CC_M",n_of_grey_ccs);
         }
-        
+
         //      os << "[STATS] Number of black connected components connected to top: "
         //	 << n_of_black_ccs_conn_to_top << std::endl
         //	 << "[STATS] Number of white connected components connected to bottom: "
         //	 << n_of_white_ccs_conn_to_bottom << std::endl;
-        
+
         descriptors.update_desc("STAT_CC_D_An",n_of_black_ccs_conn_to_top);
         descriptors.update_desc("STAT_CC_A_Ca",n_of_white_ccs_conn_to_bottom);
-        
-        
+
+
         if( flag_n_phases == 3){
             //	  os << "[STATS] Number of grey connected components connected to top: "
             //	     << n_of_grey_ccs_conn_to_top << std::endl
@@ -113,43 +121,43 @@ namespace graspi {
             descriptors.update_desc("STAT_CC_M_An",n_of_grey_ccs_conn_to_top);
             descriptors.update_desc("STAT_CC_M_Ca",n_of_grey_ccs_conn_to_bottom);
             descriptors.update_desc("STAT_CC_M_AnCa",n_of_grey_ccs_conn_to_both);
-            
+
         }
-        
+
         //     os << "[STATS] Number of vertices: "
         //	 << n_of_black_vertices + n_of_white_vertices << std::endl;
         descriptors.update_desc("STAT_n",n_of_black_vertices + n_of_white_vertices);
-        
-        
+
+
         //      os << "[STATS] Number of black vertices: "
         //	 << n_of_black_vertices << std::endl
         //	 << "[STATS] Number of white vertices: "
         //	 << n_of_white_vertices << std::endl;
-        
+
         descriptors.update_desc("STAT_n_D",n_of_black_vertices);
         descriptors.update_desc("STAT_n_A",n_of_white_vertices);
-        
-        
+
+
         if(flag_n_phases == 3){
             //      os << "[STATS] Number of grey vertices: " << n_of_grey_vertices << std::endl;
             descriptors.update_desc("STAT_n_M",n_of_grey_vertices);
         }
-        
+
         //      os << "[F ABS] Fraction of black vertices: "
         //	 << (double)n_of_black_vertices
         //	  / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices) << std::endl;
-        
+
         descriptors.update_desc("ABS_f_D",(double)n_of_black_vertices
                                 / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices));
-        
-        
+
+
         if(flag_n_phases == 3)
             //         os << "[F ABS] Fraction of grey vertices: "
             //         << (double)n_of_grey_vertices
             //         / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices) << std::endl;
             descriptors.update_desc("ABS_f_M",(double)n_of_grey_vertices
                                     / (n_of_black_vertices+n_of_white_vertices+n_of_grey_vertices));
-        
+
         if(flag_n_phases == 3){
             //         os << "[F CT] Fraction of black and grey vertices connected to top: "
             //          << (double)(n_of_black_vertices_conn_to_top+n_of_grey_vertices_conn_to_top)
@@ -163,9 +171,9 @@ namespace graspi {
                                     /(n_of_black_vertices+n_of_grey_vertices) );
             descriptors.update_desc("CT_f_conn_AM_Ca",(double)(n_of_white_vertices_conn_to_bottom+n_of_grey_vertices_conn_to_bottom)
                                     /(n_of_white_vertices+n_of_grey_vertices));
-            
+
         }else{
-            
+
             //          os << "[F CT] Fraction of useful vertices - w/o islands: " <<
             //          (double)( n_of_black_vertices_conn_to_top
             //                   +
@@ -178,20 +186,26 @@ namespace graspi {
             //          << "[F CT] Fraction of white vertices connected to bottom: "
             //          << (double)n_of_white_vertices_conn_to_bottom/n_of_white_vertices
             //          << std::endl;
-            
+
             descriptors.update_desc("CT_f_conn_D",(double)(n_of_black_vertices_conn_to_top+n_of_white_vertices_conn_to_bottom) / (n_of_black_vertices+n_of_white_vertices));
             descriptors.update_desc("CT_f_conn_D_An",(double)n_of_black_vertices_conn_to_top/n_of_black_vertices);
             descriptors.update_desc("CT_f_conn_A_Ca",(double)n_of_white_vertices_conn_to_bottom/n_of_white_vertices);
-            
-            
+
+
         }
         return std::pair<int,int>(n_of_black_vertices_conn_to_top,
                                   n_of_white_vertices_conn_to_bottom);
     }
-    
-    
-    
-    
+
+
+    /// The function to indentify the complementry paths from the interface to both top and bottom meta-vertices
+    /// @param G is the pointer to the graph to be analyzed
+    /// @param C is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param L is the map storing the labels/colors of the edges in graph G
+    /// @param vCC is the reference to the vector storing indices of the connected components (CC) of each vector in the graph
+    /// @param CC is the reference to the vector of CC
+    /// @return the pair of numbers: the total number of first order edges,
+    ///                            the total number of first order edges that are connected to top and bottom meta-vertices
     inline std::pair<int,int>
     identify_complementary_paths_from_green(
                                             graph_t* G,
@@ -199,13 +213,13 @@ namespace graspi {
                                             const edge_colors_t& L,
                                             const vertex_ccs_t& vCC,
                                             const ccs_t& CC ){
-        
+
         int n_1st_order_edges_conn_blue_red = 0;
         int n_1st_order_edges = 0;
-        
+
         graph_t::edge_iterator e, e_end;
         boost::tie(e, e_end) = boost::edges(*G);
-        
+
         for (; e != e_end; ++e) {
             vertex_t s = boost::source(*e, *G);
             vertex_t t = boost::target(*e, *G);
@@ -213,20 +227,20 @@ namespace graspi {
                                                       std::max(s,t));
             edge_colors_t::const_iterator edge = L.find(p);
             char edge_color = edge->second;
-            
+
             // find first order edges connectiong black and white
             if(
                ( (C[s] + C[t]) == 1 )  && ( edge_color == 'f' )
                ){
                 n_1st_order_edges++;
-                
+
                 vertex_t black_vertex = s;
                 vertex_t white_vertex = t;
                 if( C[t] == BLACK ) {
                     black_vertex = t;
                     white_vertex = s;
                 }
-                
+
                 if(
                    (CC[vCC[black_vertex] ].if_connected_to_top() )
                    &&
@@ -236,12 +250,21 @@ namespace graspi {
                 }
             }//if first order int
         } // for e
-        
+
         return std::pair<int,int>(n_1st_order_edges,
                                   n_1st_order_edges_conn_blue_red);
     }//identify_complementary_paths_from_green
-    
-    
+
+    /// The function to compute the shortest path from the source vertex to target vertex
+    ///
+    /// @param sourceC is the color/label of the source vertex
+    /// @param targetC is the color/label of the source vertex
+    /// @param G is the input graph
+    /// @param d_g is the reference to the struct storing the dimension of graph vertices
+    /// @param C is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param W is the reference to the map storing the weights of the edges
+    /// @param d is the reference to the vector with the lengths of the shortest paths
+    /// @param filename is the filename to save the results of this function, here the vector of path lengths/distances
     inline void
     compute_shortest_distance_from_sourceC_to_targetC(
                                                       COLOR sourceC,
@@ -256,7 +279,7 @@ namespace graspi {
         vertex_t source = d_g.id(sourceC);
         connect_same_color_and_relevant_meta_vertex pred(*G,C);
         determine_shortest_distances( G, W, source, pred, d);
-        
+
         if(filename.size() != 0){
             std::ostringstream oss_out;
             for (unsigned int i = 0; i < d.size(); i++) {
@@ -274,10 +297,18 @@ namespace graspi {
             f_out.close();
         }
     }//compute_shortest_distance_from_black_to_red
-    
-    
-    
-    
+
+
+
+    /// The function to identify the triplets of GREEN,BLACK,WHITE vertices that are connected to the relevant meta-vertices
+    ///
+    /// @param G is the input graph
+    /// @param C is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param vCC is the reference to the vector storing indices of the connected components (CC) of each vector in the graph
+    /// @param W is the reference to the map storing the weights of the edges
+    /// @param CC is the reference to the vector of CC,
+    /// @param id_blacks_conn_green_red is the set of indices of BLACK CC that are connected to top meta-vertex
+    /// @param id_whites_conn_green_blue is the set of indices of WHITE CC that are connected to bottom meta-vertex
     inline void
     identify_useful_triple_black_white_green( graph_t* G,
                                              const vertex_colors_t& C,
@@ -290,7 +321,7 @@ namespace graspi {
         //identify set of all white vertices with connection to green and path to blue
         connect_relevant_meta_vertex pred_black(*G, C, vCC, CC, BLACK);
         connect_relevant_meta_vertex pred_white(*G, C, vCC, CC, WHITE);
-        
+
         graph_t::edge_iterator e, e_end;
         boost::tie(e, e_end) = boost::edges(*G);
         for (; e != e_end; ++e) {
@@ -314,60 +345,79 @@ namespace graspi {
             }
         }
     }//identify_useful_triple_black_white_green
-    
-    
+
+    /// The function to filter and print the distance from BLACK vertices adjacent to GREEN vertices that are connected to the top meta-vertices
+    ///
+    /// @param d_red is the reference to the vector of path length
+    /// @param id_blacks_conn_green_red is the refernce to the set of indices of BLACK CC that are connected to top meta-vertex
     inline void
     identify_black_vertices_connected_to_green(
                                                const std::vector<float>& d_red,
                                                const std::set<int>& id_blacks_conn_green_red
                                                ){
-        
+
         std::string filename("DistancesGreenToRedViaBlack.txt");
         std::ostringstream oss_g_r_b;
-        
+
         //      unsigned int black_int = id_blacks_conn_green_red.size();
         std::vector<float> d_green_to_red_via_black;
         std::set<int>::iterator iter(id_blacks_conn_green_red.begin());
         std::set<int>::iterator  end(id_blacks_conn_green_red.end());
-        
+
         for (; iter != end; ++iter) {
             d_green_to_red_via_black.push_back( d_red[*iter ] ) ;
             oss_g_r_b <<  d_red[*iter] << std::endl;
         }
-        
+
         copy( d_green_to_red_via_black.begin(), d_green_to_red_via_black.end(),
              std::ostream_iterator<float>(oss_g_r_b, "\n"));
-        
+
         std::ofstream f_out_g_r_b(filename.c_str());
         std::string buffer = oss_g_r_b.str();
         int size = buffer.size();
         f_out_g_r_b.write (buffer.c_str(),size);
         f_out_g_r_b.close();
     }//identify_black_vertices_connected_to_green
-    
+
+    /// The function to print the distance based on their indices to the file of a given name
+    ///
+    /// @param d is the reference to the vector of path length (distances)
+    /// @param ids is the refernce to the set of indices of vertices to be printed to the file
+    /// @param filename is the name of the file to be saved the data to
     inline void print_distances_of_ids(
                                        const std::vector<float>& d,
                                        const std::set<int>& ids,
                                        const std::string& filename
                                        ){
-        
+
         std::ostringstream oss;
-        
+
         std::set<int>::iterator iter(ids.begin());
         std::set<int>::iterator  end(ids.end());
-        
+
         for (; iter != end; ++iter) {
             oss <<  d[*iter] << std::endl;
         }
-        
+
         std::ofstream f_out(filename.c_str());
         std::string buffer = oss.str();
         int size = buffer.size();
         f_out.write(buffer.c_str(),size);
         f_out.close();
     }//identify_black_vertices_connected_to_green
-    
-    
+
+
+    /// The function to determine and print the tortuosity of paths between source and target vertices
+    ///
+    /// @param vertex_colors is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param d_a is the reference to the struct storing dimensions of the morphology represented as a array
+    /// @param pixelsize is the physical unit of the voxel (distances will be rescaled according to this value)
+    /// @param d is the reference to the vector of path length (distances)
+    /// @param filename_t is the name of the file to save the toruosity of pathways analyzed
+    /// @param filename_id_t is the name of the file to save the index and the tortuosity of pathways analyzed
+    /// @param c_source is the color/label of the source vertex
+    /// @param c_target is the color/label of the targetted vertices
+    /// @return the fraction of straight rising paths (with toruosity = 1)
     inline double
     determine_and_print_tortuosity( const graspi::vertex_colors_t& vertex_colors,
                                    const dim_a_t& d_a,
@@ -379,7 +429,7 @@ namespace graspi {
                                    COLOR c_target){
         std::ostringstream oss_out_t;
         std::ostringstream oss_out_id_t;
-        
+
         int tort_1 = 0;
         int n_useful = 0; // useful means vertices with positive and finite distances
         double t = 0.0;
@@ -389,11 +439,11 @@ namespace graspi {
             position_source = d_a.nz - 1;
             eps = 1.0/d_a.nz;
         }
-        
+
         if(c_source == BLUE) position_source = 0;
-        
+
         int total_n = d_a.nx * d_a.ny;
-        
+
         if(	(d_a.nz == 0) || (d_a.nz == 1) ){//2D
             for(unsigned int j = 0; j < d_a.ny; j++){
                 for(unsigned int i = 0; i < d_a.nx; i++){
@@ -403,10 +453,10 @@ namespace graspi {
                             n_useful++;
                             double h_diff
                             = fabs((double)(position_source-j))*pixelsize;
-                            
+
                             if ( fabs(h_diff) < 1e-20 ) t = 1.0;
                             else t = d[id]/h_diff;
-                            
+
                             if (fabs(t-1.0) < eps) {
                                 t = 1.0;
                                 tort_1++;
@@ -429,10 +479,10 @@ namespace graspi {
                                 n_useful++;
                                 double h_diff
                                 = fabs((double)(position_source-k))*pixelsize;
-                                
+
                                 if(fabs(h_diff)<1e-20)  t = 1.0;
                                 else t = d[id]/h_diff;
-                                
+
                                 if (fabs(t-1.0) < eps) {
                                     t = 1.0;
                                     tort_1++;
@@ -446,8 +496,8 @@ namespace graspi {
                 }//j
             }//k
         }//end-3D
-        
-        
+
+
         std::ofstream f_out(filename_t.c_str());
         std::string buffer = oss_out_t.str();
         int size = oss_out_t.str().size();
@@ -458,13 +508,22 @@ namespace graspi {
         size = oss_out_id_t.str().size();
         f_out.write (buffer.c_str(),size);
         f_out.close();
-        
+
         if(n_useful == 0) return 0;
-        
+
         return (double)tort_1/n_useful;
     }
-    
-    
+
+    /// The function to determine the tortuosity of paths between source and target vertices
+    ///
+    /// @param vertex_colors is the reference to the vector storing the labels/colors of vertices in the graph G
+    /// @param d_a is the reference to the struct storing dimensions of the morphology represented as a array
+    /// @param pixelsize is the physical unit of the voxel (distances will be rescaled according to this value)
+    /// @param d is the reference to the vector of path length (distances)
+    /// @param c_source is the color/label of the source vertex
+    /// @param c_target is the color/label of the targetted vertices
+    /// @return the fraction of straight rising paths (with toruosity = 1)
+
     inline double
     determine_tortuosity( const graspi::vertex_colors_t& vertex_colors,
                          const dim_a_t& d_a,
@@ -472,7 +531,7 @@ namespace graspi {
                          const std::vector<float>& d,
                          COLOR c_source,
                          COLOR c_target){
-        
+
         int tort_1 = 0;
         int n_useful = 0; // useful means vertices with positive and finite distances
         double t = 0.0;
@@ -482,11 +541,11 @@ namespace graspi {
             position_source = d_a.nz - 1;
             eps = 1.0/d_a.nz;
         }
-        
+
         if(c_source == BLUE) position_source = 0;
-        
+
         int total_n = d_a.nx * d_a.ny;
-        
+
         if(	(d_a.nz == 0) || (d_a.nz == 1) ){//2D
             for(unsigned int j = 0; j < d_a.ny; j++){
                 for(unsigned int i = 0; i < d_a.nx; i++){
@@ -496,10 +555,10 @@ namespace graspi {
                             n_useful++;
                             double h_diff
                             = fabs((double)(position_source-j))*pixelsize;
-                            
+
                             if ( fabs(h_diff) < 1e-20 ) t = 1.0;
                             else t = d[id]/h_diff;
-                            
+
                             if (fabs(t-1.0) < eps) {
                                 t = 1.0;
                                 tort_1++;
@@ -519,10 +578,10 @@ namespace graspi {
                                 n_useful++;
                                 double h_diff
                                 = fabs((double)(position_source-k))*pixelsize;
-                                
+
                                 if(fabs(h_diff)<1e-20)  t = 1.0;
                                 else t = d[id]/h_diff;
-                                
+
                                 if (fabs(t-1.0) < eps) {
                                     t = 1.0;
                                     tort_1++;
@@ -533,14 +592,14 @@ namespace graspi {
                 }//j
             }//k
         }//end-3D
-        
-        
+
+
         if(n_useful == 0) return 0;
-        
+
         return (double)tort_1/n_useful;
     }
-    
-    
-    
+
+
+
 }//graspi-namespace
 #endif

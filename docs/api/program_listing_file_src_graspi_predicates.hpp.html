@@ -187,9 +187,6 @@
 
 <span class="k">namespace</span> <span class="n">graspi</span><span class="p">{</span>
 
-    <span class="c1">// Predicate used to identify connected components</span>
-    <span class="c1">// consisting of one color vertices.</span>
-    <span class="c1">// This predicate identifies edges connecting vertices of the same color</span>
     <span class="k">class</span> <span class="nc">connect_same_color</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
         <span class="n">connect_same_color</span><span class="p">()</span> <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">vertex_colors_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
@@ -212,13 +209,6 @@
         <span class="k">const</span> <span class="n">graspi</span><span class="o">::</span><span class="n">vertex_colors_t</span><span class="o">*</span> <span class="n">vertex_colors_</span><span class="p">;</span>
     <span class="p">};</span> <span class="c1">// class connect_same_color</span>
 
-
-    <span class="c1">// Predicate used to filter original graph to find the shortest distances</span>
-    <span class="c1">// from source vertex - GREEN to all BLACK/GREY (color_).</span>
-    <span class="c1">// Predicate is used to mask edges in G other than</span>
-    <span class="c1">// (BLACK,BLACK) and (BLACK,GREEN) and (color,color).</span>
-    <span class="c1">// Since source vertex is GREEN we allow edges to exists between</span>
-    <span class="c1">// GREEN and BLACK.</span>
     <span class="k">class</span> <span class="nc">connect_color_green</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
         <span class="n">connect_color_green</span><span class="p">()</span> <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">vertex_colors_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
@@ -251,10 +241,12 @@
     <span class="p">};</span> <span class="c1">// class connect_black_green</span>
 
 
+
     <span class="k">class</span> <span class="nc">connect_same_color_and_relevant_meta_vertex</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
         <span class="n">connect_same_color_and_relevant_meta_vertex</span> <span class="p">()</span>
         <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">vertex_colors_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
         <span class="n">connect_same_color_and_relevant_meta_vertex</span> <span class="p">(</span><span class="k">const</span> <span class="n">graph_t</span><span class="o">&amp;</span> <span class="n">G</span><span class="p">,</span>
                                                      <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">&amp;</span> <span class="n">C</span><span class="p">)</span>
         <span class="o">:</span> <span class="n">G_</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span> <span class="n">vertex_colors_</span><span class="p">(</span><span class="o">&amp;</span><span class="n">C</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
@@ -286,7 +278,6 @@
         <span class="k">const</span> <span class="n">graph_t</span><span class="o">*</span> <span class="n">G_</span><span class="p">;</span>
         <span class="k">const</span> <span class="n">vertex_colors_t</span><span class="o">*</span> <span class="n">vertex_colors_</span><span class="p">;</span>
     <span class="p">};</span> <span class="c1">// class connect_same_color_and_relevant_meta_vertex</span>
-
 
     <span class="k">class</span> <span class="nc">connect_relevant_meta_vertex</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
@@ -328,6 +319,7 @@
     <span class="k">class</span> <span class="nc">find_desc_of_name</span> <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
         <span class="n">find_desc_of_name</span><span class="p">()</span><span class="o">:</span><span class="n">desc_</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">){}</span>
+
         <span class="n">find_desc_of_name</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">desc_name</span><span class="p">)</span>
         <span class="o">:</span> <span class="n">desc_</span><span class="p">(</span><span class="n">desc_name</span><span class="p">){</span> <span class="p">}</span>
 

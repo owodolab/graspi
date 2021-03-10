@@ -78,5 +78,3 @@ Functions
 
 - :ref:`exhale_function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc`
 
-- :ref:`exhale_function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478`
-

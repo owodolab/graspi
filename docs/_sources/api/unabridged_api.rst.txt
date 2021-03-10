@@ -227,11 +227,6 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d.rst
-
-.. toctree::
-   :maxdepth: 5
-
    function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.rst
 
 .. toctree::
@@ -243,11 +238,6 @@ Functions
    :maxdepth: 5
 
    function_performance__indicators__charge__transport_8hpp_1aaf160173b786fe7fd8883dab78949dde.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9.rst
 
 .. toctree::
    :maxdepth: 5
@@ -273,11 +263,6 @@ Functions
    :maxdepth: 5
 
    function_performance__indicators__diss_8hpp_1a9eb8403b89e3373968f74cd898b123dc.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   function_performance__indicators__diss_8hpp_1ac06142d23982552828ad0a1dfb4e3478.rst
 
 .. toctree::
    :maxdepth: 5

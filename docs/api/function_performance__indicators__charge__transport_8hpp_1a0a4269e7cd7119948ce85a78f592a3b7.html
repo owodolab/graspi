@@ -177,7 +177,22 @@
 <dl class="cpp function">
 <dt id="_CPPv4N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE">
 <span id="_CPPv3N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE"></span><span id="_CPPv2N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE"></span><span id="graspi::compute_shortest_distance_from_sourceC_to_targetC__unsigned-i.unsigned-i.graph_tP.dim_g_tCR.vertex_colors_tCR.edge_weights_tCR.std::vector:float:R.ss"></span><span class="target" id="performance__indicators__charge__transport_8hpp_1a0a4269e7cd7119948ce85a78f592a3b7"></span>void <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">compute_shortest_distance_from_sourceC_to_targetC</code><span class="sig-paren">(</span>unsigned int <em>sourceC</em>, unsigned int <em>targetC</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <em class="property">const</em> <a class="reference internal" href="structgraspi_1_1dim__g__t.html#_CPPv4N6graspi7dim_g_tE" title="graspi::dim_g_t">dim_g_t</a> &amp;<em>d_g</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1adf6eba79b7aed3d0ebd0e2a23c3eb62d.html#_CPPv4N6graspi15vertex_colors_tE" title="graspi::vertex_colors_t">vertex_colors_t</a> &amp;<em>C</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, std::vector&lt;float&gt; &amp;<em>d</em>, std::string <em>filename</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi49compute_shortest_distance_from_sourceC_to_targetCEjjP7graph_tRK7dim_g_tRK15vertex_colors_tRK14edge_weights_tRNSt6vectorIfEENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>The function to compute the shortest path from the source vertex to target vertex</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceC</span></code>: is the color/label of the source vertex </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetC</span></code>: is the color/label of the source vertex </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the input graph </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d_g</span></code>: is the reference to the struct storing the dimension of graph vertices </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: is the reference to the vector storing the labels/colors of vertices in the graph G </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">W</span></code>: is the reference to the map storing the weights of the edges </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: is the reference to the vector with the lengths of the shortest paths </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: is the filename to save the results of this function, here the vector of path lengths/distances </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>

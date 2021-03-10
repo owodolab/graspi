@@ -16,14 +16,15 @@
 
 
 namespace graspi {
-    
+
+    /// structure storing the list of descriptors
     struct DESC{
-        std::vector<desc_t> desc;
-        find_desc_of_name find_desc;
-        
+        std::vector<desc_t> desc; ///< the vector of descriptors
+        find_desc_of_name find_desc; ///< The predicate used to identify descriptor of a given name
+
         explicit DESC(){}
-        
-        // set of methods to initiate and
+
+        /// set of methods to initiate the descriptors when TWO-phase morphology is considered
         void initiate_descriptors_2_phase(){
             std::pair <float, std::string> p_desc;
             p_desc.first = -1;  p_desc.second = "STAT_n";// number_of_vertices
@@ -32,7 +33,7 @@ namespace graspi {
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "STAT_n_D";// number_of_black_vertices
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "STAT_n_A";// number_of_white_vertices
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "STAT_CC_D";// number_of_black_connected_components
@@ -43,19 +44,19 @@ namespace graspi {
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "STAT_CC_A_Ca";// number_of_white_connected_components_connected_to_bottom
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "ABS_wf_D";//weighted_fraction_of_black_vertices
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "ABS_f_D";// fraction_of_black_vertices
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "DISS_wf10_D";//weighted_fraction_of_black_vertices_in_10_distance_to_interface
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "DISS_f10_D";//fraction_of_black_vertices_in_10_distance_to_interface
             desc.push_back(p_desc);
             //            p_desc.first = -1;  p_desc.second = "DISS_f2_D";// fraction_of_black_vertices_in_2_distance_to_interface
             //           desc.push_back(p_desc);
-            
+
             //            p_desc.first = -1;  p_desc.second = "CT_f_conn";// fraction_of_useful_vertices_-_w/o_islands
             //            desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "CT_f_e_conn";//fraction_of_interface_with_complementary_paths_to_bottom_and_top
@@ -82,19 +83,22 @@ namespace graspi {
             //            desc.push_back(p_desc);
             //            p_desc.first = -1;  p_desc.second = "CT_n_D_adj_An";// number_of_black_vertices_in_direct_contact_with_red
             //            desc.push_back(p_desc);
-            
+
         }
-        
+
+        /// This method prints the values of descriptors of TWO-phase morphology to the stream os
+        ///
+        /// @param os is the outputstream the descriptors should be send to
         void print_descriptors_2_phase(std::ostream& os){
-            
+
             for (unsigned int i=0; i< desc.size();i++){
                 if (fabs(desc[i].first +1 ) > 1e-10)
                     os << desc[i].second << " " << desc[i].first << std::endl;
             }
         }
-        
-        
-        // set of methods to initiate and
+
+
+        /// This method initiates the descriptors when THREE-phase morphology is considered
         void initiate_descriptors_3_phase(){
             std::pair <float, std::string> p_desc;
             p_desc.first = -1;  p_desc.second = "STAT_n";//number_of_vertices
@@ -113,19 +117,19 @@ namespace graspi {
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "STAT_CC_A_Ca";//number_of_white_connected_components_connected_to_bottom
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "ABS_wf_D";//weighted_fraction_of_black_vertices
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "ABS_f_D";//fraction_of_black_vertices
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "DISS_wf10_D";//weighted_fraction_of_black_vertices_in_10_distance_to_interface
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "DISS_f10_D";//fraction_of_black_vertices_in_10_distance_to_interface
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "DISS_f2_D";// fraction_of_black_vertices_in_2_distance_to_interface
             desc.push_back(p_desc);
-            
+
             p_desc.first = -1;  p_desc.second = "CT_f_conn_D";//fraction_of_useful_vertices_-_w/o_islands
             desc.push_back(p_desc);
             p_desc.first = -1;  p_desc.second = "CT_f_e_conn";//fraction_of_interface_with_complementary_paths_to_bottom_and_top
@@ -152,12 +156,16 @@ namespace graspi {
             //            desc.push_back(p_desc);
             //            p_desc.first = -1;  p_desc.second = "CT_n_D_adj_An";// number_of_black_vertices_in_direct_contact_with_red
             //            desc.push_back(p_desc);
-            
+
         }
-        
-        
+
+        /// This function updates the value of the descriptor with name find_desc_of_name
+        ///
+        /// @param desc_name is the name of descriptor to be updated
+        /// @param value is the value of the descriptor to be updated with
+        /// @return the status of the update
         bool update_desc(std::string desc_name,float value){
-            
+
             find_desc.set_desc(desc_name);
             std::vector< std::pair<float, std::string> >::iterator it;
             it = std::find_if( desc.begin(), desc.end(), find_desc );
@@ -168,10 +176,10 @@ namespace graspi {
                 return true;
             }
         }
-        
-        
-        
-        
+
+
+
+
     };// struct DESC
 }
 

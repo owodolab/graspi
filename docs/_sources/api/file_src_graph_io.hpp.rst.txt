@@ -61,9 +61,5 @@ Functions
 
 - :ref:`exhale_function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae`
 
-- :ref:`exhale_function_graph__io_8hpp_1a05120bd27869c1613c15eb1faeb9d75d`
-
 - :ref:`exhale_function_graph__io_8hpp_1a7834b811f17d737eb30e0d0ef522d161`
-
-- :ref:`exhale_function_graph__io_8hpp_1a23faba3c9fbcc1bcffab7d8d646a23d9`
 

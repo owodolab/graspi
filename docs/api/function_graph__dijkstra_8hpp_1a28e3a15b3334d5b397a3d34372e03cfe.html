@@ -177,7 +177,23 @@
 <dl class="cpp function">
 <dt id="_CPPv4I0EN6graspi28determine_shortest_distancesEvP7graph_tRK14edge_weights_t8vertex_tRK4PredRNSt6vectorIfEE">
 <span id="_CPPv3I0EN6graspi28determine_shortest_distancesEP7graph_tRK14edge_weights_t8vertex_tRK4PredRNSt6vectorIfEE"></span><span id="_CPPv2I0EN6graspi28determine_shortest_distancesEP7graph_tRK14edge_weights_t8vertex_tRK4PredRNSt6vectorIfEE"></span>template&lt;typename <code class="sig-name descname">Pred</code>&gt;<br /><span class="target" id="graph__dijkstra_8hpp_1a28e3a15b3334d5b397a3d34372e03cfe"></span>void <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">determine_shortest_distances</code><span class="sig-paren">(</span><a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <em class="property">const</em> <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a4cbb0f11b7c424b7949e42ab9e49eee5.html#_CPPv4N6graspi8vertex_tE" title="graspi::vertex_t">vertex_t</a> <em>source</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4I0EN6graspi28determine_shortest_distancesEvP7graph_tRK14edge_weights_t8vertex_tRK4PredRNSt6vectorIfEE" title="graspi::determine_shortest_distances::Pred">Pred</a> &amp;<em>pred</em>, std::vector&lt;float&gt; &amp;<em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN6graspi28determine_shortest_distancesEvP7graph_tRK14edge_weights_t8vertex_tRK4PredRNSt6vectorIfEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This function determines the shortest paths in the fitered graph.</p>
+<p>This function determines the shortest paths in the filtered graph. The shortest paths and the lengths (distances) are computed from the source vertex to all vertices in the filtered graph. The filtered graph is determined using predicate Pred. <dl class="simple">
+<dt><strong>Template Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Pred</span></code>: is the predicate used to filter the graph </p></li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the input graph </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">W</span></code>: is the map storing the weights of the edges </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: is the source vertex with respect to which distances are to be determine_shortest_distanced </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pred</span></code>: is the predicate used to filter the graph </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: is the vector of distance to be determined as a result of this function </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </div>

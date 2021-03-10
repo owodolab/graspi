@@ -31,23 +31,26 @@ Program Listing for File performance_indicators_abs.hpp
    #include <cmath>
    
    namespace graspi {
-       
+   
        struct foo_w_abs{
-           double Lexp;
+           double Lexp; 
+   
            foo_w_abs(double L = 100):Lexp(L){ }
            double operator()(double d)const{ return exp(-1.0*d/Lexp); }
        };
+   
+   
        struct foo_no_w_abs{
            foo_no_w_abs(){ }
            double operator()(double d)const{ return 1.0; }
        };
-       
+   
        template<typename WFoo>
        inline double wf_abs(const vertex_colors_t& C, const dim_a_t& d_a, WFoo wf,
                             double pixelsize){
            double w_abs = 0;
            unsigned int total_n = d_a.nx * d_a.ny;
-           
+   
            if( (d_a.nz == 0) || (d_a.nz == 1) ){//2D
                for(unsigned int j = 0; j < d_a.ny; j++){
                    for(unsigned int i = 0; i < d_a.nx; i++){
@@ -72,10 +75,10 @@ Program Listing for File performance_indicators_abs.hpp
                    }//j
                }//k
            }//end-3D
-           
+   
            return w_abs/total_n;
        }
-       
+   
    } // namespace graspi
    
    #endif // PERFORMANCE_INDICATORS_HPP

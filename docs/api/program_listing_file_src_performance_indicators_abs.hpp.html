@@ -190,9 +190,12 @@
 
     <span class="k">struct</span> <span class="n">foo_w_abs</span><span class="p">{</span>
         <span class="kt">double</span> <span class="n">Lexp</span><span class="p">;</span>
+
         <span class="n">foo_w_abs</span><span class="p">(</span><span class="kt">double</span> <span class="n">L</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span><span class="o">:</span><span class="n">Lexp</span><span class="p">(</span><span class="n">L</span><span class="p">){</span> <span class="p">}</span>
         <span class="kt">double</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">double</span> <span class="n">d</span><span class="p">)</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">Lexp</span><span class="p">);</span> <span class="p">}</span>
     <span class="p">};</span>
+
+
     <span class="k">struct</span> <span class="n">foo_no_w_abs</span><span class="p">{</span>
         <span class="n">foo_no_w_abs</span><span class="p">(){</span> <span class="p">}</span>
         <span class="kt">double</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">double</span> <span class="n">d</span><span class="p">)</span><span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span> <span class="p">}</span>

@@ -71,11 +71,11 @@ Functions
 
 - :ref:`exhale_function_graph__constructors_8hpp_1a83e33356090a0994c0845656a3d56601`
 
+- :ref:`exhale_function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5`
+
 - :ref:`exhale_function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852`
 
 - :ref:`exhale_function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8`
-
-- :ref:`exhale_function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5`
 
 - :ref:`exhale_function_graph__constructors_8hpp_1ab9c0f50386d5c15fc51f6b99d8ac4270`
 
