@@ -17,6 +17,8 @@
 
 namespace graspi {
 
+    bool IsZero(float i){if (std::fabs(i)<1e-10 ) return true; else return false;}
+
     /// structure storing the list of descriptors
     struct DESC{
         std::vector<desc_t> desc; ///< the vector of descriptors
@@ -79,10 +81,10 @@ namespace graspi {
             //            desc.push_back(p_desc);
             //            p_desc.first = -1;  p_desc.second = "CT_wtort_A";// weighted_fraction_of_white_vertices_with_preferably_straight_rising_paths
             //            desc.push_back(p_desc);
-            //            p_desc.first = -1;  p_desc.second = "CT_n_A_adj_Ca";// number_of_white_vertices_in_direct_contact_with_blue
-            //            desc.push_back(p_desc);
-            //            p_desc.first = -1;  p_desc.second = "CT_n_D_adj_An";// number_of_black_vertices_in_direct_contact_with_red
-            //            desc.push_back(p_desc);
+            p_desc.first = -1;  p_desc.second = "CT_n_D_adj_An";// number_of_black_vertices_in_direct_contact_with_red
+            desc.push_back(p_desc);
+            p_desc.first = -1;  p_desc.second = "CT_n_A_adj_Ca";// number_of_white_vertices_in_direct_contact_with_blue
+            desc.push_back(p_desc);
 
         }
 

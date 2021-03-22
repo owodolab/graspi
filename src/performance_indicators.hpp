@@ -154,6 +154,9 @@ namespace graspi {
         compute_shortest_distance_from_sourceC_to_targetC(RED,BLACK,
                                                           G, d_g, C, W,
                                                           distances);
+        int distZero=count_if(distances.begin(), distances.end(), IsZero);
+        descriptors.update_desc("CT_n_D_adj_An",distZero);
+
         double black_tort_1
         = determine_tortuosity( C, d_a, pixelsize,distances,RED,BLACK);
 
@@ -164,6 +167,10 @@ namespace graspi {
         compute_shortest_distance_from_sourceC_to_targetC(BLUE,WHITE,
                                                           G, d_g, C, W,
                                                           distances);
+        distZero=count_if(distances.begin(), distances.end(), IsZero);
+        descriptors.update_desc("CT_n_A_adj_Ca",distZero);
+
+
         double white_tort_1
         = determine_tortuosity( C, d_a, pixelsize,distances, BLUE,WHITE);
         descriptors.update_desc("CT_f_A_tort1",white_tort_1);
@@ -266,6 +273,10 @@ namespace graspi {
         compute_shortest_distance_from_sourceC_to_targetC(RED,BLACK,
                                                           G, d_g, C, W,
                                                           distances, filename);
+
+        int distZero=count_if(distances.begin(), distances.end(), IsZero);
+        descriptors.update_desc("CT_n_D_adj_An",distZero);
+
         filename = res_path + std::string("DistancesGreenToRedViaBlack.txt");
         print_distances_of_ids(distances,id_blacks_conn_green_red,
                                filename);
@@ -285,6 +296,10 @@ namespace graspi {
         compute_shortest_distance_from_sourceC_to_targetC(BLUE,WHITE,
                                                           G, d_g, C, W,
                                                           distances, filename);
+
+        distZero=count_if(distances.begin(), distances.end(), IsZero);
+        descriptors.update_desc("CT_n_A_adj_Ca",distZero);
+
         filename = res_path + std::string("DistancesGreenToBlueViaWhite.txt");
         print_distances_of_ids(distances,id_whites_conn_green_blue,
                                filename);
