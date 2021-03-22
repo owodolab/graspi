@@ -54,11 +54,11 @@ Functions
 
 - :ref:`exhale_function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4`
 
+- :ref:`exhale_function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852`
+
 - :ref:`exhale_function_graph__constructors_8hpp_1aee448ce90f643a56015935134950fef8`
 
 - :ref:`exhale_function_graph__constructors_8hpp_1a50a980d4374ff66475ee49e3d47b8df5`
-
-- :ref:`exhale_function_graph__constructors_8hpp_1a2afc7b6672ee1e6555943c41d3a48852`
 
 - :ref:`exhale_function_graspi_8hpp_1a5f1bb071296a4badb95419918641de77`
 
@@ -99,6 +99,8 @@ Functions
 - :ref:`exhale_function_performance__indicators__diss_8hpp_1ac200e273b19362a1b0d8e3f264f3a641`
 
 - :ref:`exhale_function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f`
+
+- :ref:`exhale_function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a`
 
 - :ref:`exhale_function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d`
 

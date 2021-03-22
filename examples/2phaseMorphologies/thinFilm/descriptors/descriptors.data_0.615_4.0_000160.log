@@ -10,7 +10,6 @@ ABS_wf_D 0.25068
 ABS_f_D 0.400558
 DISS_wf10_D 0.610803
 DISS_f10_D 0.988843
-CT_f_conn_D 0.653194
 CT_f_e_conn 0.123474
 CT_f_conn_D_An 0.134192
 CT_f_conn_A_Ca 1
@@ -19,3 +18,5 @@ CT_e_D_An 419
 CT_e_A_Ca 3658
 CT_f_D_tort1 0.890216
 CT_f_A_tort1 0.265837
+CT_n_D_adj_An 148
+CT_n_A_adj_Ca 198

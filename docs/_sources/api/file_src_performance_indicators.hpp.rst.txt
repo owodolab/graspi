@@ -69,9 +69,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67`
-
 - :ref:`exhale_function_performance__indicators_8hpp_1a2e4749cd6042c411d70aa47b9554befa`
+
+- :ref:`exhale_function_performance__indicators_8hpp_1aa2e1d1db917ac845c946c31569509e67`
 
 - :ref:`exhale_function_performance__indicators_8hpp_1aa08af6cb3191a5a3b1a1884f5f0221d4`
 

@@ -222,6 +222,11 @@ Functions
 .. toctree::
    :maxdepth: 5
 
+   function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a.rst
+
+.. toctree::
+   :maxdepth: 5
+
    function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.rst
 
 .. toctree::

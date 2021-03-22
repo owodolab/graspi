@@ -111,6 +111,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#ct-e-a-ca"><code class="docutils literal notranslate"><span class="pre">CT_e_A_Ca</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ct-f-d-tort1"><code class="docutils literal notranslate"><span class="pre">CT_f_D_tort1</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ct-f-a-tort1"><code class="docutils literal notranslate"><span class="pre">CT_f_A_tort1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ct-n-d-adj-an"><code class="docutils literal notranslate"><span class="pre">CT_n_D_adj_An</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ct-n-a-adj-ca"><code class="docutils literal notranslate"><span class="pre">CT_n_A_adj_Ca</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="graphBasedRepresentation.html">Graph-based representation of microstructure</a></li>
@@ -209,6 +211,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">CT_e_A_Ca</span></code> - number of white interface vertices with path to bottom</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CT_f_D_tort1</span></code> - fraction of black vertices with straight rising paths (t=1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CT_f_A_tort1</span></code> - fraction of white vertices with straight rising paths (t=1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CT_n_D_adj_An</span></code> - number of black vertices in direct contact with top (An - top/anode)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CT_n_A_adj_Ca</span></code> - number of white vertices in direct contact with bottom (Ca - bottom/cathode)</p></li>
 </ul>
 <p>The name of each descriptor starts with the abbreviation of the step in the
 photovoltaic process in organic solar cells (OSC): light absorption (ABS), exciton dissociation (DISS),
@@ -476,6 +480,18 @@ of all edges between vertices in <span class="math notranslate nohighlight">\(V'
 <li><p>Filter the set <span class="math notranslate nohighlight">\(V_{Wt1}\)</span> with all WHITE vertices that have the shortest path with <span class="math notranslate nohighlight">\(t=1\)</span>.</p></li>
 <li><p>Output: The fraction of WHITE vertices with straight rising paths <span class="math notranslate nohighlight">\(|V_{Wt1}|/|V_W|\)</span> .</p></li>
 </ol>
+</div>
+<div class="section" id="ct-n-d-adj-an">
+<h2><code class="docutils literal notranslate"><span class="pre">CT_n_D_adj_An</span></code><a class="headerlink" href="#ct-n-d-adj-an" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">CT_n_D_adj_An</span></code> - number of black vertices in direct contact with top (An - top/anode)</p>
+<p>This descriptor computes the number of BLACK vertices with distance to RED (Anode/top) vertex.
+To compute this descriptor, post processing of distance vector is performed. By counting the number of BLACK vertices with zero distance to the RED vertex.</p>
+</div>
+<div class="section" id="ct-n-a-adj-ca">
+<h2><code class="docutils literal notranslate"><span class="pre">CT_n_A_adj_Ca</span></code><a class="headerlink" href="#ct-n-a-adj-ca" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">CT_n_A_adj_Ca</span></code> - number of white vertices in direct contact with bottom (Ca - bottom/cathode)</p>
+<p>This descriptor computes the number of WHITE vertices with distance to BLUE (Cathode/bottom) vertex.
+To compute this descriptor, post processing of distance vector is performed. By counting the number of WHITE vertices with zero distance to the BLUE vertex.</p>
 </div>
 </div>
 

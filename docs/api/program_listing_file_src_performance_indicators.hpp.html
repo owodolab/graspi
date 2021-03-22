@@ -296,6 +296,9 @@
         <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
                                                           <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
                                                           <span class="n">distances</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">distZero</span><span class="o">=</span><span class="n">count_if</span><span class="p">(</span><span class="n">distances</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">distances</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">IsZero</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_n_D_adj_An&quot;</span><span class="p">,</span><span class="n">distZero</span><span class="p">);</span>
+
         <span class="kt">double</span> <span class="n">black_tort_1</span>
         <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">);</span>
 
@@ -306,6 +309,10 @@
         <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
                                                           <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
                                                           <span class="n">distances</span><span class="p">);</span>
+        <span class="n">distZero</span><span class="o">=</span><span class="n">count_if</span><span class="p">(</span><span class="n">distances</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">distances</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">IsZero</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_n_A_adj_Ca&quot;</span><span class="p">,</span><span class="n">distZero</span><span class="p">);</span>
+
+
         <span class="kt">double</span> <span class="n">white_tort_1</span>
         <span class="o">=</span> <span class="n">determine_tortuosity</span><span class="p">(</span> <span class="n">C</span><span class="p">,</span> <span class="n">d_a</span><span class="p">,</span> <span class="n">pixelsize</span><span class="p">,</span><span class="n">distances</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">);</span>
         <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_f_A_tort1&quot;</span><span class="p">,</span><span class="n">white_tort_1</span><span class="p">);</span>
@@ -394,6 +401,10 @@
         <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">RED</span><span class="p">,</span><span class="n">BLACK</span><span class="p">,</span>
                                                           <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
                                                           <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+
+        <span class="kt">int</span> <span class="n">distZero</span><span class="o">=</span><span class="n">count_if</span><span class="p">(</span><span class="n">distances</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">distances</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">IsZero</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_n_D_adj_An&quot;</span><span class="p">,</span><span class="n">distZero</span><span class="p">);</span>
+
         <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToRedViaBlack.txt&quot;</span><span class="p">);</span>
         <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_blacks_conn_green_red</span><span class="p">,</span>
                                <span class="n">filename</span><span class="p">);</span>
@@ -413,6 +424,10 @@
         <span class="n">compute_shortest_distance_from_sourceC_to_targetC</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span><span class="n">WHITE</span><span class="p">,</span>
                                                           <span class="n">G</span><span class="p">,</span> <span class="n">d_g</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span>
                                                           <span class="n">distances</span><span class="p">,</span> <span class="n">filename</span><span class="p">);</span>
+
+        <span class="n">distZero</span><span class="o">=</span><span class="n">count_if</span><span class="p">(</span><span class="n">distances</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">distances</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">IsZero</span><span class="p">);</span>
+        <span class="n">descriptors</span><span class="p">.</span><span class="n">update_desc</span><span class="p">(</span><span class="s">&quot;CT_n_A_adj_Ca&quot;</span><span class="p">,</span><span class="n">distZero</span><span class="p">);</span>
+
         <span class="n">filename</span> <span class="o">=</span> <span class="n">res_path</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;DistancesGreenToBlueViaWhite.txt&quot;</span><span class="p">);</span>
         <span class="n">print_distances_of_ids</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span><span class="n">id_whites_conn_green_blue</span><span class="p">,</span>
                                <span class="n">filename</span><span class="p">);</span>

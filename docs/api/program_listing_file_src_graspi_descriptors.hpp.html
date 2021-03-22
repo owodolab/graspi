@@ -185,6 +185,8 @@
 
 <span class="k">namespace</span> <span class="n">graspi</span> <span class="p">{</span>
 
+    <span class="kt">bool</span> <span class="n">IsZero</span><span class="p">(</span><span class="kt">float</span> <span class="n">i</span><span class="p">){</span><span class="k">if</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">fabs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">1e-10</span> <span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span> <span class="k">else</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span>
+
     <span class="k">struct</span> <span class="n">DESC</span><span class="p">{</span>
         <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">desc_t</span><span class="o">&gt;</span> <span class="n">desc</span><span class="p">;</span>
         <span class="n">find_desc_of_name</span> <span class="n">find_desc</span><span class="p">;</span>
@@ -245,10 +247,10 @@
             <span class="c1">//            desc.push_back(p_desc);</span>
             <span class="c1">//            p_desc.first = -1;  p_desc.second = &quot;CT_wtort_A&quot;;// weighted_fraction_of_white_vertices_with_preferably_straight_rising_paths</span>
             <span class="c1">//            desc.push_back(p_desc);</span>
-            <span class="c1">//            p_desc.first = -1;  p_desc.second = &quot;CT_n_A_adj_Ca&quot;;// number_of_white_vertices_in_direct_contact_with_blue</span>
-            <span class="c1">//            desc.push_back(p_desc);</span>
-            <span class="c1">//            p_desc.first = -1;  p_desc.second = &quot;CT_n_D_adj_An&quot;;// number_of_black_vertices_in_direct_contact_with_red</span>
-            <span class="c1">//            desc.push_back(p_desc);</span>
+            <span class="n">p_desc</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>  <span class="n">p_desc</span><span class="p">.</span><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;CT_n_D_adj_An&quot;</span><span class="p">;</span><span class="c1">// number_of_black_vertices_in_direct_contact_with_red</span>
+            <span class="n">desc</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">p_desc</span><span class="p">);</span>
+            <span class="n">p_desc</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>  <span class="n">p_desc</span><span class="p">.</span><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;CT_n_A_adj_Ca&quot;</span><span class="p">;</span><span class="c1">// number_of_white_vertices_in_direct_contact_with_blue</span>
+            <span class="n">desc</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">p_desc</span><span class="p">);</span>
 
         <span class="p">}</span>
 

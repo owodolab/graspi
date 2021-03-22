@@ -55,3 +55,10 @@ Classes
 
 - :ref:`exhale_struct_structgraspi_1_1_d_e_s_c`
 
+
+Functions
+---------
+
+
+- :ref:`exhale_function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a`
+

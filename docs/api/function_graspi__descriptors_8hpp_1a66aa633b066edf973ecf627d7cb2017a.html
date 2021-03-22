@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Function graspi::make_update_edge_with_meta_vertex &mdash; GraSPI July 2020 documentation</title>
+  <title>Function graspi::IsZero &mdash; GraSPI July 2020 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function graspi::output_graph" href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" />
-    <link rel="prev" title="Function graspi::IsZero" href="function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a.html" /> 
+    <link rel="next" title="Function graspi::make_update_edge_with_meta_vertex" href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html" />
+    <link rel="prev" title="Function graspi::initlize_colors_meta_vertices" href="function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -148,13 +148,13 @@
         
           <li><a href="library_root.html">Library API</a> &raquo;</li>
         
-      <li>Function graspi::make_update_edge_with_meta_vertex</li>
+      <li>Function graspi::IsZero</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/api/function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -167,32 +167,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="function-graspi-make-update-edge-with-meta-vertex">
-<span id="exhale-function-graph-constructors-8hpp-1a1858ff31637ac75b0ffa03c793239e3d"></span><h1>Function graspi::make_update_edge_with_meta_vertex<a class="headerlink" href="#function-graspi-make-update-edge-with-meta-vertex" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="function-graspi-iszero">
+<span id="exhale-function-graspi-descriptors-8hpp-1a66aa633b066edf973ecf627d7cb2017a"></span><h1>Function graspi::IsZero<a class="headerlink" href="#function-graspi-iszero" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_src_graph_constructors.hpp.html#file-src-graph-constructors-hpp"><span class="std std-ref">File graph_constructors.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_src_graspi_descriptors.hpp.html#file-src-graspi-descriptors-hpp"><span class="std std-ref">File graspi_descriptors.hpp</span></a></p></li>
 </ul>
 <div class="section" id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp function">
-<dt id="_CPPv4N6graspi33make_update_edge_with_meta_vertexEiidcP7graph_tR14edge_weights_tR13edge_colors_t">
-<span id="_CPPv3N6graspi33make_update_edge_with_meta_vertexEiidcP7graph_tR14edge_weights_tR13edge_colors_t"></span><span id="_CPPv2N6graspi33make_update_edge_with_meta_vertexEiidcP7graph_tR14edge_weights_tR13edge_colors_t"></span><span id="graspi::make_update_edge_with_meta_vertex__i.i.double.c.graph_tP.edge_weights_tR.edge_colors_tR"></span><span class="target" id="graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d"></span>void <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">make_update_edge_with_meta_vertex</code><span class="sig-paren">(</span>int <em>s</em>, int <em>meta_t</em>, double <em>w</em>, char <em>o</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a6f9edbe30b9dd1b3180ca57998b99f95.html#_CPPv4N6graspi7graph_tE" title="graspi::graph_t">graph_t</a> *<em>G</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a046ee9c35910d3989aa082a65b7073c2.html#_CPPv4N6graspi14edge_weights_tE" title="graspi::edge_weights_t">edge_weights_t</a> &amp;<em>W</em>, <a class="reference internal" href="typedef_graspi__types_8hpp_1a1715ad8628f60478c7327ad40fd5c4ef.html#_CPPv4N6graspi13edge_colors_tE" title="graspi::edge_colors_t">edge_colors_t</a> &amp;<em>L</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi33make_update_edge_with_meta_vertexEiidcP7graph_tR14edge_weights_tR13edge_colors_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This is function to update edge between source and target vertex</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: is the source vertex </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code>: is the target vertex </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">o</span></code>: is the order of the edges to be added </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: is the weight of the edge to be added </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">G</span></code>: is the reference to the input graph </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: is the reference to the vector storing the labels/colors of vertices in the graph G </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">W</span></code>: is the reference to the map storing the weights of the edges </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code>: is the reference to the map storing the labels/colors of the edges in graph G </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
+<dt id="_CPPv4N6graspi6IsZeroEf">
+<span id="_CPPv3N6graspi6IsZeroEf"></span><span id="_CPPv2N6graspi6IsZeroEf"></span><span id="graspi::IsZero__float"></span><span class="target" id="graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a"></span>bool <code class="sig-prename descclassname">graspi<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">IsZero</code><span class="sig-paren">(</span>float <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6graspi6IsZeroEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </div>
@@ -205,10 +190,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="function_graph__io_8hpp_1a31a12e3f7e55861c4d0723c9398c4bae.html" class="btn btn-neutral float-right" title="Function graspi::output_graph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="function_graph__constructors_8hpp_1a1858ff31637ac75b0ffa03c793239e3d.html" class="btn btn-neutral float-right" title="Function graspi::make_update_edge_with_meta_vertex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="function_graspi__descriptors_8hpp_1a66aa633b066edf973ecf627d7cb2017a.html" class="btn btn-neutral float-left" title="Function graspi::IsZero" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="function_graph__constructors_8hpp_1a53f33892ab14d614ea10cf5d1906126f.html" class="btn btn-neutral float-left" title="Function graspi::initlize_colors_meta_vertices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

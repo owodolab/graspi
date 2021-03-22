@@ -24,6 +24,8 @@ For two-phase morphology, |graspi| computes the following set of descriptors:
 * ``CT_e_A_Ca`` - number of white interface vertices with path to bottom
 * ``CT_f_D_tort1`` - fraction of black vertices with straight rising paths (t=1)
 * ``CT_f_A_tort1`` - fraction of white vertices with straight rising paths (t=1)
+* ``CT_n_D_adj_An`` - number of black vertices in direct contact with top (An - top/anode)
+* ``CT_n_A_adj_Ca`` - number of white vertices in direct contact with bottom (Ca - bottom/cathode)
 
 The name of each descriptor starts with the abbreviation of the step in the
 photovoltaic process in organic solar cells (OSC): light absorption (ABS), exciton dissociation (DISS),
@@ -313,3 +315,19 @@ The graph-based algorithm to compute the fraction is given below:
 6. For each WHITE vertex compute the tortuosity using the shortest paths from step 5 and 4.
 7. Filter the set :math:`V_{Wt1}` with all WHITE vertices that have the shortest path with :math:`t=1`.
 8. Output: The fraction of WHITE vertices with straight rising paths :math:`|V_{Wt1}|/|V_W|` .
+
+``CT_n_D_adj_An``
+=================
+``CT_n_D_adj_An`` - number of black vertices in direct contact with top (An - top/anode)
+
+This descriptor computes the number of BLACK vertices with distance to RED (Anode/top) vertex.
+To compute this descriptor, post processing of distance vector is performed. By counting the number of BLACK vertices with zero distance to the RED vertex.
+
+
+
+``CT_n_A_adj_Ca``
+=================
+``CT_n_A_adj_Ca`` - number of white vertices in direct contact with bottom (Ca - bottom/cathode)
+
+This descriptor computes the number of WHITE vertices with distance to BLUE (Cathode/bottom) vertex.
+To compute this descriptor, post processing of distance vector is performed. By counting the number of WHITE vertices with zero distance to the BLUE vertex.  
