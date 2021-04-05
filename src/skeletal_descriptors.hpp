@@ -21,6 +21,12 @@ namespace graspi {
             std::pair <float, std::string> p_desc;
             p_desc.first = -1;  p_desc.second = "SKEL_n";// number_of_skeletal_pixels
             skeldesc.push_back(p_desc);
+            p_desc.first = -1;  p_desc.second = "SKEL_END_n";// number_of_end_nodes
+            skeldesc.push_back(p_desc);
+            p_desc.first = -1;  p_desc.second = "SKEL_INTERSECTION_n";// number_of_end_nodes
+            skeldesc.push_back(p_desc);
+            p_desc.first = -1;  p_desc.second = "SKEL_BRANCH_n";// number_of_end_nodes
+            skeldesc.push_back(p_desc);
         }
         
         void print_skeletal_descriptors(std::ostream& os){

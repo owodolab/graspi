@@ -15,16 +15,15 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <algorithm> // for std::find
-#include <iterator> // for std::begin, std::end
-
 
 namespace graspi {
 
-  typedef struct{
-      int row;
-      int col;
-  }node;
+typedef struct{
+    int row;
+    int col;
+    int count;
+}node;
+
 
 typedef struct{
     int count;
@@ -34,12 +33,12 @@ typedef struct{
     node neighbors[8];
 }neighbor;
 
-/// This function returns the neighbor data for an input pixel.
+/// This function returns a pointer to the neighbor data for an input pixel.
 /// The data includes the count of skeletal neighbors, the count of even and odd neighbors (refer the document), directions of the neighbors, and the pixel positions of all the neighbors
-/// @param thispixel  is the pixel for which the neighbor data is to be calculated
-/// @param skeleton are the pixel positions corresponding to the skeleton
+/// @param thispixel  is the pointer to the pixel for which the neighbor data is to be calculated
+/// @param skeleton is the pointer to the structure containing the pixel positions of the skeleton
 /// @param skelsize is the length of the skeleton
-/// @return struct encoding the information about the 8-neighborhood of the input pixel
+/// @return pointer to the struct encoding the information about the 8-neighborhood of the input pixel
 
 neighbor* getNeighbors(node* thispixel, node* skeleton, int skelsize){ //Number of neighbors that belong to the image
     neighbor* neighbordata = new neighbor [9];
@@ -77,8 +76,8 @@ neighbor* getNeighbors(node* thispixel, node* skeleton, int skelsize){ //Number 
 }
 
 /// This function returns true/false if a neighbor exists in certain directions
-/// @param neighbordata  is the structure storing the information aobut the neighbors
-/// @param ndir is the array of directions in which neighbor exists is to be checked
+/// @param neighbordata  is a pointer to  the structure storing the information aobut the neighbors
+/// @param ndir is a pointer to the array of directions in which neighbor exists is to be checked
 /// @param dir_count is the count of the directions
 /// @return neighbor_exists is a true/false value if the neighbor exists in all the input directions
 
@@ -98,9 +97,9 @@ bool getNeighborPosition(neighbor* neighbordata, int* ndir, int dir_count){
 }
 
 
-/// This function deletes the elements of struct Node
+/// This function deletes the elements from a structure and returns the structure
 /// @param delposition  is the index to the deleted
-/// @param allNodes is the struct from which an entry is to be deleted
+/// @param allNodes is a pointer to the struct from which an entry is to be deleted
 /// @param lenAllNodes is the size of the struct
 /// @return allNodes is the struct after deletion
 
@@ -116,7 +115,7 @@ node* delNode(int delposition, node* allNodes, int lenAllNodes) {
 
 /// This function return true if the element is in the array
 /// @param val  is the element
-/// @param inputArray is the array
+/// @param inputArray is a pointer to the array
 /// @param sizeA is the size of inputArray
 /// @return true if the element is in inputArray
 
@@ -128,40 +127,19 @@ bool isInArray(int val, int* inputArray, int sizeA){
     return false;
 }
 
-/// This function computes skeletal descriptors of morphology defined on structured matrix
-///
-/// This function computes a set of descriptors of morphology
-/// @param skeletonMatrix is the thinned morphology stored as a 2D matrix of pixel positions corresponding to the skeleton
-/// @param nx is the number of voxels in x-direction
-/// @param ny is the number of voxels in y-direction
-/// @param phasePixel is the value of the pixel that corresponds to the skeleton in skeletonMatrix
-/// @return the vector of descriptors, where each descriptor is a pair (std::pair<float,std::string>) consisting of descriptor's value (float) and name (string)
+/// This function returns the information about the branch ends of a skeleton
+/// @param skeleton  is a pointer to the struct the contains the skeletal pixel postitions
+/// @param skelpixel is the size of the skeleton structure
+/// @param phasePixel is the value corresponding to the phase of the skeleton
+/// @return pointer to the structure containing information (count and positions) about the branch ends
 
-int* identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel) {
-    
-    node* skeleton = new node[(ny+1)*(nx+1)];
-
-    int skelpixel = 0;
-    for(int i=0;i<ny;i++) {
-        for(int j=0;j<nx;j++) {
-            if(skeletonMatrix[i][j]==phasePixel) {
-                skeleton[skelpixel].row = i;
-                skeleton[skelpixel].col = j;
-                skelpixel++;
-            }
-            std::cout << skeletonMatrix[i][j] << " ";
-        }
-        std::cout <<  "\n";
-    }
-
- 
+node* identifyEnds(node* skeleton, int skelpixel,int phasePixel) {
+    node* branchEnd = new node [skelpixel];
     neighbor* thispixel_neighbors = new neighbor;
     node* thispixel = new node;
-
-    node* potentialJunction = new node [(ny+1)*(nx+1)];
-    node* branchEnd = new node [(ny+1)*(nx+1)];
     
-    int endcount = 0, potjunctcount = 0;
+    int endcount = 0;
+    
     for(int i = 0; i < skelpixel; i++) {
         thispixel = &skeleton[i];
 //        std::cout << thispixel->row << " , " << thispixel->col << "\n";
@@ -171,13 +149,42 @@ int* identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel)
             branchEnd[endcount] = *thispixel;
             endcount++;
         }
-        else if(thispixel_neighbors->count > 2){
+        else if(thispixel_neighbors->count == 2) {
+            //            std::cout << "Do something! \n";
+        }
+    }
+    branchEnd->count = endcount;
+    return branchEnd;
+}
+
+/// This function returns the information about the intersections of a skeleton
+/// @param skeleton  is a pointer to the struct the contains the skeletal pixel postitions
+/// @param skelpixel is the size of the skeleton structure
+/// @param phasePixel is the value corresponding to the phase of the skeleton
+/// @return pointer to the structure containing information (count and positions) about the intersections
+
+node* identifyIntersections(node* skeleton, int skelpixel, int phasePixel) {
+    
+    
+    neighbor* thispixel_neighbors = new neighbor;
+    node* thispixel = new node;
+
+    node* potentialJunction = new node [skelpixel];
+    node* branchEnd = new node [skelpixel];
+    
+    branchEnd = identifyEnds(skeleton, skelpixel, phasePixel);
+    int endcount = branchEnd->count;
+    
+    int potjunctcount = 0;
+    for(int i = 0; i < skelpixel; i++) {
+        thispixel = &skeleton[i];
+//        std::cout << thispixel->row << " , " << thispixel->col << "\n";
+        thispixel_neighbors = getNeighbors(thispixel, skeleton, skelpixel);
+        if(thispixel_neighbors->count > 2){
             potentialJunction[potjunctcount] = *thispixel;
             potjunctcount++;
         }
-        else if(thispixel_neighbors->count == 2) {
-//            std::cout << "Do something! \n";
-        }
+        
     }
     
     
@@ -301,11 +308,18 @@ int* identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel)
                         maximumIdx = d;
                 }
             }
-            delpixel[del].row = temp_node[maximumIdx].row;
-            delpixel[del].col = temp_node[maximumIdx].col;
-            del++;
+            for (int d = 0; d < tempsize; d++){
+                if (d == maximumIdx){
+                    continue;
+                }
+                else {
+                    delpixel[del].row = temp_node[d].row;
+                    delpixel[del].col = temp_node[d].col;
+                    del++;
+                }
+            }
+            
         }
-        
         
     }
     
@@ -344,11 +358,14 @@ int* identifyIntersections(int** skeletonMatrix, int nx, int ny, int phasePixel)
         }
         
     }
-    
+    branchJunction->count = junctcount;
     int* node_counts = new int[2];
-    node_counts[0] = endcount - 1;
-    node_counts[1] = junctcount - 1;
-    return node_counts;
+    node_counts[0] = endcount;
+    node_counts[1] = junctcount;
+    
+    
+    
+    return branchJunction;
 }
 }
 
