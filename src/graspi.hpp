@@ -94,7 +94,7 @@ namespace graspi {
                                           pixelsize,
                                           res_path);
 
-        if(!G) delete G;
+        if(G) delete G;
 
         return descriptors.desc;
     }
