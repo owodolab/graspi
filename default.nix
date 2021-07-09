@@ -2,6 +2,9 @@
 , cython
 , boost
 , numpy
+, toolz
+, pytestcov
+, pandas
 , python
 , lib
 }:
@@ -15,6 +18,9 @@ buildPythonPackage rec {
     cython
     boost
     numpy
+    toolz
+    pytestcov
+    pandas
   ];
 
   pythonImportsCheck = ["graspi"];
